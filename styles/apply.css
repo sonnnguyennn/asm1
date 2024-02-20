@@ -523,7 +523,7 @@ fieldset {
     margin: 0 auto 2.2em;
     padding-bottom: 0.8em;
     position: relative;
-    border-radius: 5px;
+    border-radius: 20px;
 }
 fieldset div{
     width: fit-content;
