@@ -553,9 +553,7 @@ legend {
 #name div{
     margin: auto;
 }
-#gender {
-    display: flex;
-}
+
 .form-contact-details {
     line-height: 2.8em;
     padding-bottom: 0.8em;
@@ -571,6 +569,7 @@ label {
 input[type=text] {
     border: 2px solid #787878;
     border-radius: 5px;
+    padding: 3px 0;
 }
 input[type=radio] {
     cursor: pointer;
@@ -586,6 +585,14 @@ input[type=checkbox] {
     cursor: pointer;
     margin-left: 0.5em;
     border-radius: 10px;
+}
+textarea {
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 1.1em;
+}
+textarea:placeholder-shown {
+    font-size: 1.1em;
 }
 .form-actions input{
     /* background-color: #777181; */
