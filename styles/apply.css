@@ -590,7 +590,7 @@ input[type=checkbox] {
 .form-actions input{
     /* background-color: #777181; */
     opacity: 0.7;
-    margin: 2em 1.2em;
+    margin: 0.2em 1.2em 1.5em;
     font-size: 1.2em;
     padding: 1%;
     border: 2px solid ;
