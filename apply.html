@@ -114,62 +114,65 @@
 
                     <!-- General Details -->
                     <div class="form-sections">Section A - Personal Information</div>
-                    <fieldset class="form-general-details">
-                        <legend>General details</legend>
-                        <div id="name">
-                            <div>
-                                <label for="form-general-fname">First Name<em>(*)</em></label>&nbsp;
-                                <input type="text" name="First Name" id="form-general-fname" pattern="^[A-Za-z ]{1,15}$" title="Please enter only alphabetical characters" required>
+                    <section id="sec1">
+                        <fieldset class="form-general-details">
+                            <legend>General details</legend>
+                            <div id="name">
+                                <div>
+                                    <label for="form-general-fname">First Name<em>(*)</em></label>&nbsp;
+                                    <input type="text" name="First Name" id="form-general-fname" pattern="^[A-Za-z ]{1,15}$" title="Please enter only alphabetical characters" required>
+                                </div>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <div>
+                                    <label for="form-general-lname">Last Name<em>(*)</em></label>&nbsp;
+                                    <input type="text" name="Last Name" id="form-general-lname" pattern="^[A-Za-z]{1,15}$" title="Please enter only alphabetical characters" required>
+                                </div>
                             </div>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <div>
-                                <label for="form-general-lname">Last Name<em>(*)</em></label>&nbsp;
-                                <input type="text" name="Last Name" id="form-general-lname" pattern="^[A-Za-z]{1,15}$" title="Please enter only alphabetical characters" required>
+                            <div id="gender">Gender<em>(*)</em>
+                                &nbsp;
+                                <input type="radio" name="Gender" value="Male" id="form-gender-male" required>
+                                <label for="form-gender-male">Male</label>
+                                <input type="radio" name="Gender" value="Female" id="form-gender-female" required>
+                                <label for="form-gender-female">Female</label>
+                                <input type="radio" name="Gender" value="Others" id="form-gender-others" required>
+                                <label for="form-gender-others">Others</label>                              
                             </div>
-                        </div>
-                        <div id="gender">Gender<em>(*)</em>
-                            &nbsp;
-                            <input type="radio" name="Gender" value="Male" id="form-gender-male" required>
-                            <label for="form-gender-male">Male</label>
-                            <input type="radio" name="Gender" value="Female" id="form-gender-female" required>
-                            <label for="form-gender-female">Female</label>
-                            <input type="radio" name="Gender" value="Others" id="form-gender-others" required>
-                            <label for="form-gender-others">Others</label>                              
-                        </div>
-                        <div id="id">
-                            <label for="form-general-ID">National identification number<em>(*)</em></label>&nbsp;
-                            <input type="text" name="NID" id="form-general-ID" pattern="[A-Z0-9]{12}" title="Please enter your national ID" required>
-                        </div>
-                    </fieldset>
-                    <fieldset class="form-contact-details">
-                        <legend>Contact details</legend>
-                        <div>
-                            <!-- pattern [0-9]{12} -->
-                            <label for="form-phonenumb">Phone<em>(*)</em></label>&nbsp;
-                            <input type="text" name="phonenum" id="form-phonenumb" pattern="^[0-9]{3}-[0-9]{3}-[0-9]{4}$" placeholder=" 123-456-7890" required>
-                        </div>
-                        <div>
-                            <label for="form-email">Email<em>(*)</em></label>&nbsp;
-                            <input type="text" name="email" id="form-email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" placeholder=" abc123@domain.com" required>
-                        </div>
-                    </fieldset>
-                    <fieldset class="form-address-details">
-                        <legend>Address</legend>
-                        <div class="home-address">
-                            <label for="first-address">Permanent home address<em>(*)</em></label>&nbsp;
-                            <input type="text" name="Home Address" id="first-address" pattern="^[A-Za-z0-9 ,$" required>
-                        </div>
-                        <div class="postal-address">
-                            <label for="second-address">Postal address<em>(*)</em></label>&nbsp;
-                            <input type="text" name="Postal Address" id="second-address" pattern="[0-9]{6}" required>
-                        </div>
-                    </fieldset>
+                            <div id="id">
+                                <label for="form-general-ID">National identification number<em>(*)</em></label>&nbsp;
+                                <input type="text" name="NID" id="form-general-ID" pattern="[A-Z0-9]{12}" title="Please enter your national ID" required>
+                            </div>
+                        </fieldset>
+                        <fieldset class="form-contact-details">
+                            <legend>Contact details</legend>
+                            <div>
+                                <!-- pattern [0-9]{12} -->
+                                <label for="form-phonenumb">Phone<em>(*)</em></label>&nbsp;
+                                <input type="text" name="phonenum" id="form-phonenumb" pattern="^[0-9]{3}-[0-9]{3}-[0-9]{4}$" placeholder=" 123-456-7890" required>
+                            </div>
+                            <div>
+                                <label for="form-email">Email<em>(*)</em></label>&nbsp;
+                                <input type="text" name="email" id="form-email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" placeholder=" abc123@domain.com" required>
+                            </div>
+                        </fieldset>
+                        <fieldset class="form-address-details">
+                            <legend>Address</legend>
+                            <div class="home-address">
+                                <label for="first-address">Permanent home address<em>(*)</em></label>&nbsp;
+                                <input type="text" name="Home Address" id="first-address" pattern="^[A-Za-z0-9 ,$" placeholder=" Eg: Street A, City B" required>
+                            </div>
+                            <div class="postal-address">
+                                <label for="second-address">Postal address<em>(*)</em></label>&nbsp;
+                                <input type="text" name="Postal Address" id="second-address" pattern="[0-9]{6}" placeholder=" Eg: 100000" required>
+                            </div>
+                        </fieldset>                        
+                    </section>
+
 
                     <br><hr>
 
                     <!-- Academic Record -->
                     <div class="form-sections">Section B - Academic Record</div>
-                    <section>
+                    <section id="sec2">
                         <fieldset>
                             <legend>Academic level</legend>
                             <div>
@@ -230,82 +233,85 @@
                     
                     <!-- References -->
                     <div class="form-sections">Section C - Working Experience</div>
-                    <fieldset>
-                        <legend>Experience</legend>
-                        <div>
-                            <span>Do you have experience working in companies before ?<em>(*)</em></span>
-                            <br>
-                            <input type="radio" name="Experience" value="Yes" id="work-experience-yes" required>
-                            <label for="work-experience-yes">Yes</label>
-                            <input type="radio" name="Experience" value="No" id="work-experience-no" required>
-                            <label for="work-experience-no">No</label>
-                        </div>
-                        <div>
-                            <label for="behavior">How was your experience working with the last company ?</label><br>
-                            <textarea name="" id="behavior" cols="40" rows="7" placeholder=" Note the experience down here."></textarea>
-                        </div>
-                        <div>
-                            <label for="references">References list</label><br>
-                            <textarea name="References" id="references" cols="40" rows="7" placeholder=" Write the references from your past works here." required></textarea>
-                        </div>
-                    </fieldset>
+                    <section id="sec3">
+                        <fieldset>
+                            <legend>Experience</legend>
+                            <div>
+                                <span>Do you have experience working in companies before ?<em>(*)</em></span>
+                                <br>
+                                <input type="radio" name="Experience" value="Yes" id="work-experience-yes" required>
+                                <label for="work-experience-yes">Yes</label>
+                                <input type="radio" name="Experience" value="No" id="work-experience-no" required>
+                                <label for="work-experience-no">No</label>
+                            </div>
+                            <div>
+                                <label for="behavior">How was your experience working with the last company ?</label><br>
+                                <textarea name="" id="behavior" cols="40" rows="7" placeholder=" Note the experience down here."></textarea>
+                            </div>
+                            <div>
+                                <label for="references">References list</label><br>
+                                <textarea name="References" id="references" cols="40" rows="7" placeholder=" Write the references from your past works here." required></textarea>
+                            </div>
+                        </fieldset>
+                    </section>
 
                     <br><hr>
 
                     <!-- Employ Desire -->
                     <div class="form-sections">Section D - Employment Desired</div>
-                    <fieldset>
-                        <legend>Employment</legend>
-                        <div>Applying for position:<em>(*)</em>
-                            <input type="radio" name="Position" value="ServerAdministrator" id="position-server" required="required" checked>
-                            <label for="position-server">Server Administrator</label>
-                            <input type="radio" name="Position" value="SecuritySpecialist" id="position-security" required="required">
-                            <label for="position-security">Security Specialist</label>
-                            <input type="radio" name="Position" value="ProductDevelopment" id="position-product" required="required">
-                            <label for="position-product">Product Development</label>
-                        </div>
-                        <div>
-                            <label for="year-experience">Years of experience<em>(*)</em></label>&nbsp;
-                            <select name="Education" id="academic-level" required>
-                                <option value="" selected="selected">Please select</option>
-                                <option value="None">0</option>
-                                <option value="Intern">Internships</option>
-                                <option value="1-5 years">1-5 years</option>
-                                <option value="5-10 years">5-10 years</option>
-                                <option value="10-15 years">10-15 years</option>
-                                <option value=">15 years">>15 years</option>
-                            </select> 
-                        </div>
-                        <div>
-                            <h3>For Server Administrator:</h3>
-                        </div>
-                        <div>
-                            <h3>For Security Specialist:</h3>
-                        </div>
-                        <div>
-                            <h3>For Product Development:</h3>
-                        </div>
-                        <div>
-                            <span class="form-expertise">Expert in:</span>&nbsp;
-                            <input type="checkbox" name="language[]" id="html" value="HTML">
-                            <label for="html">HTML</label>
-                            <input type="checkbox" name="language[]" id="css" value="CSS">
-                            <label for="css">CSS</label>
-                            <input type="checkbox" name="language[]" id="javasc" value="JavaScript">
-                            <label for="javasc">JavaScript</label>
-                            <input type="checkbox" name="language[]" id="php" value="PHP">
-                            <label for="php">PHP</label>
-                            <input type="checkbox" name="language[]" id="python" value="Python">     
-                            <label for="python">Python</label>
-                            <input type="checkbox" name="language[]" id="others" value="Others">
-                            <label for="others">Others</label>
-                        </div>
-                        <div>
-                            <label for="checkbox-others">If select others, please note them down below:</label><br>
-                            <textarea name="Other language(s)" id="checkbox-others" cols="50" rows="5" placeholder=" Write here"></textarea>
-                        </div>
-                    </fieldset>
-                    
+                    <section>
+                        <fieldset id="sec4">
+                            <legend>Employment</legend>
+                            <div>Applying for position:<em>(*)</em>
+                                <input type="radio" name="Position" value="ServerAdministrator" id="position-server" required="required" checked>
+                                <label for="position-server">Server Administrator</label>
+                                <input type="radio" name="Position" value="SecuritySpecialist" id="position-security" required="required">
+                                <label for="position-security">Security Specialist</label>
+                                <input type="radio" name="Position" value="ProductDevelopment" id="position-product" required="required">
+                                <label for="position-product">Product Development</label>
+                            </div>
+                            <div>
+                                <label for="year-experience">Years of experience<em>(*)</em></label>&nbsp;
+                                <select name="Education" id="academic-level" required>
+                                    <option value="" selected="selected">Please select</option>
+                                    <option value="None">0</option>
+                                    <option value="Intern">Internships</option>
+                                    <option value="1-5 years">1-5 years</option>
+                                    <option value="5-10 years">5-10 years</option>
+                                    <option value="10-15 years">10-15 years</option>
+                                    <option value=">15 years">>15 years</option>
+                                </select> 
+                            </div>
+                            <div>
+                                <h3>For Server Administrator:</h3>
+                            </div>
+                            <div>
+                                <h3>For Security Specialist:</h3>
+                            </div>
+                            <div>
+                                <h3>For Product Development:</h3>
+                            </div>
+                            <div>
+                                <span class="form-expertise">Expert in:</span>&nbsp;
+                                <input type="checkbox" name="language[]" id="html" value="HTML">
+                                <label for="html">HTML</label>
+                                <input type="checkbox" name="language[]" id="css" value="CSS">
+                                <label for="css">CSS</label>
+                                <input type="checkbox" name="language[]" id="javasc" value="JavaScript">
+                                <label for="javasc">JavaScript</label>
+                                <input type="checkbox" name="language[]" id="php" value="PHP">
+                                <label for="php">PHP</label>
+                                <input type="checkbox" name="language[]" id="python" value="Python">     
+                                <label for="python">Python</label>
+                                <input type="checkbox" name="language[]" id="others" value="Others">
+                                <label for="others">Others</label>
+                            </div>
+                            <div>
+                                <label for="checkbox-others">If select others, please note them down below:</label><br>
+                                <textarea name="Other language(s)" id="checkbox-others" cols="50" rows="5" placeholder=" Write here."></textarea>
+                            </div>
+                        </fieldset>                        
+                    </section>
 
                     <!-- Buttons -->
                     <div class="form-actions">

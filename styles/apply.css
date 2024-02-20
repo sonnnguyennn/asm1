@@ -586,7 +586,12 @@ input[type=checkbox] {
     margin-left: 0.5em;
     border-radius: 10px;
 }
-textarea {
+#sec3 textarea {
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 1.1em;
+}
+#sec4 textarea {
     border: 2px solid black;
     border-radius: 10px;
     font-size: 1.1em;
@@ -611,11 +616,24 @@ textarea:placeholder-shown {
     transition: 0.2s ease-in-out;
     color: whitesmoke;
 }
-table, th, td {
+table {
     border: 2px solid black;
+    border-radius: 10px;
     line-height: 2.2em;
     margin: 0 auto 20px;
     text-align: center;
+}
+th {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid black;
+}
+table textarea {
+    border: 1px solid black;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    /* border-radius: 10px; */
+    margin-bottom: -7px;
 }
 th {
     background-color: #cbcbcb;
