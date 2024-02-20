@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOCXI</title>
+    <link rel="stylesheet" href="./styles/apply.css" class="css">
+    
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" /> -->
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="./images/logo.png" alt=""></a>
+        </div>
+        <ul class="main-menu">
+            <li class="drop"><a href="index.html">Home</a></li>
+            <li class="drop"><a href="">Pages</a>
+                <ul class="pages-drop">
+                    <li><a href="../pages/team.html">Our Team</a></li>
+                    <li><a href="../pages/gallery.html">Gallery</a></li>
+                    <li><a href="../pages/FAQs.html">FAQs</a></li>
+                </ul>
+            </li>
+            <li class="drop"><a href="#">Services</a>
+                <ul class="services-drop">
+                    <li><a href="../services/app.html">Applications</a></li>
+                    <li><a href="../services/servers.html">Servers Resources</a></li>
+                    <li><a href="../services/UIUX.html">UI/UX Designing</a></li>
+                    <li><a href="../services/cyber-secuity.html">Cyber Security</a></li>
+                </ul>
+            </li>
+            <li class="drop"><a href="../about us/about.html">About us</a></li>
+            <li class="drop"><a href="../contact us/contact.html">Contact</a></li>
+            <li class="hiring">
+                <a href="../hiring/jobs.html">We are Hiring!</a>
+            </li>
+        </ul>
+        <div class="icon-control">
+            <div class="log-in">
+                <span class="fa-solid fa-lock"></span>
+                <p>Log in</p>
+            </div>
+            <button class="start">Get started</button>
+            <div class="iconsearch-ctr">
+                <div class="wrap"></div>
+                <div class="search-box">
+                    <input type="text" placeholder="Search here.." />
+                    <div class="icon">
+                        <img src="https://img.icons8.com/fluency-systems-regular/48/000000/search--v1.png"/>
+                    </div>
+                </div>
+                <img class="search" src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-search-logistic-delivery-kiranshastry-solid-kiranshastry.png"/>
+            </div>
+        </div>
+    </header>
+    <section class="hero-content">
+        <div class="hero-items">
+            <ul class="hero-navi">
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+                <li>
+                    /
+                </li>
+                <li>
+                    <a href="../hiring/apply.html">Apply</a>
+                </li>
+            </ul>
+            <h2>Application Form</h2>
+        </div>
+    </section>
+    <section class="description">
+        <div class="description-img"></div>
+        <div class="description-content">
+            <div class="content-header">
+                <div class="content-header-start">
+                    <img src="./images/section-title-shape.png" alt="">
+                    <p>Start your journey at NOCXI</p>                    
+                </div>
+                <h2>Join our teams!</h2>
+            </div>
+            <div class="content-text">
+                Welcome to our dynamic and innovative tech company! 
+                We're hiring cybersecurity experts, security specialists, and server providers. 
+                As leaders in the field, we prioritize safeguarding digital assets. Our tech team fosters innovation and growth. 
+                If you're passionate about cybersecurity and want to shape the future, explore exciting opportunities with us. 
+                Be a key player in the world of digital security!
+            </div>
+            <div class="content-start">Fill out the form below to apply!</div>
+        </div>
+    </section>
+    
+    <main>
+        <div class="form-background">
+            <div class="form-container">
+                <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php">
+                    <!-- Title -->
+                    <h1>Job Application</h1>
+                    <div>
+                        The Help Desk is located in ATC620. Open 9 A.M. to 5 P.M. Monday to Friday <br>
+                        Kindly check your email frequently for the response pertaining to the job application. <br>
+                        <em>All (*) marked fields are required unless specified optional</em>
+                    </div>
+
+                    <br><hr>
+
+                    <!-- General Details -->
+                    <div class="form-sections">Section A - Personal Information</div>
+                    <fieldset class="form-general-details">
+                        <legend>General details</legend>
+                        <div id="name">
+                            <div>
+                                <label for="form-general-fname">First Name<em>(*)</em></label>&nbsp;
+                                <input type="text" name="First Name" id="form-general-fname" pattern="^[A-Za-z ]{1,15}$" title="Please enter only alphabetical characters" required>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div>
+                                <label for="form-general-lname">Last Name<em>(*)</em></label>&nbsp;
+                                <input type="text" name="Last Name" id="form-general-lname" pattern="^[A-Za-z]{1,15}$" title="Please enter only alphabetical characters" required>
+                            </div>
+                        </div>
+                        <div id="gender">
+                            <span class="form-general-gender">Gender<em>(*)</em></span>&nbsp;
+                            <input type="radio" name="Gender" value="Male" id="form-gender-male" required>
+                            <label for="form-gender-male">Male</label>
+                            <input type="radio" name="Gender" value="Female" id="form-gender-female" required>
+                            <label for="form-gender-female">Female</label>
+                            <input type="radio" name="Gender" value="Others" id="form-gender-others" required>
+                            <label for="form-gender-others">Others</label>                              
+                        </div>
+                        <div id="id">
+                            <label for="form-general-ID">National identification number<em>(*)</em></label>&nbsp;
+                            <input type="text" name="NID" id="form-general-ID" pattern="[A-Z0-9]{12}" title="Please enter your national ID" required>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form-contact-details">
+                        <legend>Contact details</legend>
+                        <div>
+                            <!-- pattern [0-9]{12} -->
+                            <label for="form-phonenumb">Phone<em>(*)</em></label>&nbsp;
+                            <input type="text" name="phonenum" id="form-phonenumb" pattern="^[0-9]{3}-[0-9]{3}-[0-9]{4}$" placeholder="123-456-7890" required>
+                        </div>
+                        <div>
+                            <label for="form-email">Email<em>(*)</em></label>&nbsp;
+                            <input type="text" name="email" id="form-email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" placeholder="abc123@domain.com" required>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form-address-details">
+                        <legend>Address</legend>
+                        <div class="home-address">
+                            <label for="first-address">Permanent home address<em>(*)</em></label>&nbsp;
+                            <input type="text" name="Home Address" id="first-address" pattern="^[A-Za-z0-9 ,$" required>
+                        </div>
+                        <div class="postal-address">
+                            <label for="second-address">Postal address<em>(*)</em></label>&nbsp;
+                            <input type="text" name="Postal Address" id="second-address" pattern="[0-9]{6}" required>
+                        </div>
+                    </fieldset>
+
+                    <br><hr>
+
+                    <!-- Academic Record -->
+                    <div class="form-sections">Section B - Academic Record</div>
+                    <section>
+                        <fieldset>
+                            <legend>Academic level</legend>
+                            <div>
+                                <label for="academic-level">Highest level of education<em>(*)</em></label>&nbsp;
+                                <select name="Education" id="academic-level" required>
+                                    <option value="" selected="selected">Please select</option>
+                                    <option value="Primary">Primary</option>
+                                    <option value="Secondary">Secondary</option>
+                                    <option value="Highschool">Highschool</option>
+                                    <option value="Tertiary/Uni">Tertiary/University</option>
+                                    <option value="Bachelor">Bachelor's</option>
+                                    <option value="Master">Master's</option>
+                                    <option value="Doctoral">Ph.D.</option>
+                                    <option value="None">Have no experience</option>
+                                    <option value="Others">Others (not listed)</option>
+                                </select>                                
+                            </div>
+                            <div>Please list your academic records below, staring from the highest:</p>
+                            <br>
+                            <table>
+                                <tr>
+                                    <th>College/University</th>
+                                    <th>Course(s)</th>
+                                    <th>Certificates & Grades</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <textarea name="College/University" id="" cols="28" rows="7"></textarea>
+                                    </td>
+                                    <td>
+                                        <textarea name="College/University" id="" cols="26" rows="7"></textarea>
+                                    </td>
+                                    <td>
+                                        <textarea name="College/University" id="" cols="26" rows="7"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>School</th>
+                                    <th>Subjects</th>
+                                    <th>Certificates & Grades</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <textarea name="College/University" id="" cols="26" rows="7"></textarea>
+                                    </td>
+                                    <td>
+                                        <textarea name="College/University" id="" cols="26" rows="7"></textarea>
+                                    </td>
+                                    <td>
+                                        <textarea name="College/University" id="" cols="26" rows="7"></textarea>
+                                    </td>
+                                </tr>
+                            </table>
+                        </fieldset>
+                    </section>
+                    
+                    <br><hr>
+                    
+                    <!-- References -->
+                    <div class="form-sections">Section C - Working Experience</div>
+                    <fieldset>
+                        <legend>Experience</legend>
+                        <div>
+                            <span>Do you have experience working in companies before ?<em>(*)</em></span>
+                            <br>
+                            <input type="radio" name="Experience" value="Yes" id="work-experience-yes" required>
+                            <label for="work-experience-yes">Yes</label>
+                            <input type="radio" name="Experience" value="No" id="work-experience-no" required>
+                            <label for="work-experience-no">No</label>
+                        </div>
+                        <div>
+                            <label for="behavior">How was your experience working with the last company ?</label><br>
+                            <textarea name="" id="behavior" cols="40" rows="7" placeholder="Note the experience down here."></textarea>
+                        </div>
+                        <div>
+                            <label for="references">References list</label><br>
+                            <textarea name="References" id="references" cols="40" rows="7" placeholder="Write the references from your past works here." required></textarea>
+                        </div>
+                    </fieldset>
+
+                    <br><hr>
+
+                    <!-- Employ Desire -->
+                    <div class="form-sections">Section D - Employment Desired</div>
+                    <fieldset>
+                        <legend>Employment</legend>
+                        <div>Applying for position:<em>(*)</em>
+                            <input type="radio" name="Position" value="ServerAdministrator" id="position-server" required="required" checked>
+                            <label for="position-server">Server Administrator</label>
+                            <input type="radio" name="Position" value="SecuritySpecialist" id="position-security" required="required">
+                            <label for="position-security">Security Specialist</label>
+                            <input type="radio" name="Position" value="ProductDevelopment" id="position-product" required="required">
+                            <label for="position-product">Product Development</label>
+                        </div>
+                        <div>
+                            <label for="year-experience">Years of experience<em>(*)</em></label>&nbsp;
+                            <select name="Education" id="academic-level" required>
+                                <option value="" selected="selected">Please select</option>
+                                <option value="None">0</option>
+                                <option value="Intern">Internships</option>
+                                <option value="1-5 years">1-5 years</option>
+                                <option value="5-10 years">5-10 years</option>
+                                <option value="10-15 years">10-15 years</option>
+                                <option value=">15 years">>15 years</option>
+                            </select> 
+                        </div>
+                        <div>
+                            <h3>For Server Administrator:</h3>
+                        </div>
+                        <div>
+                            <h3>For Security Specialist:</h3>
+                        </div>
+                        <div>
+                            <h3>For Product Development:</h3>
+                        </div>
+                        <div>
+                            <span class="form-expertise">Expert in:</span>&nbsp;
+                            <input type="checkbox" name="language[]" id="html" value="HTML">
+                            <label for="html">HTML</label>
+                            <input type="checkbox" name="language[]" id="css" value="CSS">
+                            <label for="css">CSS</label>
+                            <input type="checkbox" name="language[]" id="javasc" value="JavaScript">
+                            <label for="javasc">JavaScript</label>
+                            <input type="checkbox" name="language[]" id="php" value="PHP">
+                            <label for="php">PHP</label>
+                            <input type="checkbox" name="language[]" id="python" value="Python">     
+                            <label for="python">Python</label>
+                            <input type="checkbox" name="language[]" id="others" value="Others">
+                            <label for="others">Others</label>
+                        </div>
+                        <div>
+                            <label for="checkbox-others">If select others, please note them down below:</label><br>
+                            <textarea name="Other language(s)" id="checkbox-others" cols="50" rows="5" placeholder="Write here"></textarea>
+                        </div>
+                    </fieldset>
+                    
+
+                    <!-- Buttons -->
+                    <div class="form-actions">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset form">                
+                    </div>
+                </form>                
+            </div>
+        </div>
+                
+    </main>
+        
+
+    <footer class="footer">
+        <img class="footer-bg" src="./images/footer.jpg" alt="">
+        <img class="footer-bg2" src="./images/footer.jpg" alt="">
+        <div class="about-col">
+            <img src="./images/logo (white).png" alt="">
+            <p>Subsrcibe for our upcoming latest articles and news resources</p>
+            <input type="text" placeholder="Email address">
+        </div>
+        <div class="links-col">
+            <p>Links</p>
+            <ul>
+                <li>About us</li>
+                <li>Meet our team</li>
+                <li>News & media</li>
+                <li>Our projects</li>
+                <li>Contacts</li>
+            </ul>
+        </div>
+        <div class="contact-col">
+            <p>Contacts</p>
+            <ul>
+                <li>
+                    <span class="fa-solid fa-phone"></span>
+                    <span>+84 0123456789</span>
+                </li>
+                <li>
+                    <span class="fa-solid fa-envelope"></span>
+                    <span>admin@nocxi.com</span>
+                </li>
+                <li>
+                    <span class="fa-solid fa-location-pin"></span>
+                    <span>458 Minh Khai </span>
+                </li>
+            </ul>
+        </div>
+        <div class="icon-col">
+            <span class="fa-brands fa-facebook"></span>
+            <span class="fa-brands fa-instagram"></span>
+            <span class="fa-brands fa-x-twitter"></span>
+            <span class="fa-brands fa-pinterest"></span>
+        </div>
+    </footer>
+    <section class="cp-right">
+        <p>Made by Son & friends</p>
+    </section>
+</body>
+</html>
