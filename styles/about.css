@@ -54,11 +54,11 @@ a {
     line-height: 32px;
     /* background-color: gray; */
 }
-.drop:nth-child(1){
+.drop:nth-child(4){
     opacity: 1;
     position: relative;
 }
-.drop:nth-child(1)::after{
+.drop:nth-child(4)::after{
     content: "";
     position: absolute;
     bottom: 0;
@@ -414,57 +414,101 @@ a {
 
 /* SERVICE */
 .service {
-    width: 100%;
-    height: 67vh;
-    background-color: red;
+    width: 100vw;
+    height: 60vh;
+    /* background-color: red; */
     text-align: center;
     display: flex;
     justify-content: center;
     position: relative;
+    /* margin: 100px 0; */
 }
 .service-row {
     width: 90%;
     height: 90%;
     display: flex;
     justify-content: space-evenly;
-    background-color: blue;
+    align-items: center;
+    /* background-color: blue; */
     margin: auto 0;
     position: relative;
 }
 .service-box {
-    width: auto;
-    background-color: #46B1C9;
+    height: 55%;
+    width: 28%;
+    /* background-color: #46B1C9; */
     position: relative;
-    margin: auto 0;
-    padding: 10px;
-    align-items: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
     text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.service-box::before {
+    content: "";
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.3;
+    position: absolute;
+    background-color: black;
+    transition: 0.4s ease-in-out;
+}
+.service-box:hover .service-content::before{
+    height: 100%;
+}
+.service-box:hover .service-text{
+    color: white;
+}
+.service-box:hover::before{
+    height: 100%;
 }
 .service-box:nth-child(1){
-    height: 50%;
-    width: 24vw;
-    background-image: url(/images/project-1.jpg);
+    background-image: url(./images/project-1.jpg);
 }
 .service-box:nth-child(2) {
-    height: 50%;
-    width: 24vw;
-    background-image: url(/images/project-2.jpg);
+    background-image: url(./images/project-2.jpg);
 }
 .service-box:nth-child(3) {
-    height: 50%;
-    width: 24vw;
-    background-image: url(/images/project-3.jpg);
+    background-image: url(./images/project-3.jpg);
+}
+.service-content {
+    /* height: auto; */
+    width: 20vw;
+    background-color: whitesmoke;
+    padding: 20px;
+    position: relative;
+    transform: translateY(50%);
 }
 .service-text {
-    width: 20vw;
-    font-size: 1.2em;
-    font-weight: 500;
-    background-color: #2BE4AC;
-    padding: 14px;
-    margin: 180px auto 0;
-    z-index: 999;
+    font-size: 1.1em;
+    font-weight: 700;
+    position: relative;
+    z-index: 30;
+    transition: 0.4s ease-in-out;
 }
-.service-text:hover {
+/* .service-text:hover {
     background-color: #002c57;
+} */
+.service-content::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: #002C57;
+    transition: 0.4s ease-in-out;
+    z-index: 10;
 }
 
+/* BUSINESS */
+.business {
+    width: 100vw;
+    height: 60vh;
+    background-image: url(./images/business-from-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
