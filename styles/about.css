@@ -575,21 +575,29 @@ a {
 /* MORE */
 .more {
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
+    display: flex;
+    align-content: center;
     position: relative;
+    /* background-color: blue; */
 }
 .more-row {
     width: 90%;
     height: 90%;
     /* background-color: red; */
-    margin: 0 auto;
+    margin: auto;
     display: flex;
+    align-self: center;
+    position: relative;
 }
 .more-content {
     width: 50%;
-    height: 100%;
-    margin: 2em;
+    height: fit-content;
+    margin: 2em 2em 2em 4.3em; 
+    /* padding-left: 2em; */
+    align-self: center;
     line-height: 2.2em;
+    /* background-color: #2BE4AC; */
 }
 .more-title-start span {
     margin-left: 10px;
@@ -602,9 +610,55 @@ a {
 }
 .more-text {
     font-size: 1.2em;
-    margin: 20px 0;
     color: gray;
 }
 .more-features {
     display: flex;
+    line-height: 2em;
+}
+.features-1,.features-2 {
+    width: 80%;
+    display: inline-block;
+    /* background-color: red; */
+}
+.more-features p {
+    color: gray;
+}
+.more-features img {
+    width: auto;
+    height: 50%;
+    scale: 0.7;
+    margin-bottom: -20px;
+    transition: transform 0.5s ease
+}
+.more-features img:hover {
+    transform: scale(0.8);
+} 
+.more-title,.more-text,.more-features {
+    margin:0 2rem;
+}
+.more-img {
+    align-self: center;
+    animation: slideLeft 2s ;
+    display: flex;
+}
+.more-img {
+    width: 50%;
+    height: auto;
+}
+.img-back {
+    background-color: rebeccapurple;
+    height: 50vh;
+    width: 3.5vw;
+    align-self: center;
+}
+
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(300px);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
