@@ -303,7 +303,7 @@ a {
 /* HERO */
 .hero-content {
     width: 100%;
-    height: 38vh;
+    height: 39.8vh;
     background-image: url(../images/page-header-bg.png);
     background-position: center;
     background-color: #1B1525;
@@ -523,7 +523,7 @@ fieldset {
     margin: 0 auto 2.2em;
     padding-bottom: 0.8em;
     position: relative;
-    border-radius: 5px;
+    border-radius: 20px;
 }
 fieldset div{
     width: fit-content;
@@ -533,7 +533,7 @@ fieldset div{
 }
 hr {
     height: 8px;
-    background-color: #46B1C9;
+    background-color: #002C57;
     border: none;
     margin: 0 6.7em;
 }
@@ -553,9 +553,7 @@ legend {
 #name div{
     margin: auto;
 }
-#gender {
-    display: flex;
-}
+
 .form-contact-details {
     line-height: 2.8em;
     padding-bottom: 0.8em;
@@ -568,9 +566,10 @@ legend {
 label {
     display: inline-block; 
 }
-input[type=text] {
+input[type=text], select {
     border: 2px solid #787878;
     border-radius: 5px;
+    padding: 3px 0;
 }
 input[type=radio] {
     cursor: pointer;
@@ -587,10 +586,23 @@ input[type=checkbox] {
     margin-left: 0.5em;
     border-radius: 10px;
 }
+#sec3 textarea {
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 1.1em;
+}
+#sec4 textarea {
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 1.1em;
+}
+textarea:placeholder-shown {
+    font-size: 1.1em;
+}
 .form-actions input{
     /* background-color: #777181; */
     opacity: 0.7;
-    margin: 2em 1.2em;
+    margin: 0.2em 1.2em 1.5em;
     font-size: 1.2em;
     padding: 1%;
     border: 2px solid ;
@@ -604,11 +616,24 @@ input[type=checkbox] {
     transition: 0.2s ease-in-out;
     color: whitesmoke;
 }
-table, th, td {
+table {
     border: 2px solid black;
+    border-radius: 10px;
     line-height: 2.2em;
     margin: 0 auto 20px;
     text-align: center;
+}
+th {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid black;
+}
+table textarea {
+    border: 1px solid black;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    /* border-radius: 10px; */
+    margin-bottom: -7px;
 }
 th {
     background-color: #cbcbcb;
