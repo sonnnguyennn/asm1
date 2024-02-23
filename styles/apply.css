@@ -54,11 +54,11 @@ a {
     line-height: 32px;
     /* background-color: gray; */
 }
-.drop:nth-child(1){
+.drop:nth-child(6){
     opacity: 1;
     position: relative;
 }
-.drop:nth-child(1)::after{
+.drop:nth-child(6)::after{
     content: "";
     position: absolute;
     bottom: 0;
@@ -163,7 +163,7 @@ a {
     bottom: -9px;
     left: -6px;
     animation: line 0.5s ease-in-out 0s;
-    rotate: -1deg;
+    /* rotate: -1deg; */
 } 
 .hiring:hover{
     animation: hiringText 2.5s ease-in-out infinite;
@@ -303,7 +303,7 @@ a {
 /* HERO */
 .hero-content {
     width: 100%;
-    height: 39.8vh;
+    height: 40vh;
     background-image: url(../images/page-header-bg.png);
     background-position: center;
     background-color: #1B1525;
@@ -326,7 +326,7 @@ a {
     padding: 100px 0 0 0;
 }
 .hero-navi {
-    width: 20%;
+    width: 25%;
     height: 25%;
     display: flex;
     align-items: center;
@@ -336,7 +336,7 @@ a {
     font-size: 1em;
     font-weight: 700;
     padding-bottom: 0.5em;
-    color: #2BE4AC;
+    color: #46B1C9;
 }
 .hero-items h2 {
     /* padding-top: 0em; */
@@ -382,34 +382,7 @@ a {
         transform: translateY(0);
     }
 }
-@keyframes titleHero1 {
-    0%{
-        transform: translateY(-20vh);
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(0vh);
-        opacity: 1;
-    }
-}
-@keyframes titleHero2 {
-    0%{
-        transform: translateY(20vh);
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(0vh);
-        opacity: 1;
-    }
-}
-@keyframes background {
-    0%{
-        scale: 1.1;
-    }
-    100%{
-        scale: 1;
-    }
-}
+
 
 /* DESCRIPTION */
 .description {
@@ -425,6 +398,7 @@ a {
 }
 .description-img {
     background-image: url(https://img.freepik.com/free-photo/researchers-looking-alternative-energy-souces_23-2149311493.jpg);
+    background-repeat: no-repeat;
     border-radius: 20px;
     width: 54%;
     height: 70%;
@@ -451,6 +425,8 @@ a {
 }
 .content-header-start {
     display: flex;
+    color: #46B1C9;
+    font-weight: 600;
 }
 .content-header h2{
     /* background-color: crimson; */
@@ -566,7 +542,7 @@ legend {
 label {
     display: inline-block; 
 }
-input[type=text], select {
+input[type=text], input[type=email] ,select {
     border: 2px solid #787878;
     border-radius: 5px;
     padding: 3px 0;
@@ -586,12 +562,10 @@ input[type=checkbox] {
     margin-left: 0.5em;
     border-radius: 10px;
 }
-#sec3 textarea {
-    border: 2px solid black;
-    border-radius: 10px;
-    font-size: 1.1em;
+input[type=text]:valid, form input[type=email]:valid {
+    border: 2px solid #002C57;
 }
-#sec4 textarea {
+#sec3 textarea,#sec4 textarea {
     border: 2px solid black;
     border-radius: 10px;
     font-size: 1.1em;
@@ -778,7 +752,7 @@ h3 {
 
 .cp-right{
     text-align: center;
-    padding: auto 0;
+    /* padding: auto 0; */
     color: white;
     font-size: 0.8rem;
     display: flex;
