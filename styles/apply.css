@@ -540,7 +540,7 @@ legend {
 label {
     display: inline-block; 
 }
-input[type=text], select {
+input[type=text], input[type=email] ,select {
     border: 2px solid #787878;
     border-radius: 5px;
     padding: 3px 0;
@@ -560,7 +560,7 @@ input[type=checkbox] {
     margin-left: 0.5em;
     border-radius: 10px;
 }
-input[type=text],input[type=email]:valid {
+input[type=text]:valid,input[type=email]:valid {
     border: 2px solid #002C57;
 }
 #sec3 textarea,#sec4 textarea {
