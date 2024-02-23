@@ -442,7 +442,7 @@ a {
 }
 .content-text {
     /* background-color: darkseagreen; */
-    font-weight: 500;
+    font-weight: 300;
     font-size: 1.2em;
     padding: 0 0;
     margin: 0.6em 2rem 2em ;
@@ -542,7 +542,7 @@ legend {
 label {
     display: inline-block; 
 }
-input[type=text], input[type=email] ,select {
+form input[type=text], input[type=email] ,select {
     border: 2px solid #787878;
     border-radius: 5px;
     padding: 3px 0;
@@ -554,7 +554,7 @@ input[type=radio] {
 input[type=radio] + label {
     cursor: pointer;
 }
-input[type=radio]:checked + label {
+form input[type=radio]:checked + label {
     color: #002c57;
 }
 input[type=checkbox] {
@@ -562,7 +562,7 @@ input[type=checkbox] {
     margin-left: 0.5em;
     border-radius: 10px;
 }
-input[type=text]:valid, form input[type=email]:valid {
+form input[type=text]:valid, form input[type=email]:valid {
     border: 2px solid #002C57;
 }
 #sec3 textarea,#sec4 textarea {
