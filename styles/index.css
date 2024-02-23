@@ -413,7 +413,7 @@ a {
     animation: background 4s ease-in-out;
     overflow: hidden;
     background-color: #00081A;
-    mix-blend-mode: luminosity;
+    /* mix-blend-mode: luminosity; */
 }
 .section-wrap{
     position: absolute;
@@ -640,7 +640,6 @@ a {
     right: 0;
     z-index: 50;
     rotate: 180deg;
-    -webkit-transform: scaleX(-1);
 }
 .img-box {
     width: 49%;
@@ -884,6 +883,7 @@ a {
 
 /* FEEDBACKS */
 .feedbacks{
+    /* background-color: #; */
     width: 100vw;
     height: 65vh;
     background-color: #00081A;
@@ -911,7 +911,7 @@ a {
     height: 80%;
     display:flex;
     flex-direction: row;
-    justify-content: start;
+    /* justify-content:start; */
     overflow: hidden;
 }
 .feedback-item{
@@ -923,8 +923,7 @@ a {
     padding: 3% 2%;
     color: white;
     min-width: 100%;
-    animation: slideFb 40s linear infinite;
-    margin: 0 100px;
+    animation: slideFb2 40s ease-in-out infinite;
 }
 .client-img{
     height: 100%;
@@ -951,6 +950,8 @@ a {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    /* background-color: lightcoral; */
+    width: 80%;
 }
 .fa-quote-left{
     font-size: 2rem;
@@ -969,10 +970,24 @@ a {
 
 @keyframes slideFb {
     from {
-        transform: translateX(0);
+        transform: translateX(-100px);
     }
     to {
         transform: translateX(calc(-1583px * 3));
+    }
+}
+@keyframes slideFb2 {
+    0%{
+        transform: translateX(0px);
+    }
+    33%{
+        transform: translateX(-90vw);
+    }
+    66%{
+        transform: translateX(calc(-90vw * 2));
+    }
+    100% {
+        transform: translateX(calc(-90vw * 3));
     }
 }
 
