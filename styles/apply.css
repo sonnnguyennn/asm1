@@ -163,7 +163,7 @@ a {
     bottom: -9px;
     left: -6px;
     animation: line 0.5s ease-in-out 0s;
-    rotate: -1deg;
+    /* rotate: -1deg; */
 } 
 .hiring:hover{
     animation: hiringText 2.5s ease-in-out infinite;
@@ -382,34 +382,7 @@ a {
         transform: translateY(0);
     }
 }
-@keyframes titleHero1 {
-    0%{
-        transform: translateY(-20vh);
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(0vh);
-        opacity: 1;
-    }
-}
-@keyframes titleHero2 {
-    0%{
-        transform: translateY(20vh);
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(0vh);
-        opacity: 1;
-    }
-}
-@keyframes background {
-    0%{
-        scale: 1.1;
-    }
-    100%{
-        scale: 1;
-    }
-}
+
 
 /* DESCRIPTION */
 .description {
@@ -425,6 +398,7 @@ a {
 }
 .description-img {
     background-image: url(https://img.freepik.com/free-photo/researchers-looking-alternative-energy-souces_23-2149311493.jpg);
+    background-repeat: no-repeat;
     border-radius: 20px;
     width: 54%;
     height: 70%;
@@ -586,12 +560,7 @@ input[type=checkbox] {
     margin-left: 0.5em;
     border-radius: 10px;
 }
-#sec3 textarea {
-    border: 2px solid black;
-    border-radius: 10px;
-    font-size: 1.1em;
-}
-#sec4 textarea {
+#sec3 textarea,#sec4 textarea {
     border: 2px solid black;
     border-radius: 10px;
     font-size: 1.1em;
@@ -778,7 +747,7 @@ h3 {
 
 .cp-right{
     text-align: center;
-    padding: auto 0;
+    /* padding: auto 0; */
     color: white;
     font-size: 0.8rem;
     display: flex;

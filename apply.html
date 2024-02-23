@@ -53,12 +53,12 @@
             <div class="iconsearch-ctr">
                 <div class="wrap"></div>
                 <div class="search-box">
-                    <input type="text" placeholder=" Search here.." />
+                    <input type="text" placeholder=" Search here..">
                     <div class="icon">
-                        <img src="https://img.icons8.com/fluency-systems-regular/48/000000/search--v1.png"/>
+                        <img src="https://img.icons8.com/fluency-systems-regular/48/000000/search--v1.png" alt="search-icon">
                     </div>
                 </div>
-                <img class="search" src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-search-logistic-delivery-kiranshastry-solid-kiranshastry.png"/>
+                <img class="search" src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-search-logistic-delivery-kiranshastry-solid-kiranshastry.png" alt="search-icon">
             </div>
         </div>
     </header>
@@ -114,8 +114,9 @@
                     <br><hr>
 
                     <!-- General Details -->
-                    <div class="form-sections">Section A - Personal Information</div>
+                    <!-- <div class="form-sections">Section A - Personal Information</div> -->
                     <section id="sec1">
+                        <h3 class="form-sections">Section A - Personal Information</h3>
                         <fieldset class="form-general-details">
                             <legend>General</legend>
                             <div id="name">
@@ -148,11 +149,12 @@
                             <div>
                                 <!-- pattern [0-9]{12} -->
                                 <label for="form-phonenumb">Phone<em>(*)</em></label>&nbsp;
-                                <input type="text" name="phonenum" id="form-phonenumb" pattern="^[0-9]{3}-[0-9]{3}-[0-9]{4}$" placeholder=" 123-456-7890" required>
+                                <input type="text" name="Phone number" id="form-phonenumb" pattern="^[0-9]{3}-[0-9]{3}-[0-9]{4}$" placeholder=" 123-456-7890" required>
                             </div>
                             <div>
                                 <label for="form-email">Email<em>(*)</em></label>&nbsp;
-                                <input type="text" name="email" id="form-email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" placeholder=" abc123@domain.com" required>
+                                <!-- <input type="text" name="email" id="form-email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" placeholder=" abc123@domain.com" required> -->
+                                <input type="email" name="Email" id="form-email" placeholder=" abc123@domain.com" required>
                             </div>
                         </fieldset>
                         <fieldset class="form-address-details">
@@ -172,8 +174,9 @@
                     <br><hr>
 
                     <!-- Academic Record -->
-                    <div class="form-sections">Section B - Academic Record</div>
+                    <!-- <div class="form-sections">Section B - Academic Record</div> -->
                     <section id="sec2">
+                        <h3 class="form-sections">Section B - Academic Record</h3>
                         <fieldset>
                             <legend>Academic level</legend>
                             <div>
@@ -191,8 +194,7 @@
                                     <option value="Others">Others (not listed)</option>
                                 </select>                                
                             </div>
-                            <div>Please list your academic records below, staring from the highest:</p>
-                            <br>
+                            <div>Please list your academic records below, staring from the highest:</div>
                             <table>
                                 <tr>
                                     <th>College/University</th>
@@ -201,13 +203,13 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <textarea name="College/University" id="" cols="25" rows="7"></textarea>
+                                        <textarea name="College/University" id="textarea1" cols="25" rows="7"></textarea>
                                     </td>
                                     <td>
-                                        <textarea name="College/University" id="" cols="25" rows="7"></textarea>
+                                        <textarea name="College/University" id="textarea2" cols="25" rows="7"></textarea>
                                     </td>
                                     <td>
-                                        <textarea name="College/University" id="" cols="25" rows="7"></textarea>
+                                        <textarea name="College/University" id="textarea3" cols="25" rows="7"></textarea>
                                     </td>
                                 </tr>
                                 <tr>
@@ -217,13 +219,13 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <textarea name="College/University" id="" cols="25" rows="7"></textarea>
+                                        <textarea name="College/University" id="textarea4" cols="25" rows="7"></textarea>
                                     </td>
                                     <td>
-                                        <textarea name="College/University" id="" cols="25" rows="7"></textarea>
+                                        <textarea name="College/University" id="textarea5" cols="25" rows="7"></textarea>
                                     </td>
                                     <td>
-                                        <textarea name="College/University" id="" cols="25" rows="7"></textarea>
+                                        <textarea name="College/University" id="textarea6" cols="25" rows="7"></textarea>
                                     </td>
                                 </tr>
                             </table>
@@ -233,8 +235,9 @@
                     <br><hr>
                     
                     <!-- References -->
-                    <div class="form-sections">Section C - Working Experience</div>
+                    <!-- <div class="form-sections">Section C - Working Experience</div> -->
                     <section id="sec3">
+                        <h3 class="form-sections">Section C - Working Experience</h3>
                         <fieldset>
                             <legend>Experience</legend>
                             <div>
@@ -247,7 +250,7 @@
                             </div>
                             <div>
                                 <label for="behavior">How was your experience working with the last company ?</label><br>
-                                <textarea name="" id="behavior" cols="40" rows="7" placeholder=" Note the experience down here."></textarea>
+                                <textarea name="Past experience" id="behavior" cols="40" rows="7" placeholder=" Note the experience down here."></textarea>
                             </div>
                             <div>
                                 <label for="references">References list</label><br>
@@ -259,8 +262,9 @@
                     <br><hr>
 
                     <!-- Employ Desire -->
-                    <div class="form-sections">Section D - Employment Desired</div>
+                    <!-- <div class="form-sections">Section D - Employment Desired</div> -->
                     <section>
+                        <h3 class="form-sections">Section D - Employment Desired</h3>
                         <fieldset id="sec4">
                             <legend>Employment</legend>
                             <div>Applying for position:<em>(*)</em>
@@ -273,7 +277,7 @@
                             </div>
                             <div>
                                 <label for="year-experience">Years of experience<em>(*)</em></label>&nbsp;
-                                <select name="Education" id="academic-level" required>
+                                <select name="Years of experience" id="year-experience" required>
                                     <option value="" selected="selected">Please select</option>
                                     <option value="None">0</option>
                                     <option value="Intern">Internships</option>
@@ -327,10 +331,10 @@
         
 
     <footer class="footer">
-        <img class="footer-bg" src="./images/footer.jpg" alt="">
-        <img class="footer-bg2" src="./images/footer.jpg" alt="">
+        <img class="footer-bg" src="./images/footer.jpg" alt="footer">
+        <img class="footer-bg2" src="./images/footer.jpg" alt="footer">
         <div class="about-col">
-            <img src="./images/logo (white).png" alt="">
+            <img src="./images/logo-(white).png" alt="logo">
             <p>Subsrcibe for our upcoming latest articles and news resources</p>
             <input type="text" placeholder=" Email address">
         </div>
@@ -368,8 +372,8 @@
             <span class="fa-brands fa-pinterest"></span>
         </div>
     </footer>
-    <section class="cp-right">
-        <p>Made by Son & friends</p>
-    </section>
+    <span class="cp-right">
+        Made by Son & friends
+    </span>
 </body>
 </html>
