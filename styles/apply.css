@@ -336,7 +336,7 @@ a {
     font-size: 1em;
     font-weight: 700;
     padding-bottom: 0.5em;
-    color: #2BE4AC;
+    color: #46B1C9;
 }
 .hero-items h2 {
     /* padding-top: 0em; */
@@ -425,6 +425,8 @@ a {
 }
 .content-header-start {
     display: flex;
+    color: #46B1C9;
+    font-weight: 600;
 }
 .content-header h2{
     /* background-color: crimson; */
@@ -560,7 +562,7 @@ input[type=checkbox] {
     margin-left: 0.5em;
     border-radius: 10px;
 }
-input[type=text]:valid,input[type=email]:valid {
+input[type=text]:valid, form input[type=email]:valid {
     border: 2px solid #002C57;
 }
 #sec3 textarea,#sec4 textarea {

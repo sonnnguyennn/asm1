@@ -337,7 +337,7 @@ a {
     font-size: 1em;
     font-weight: 700;
     padding-bottom: 0.5em;
-    color: #2BE4AC;
+    color: #46B1C9;
 }
 .hero-items h2 {
     /* padding-top: 0em; */
@@ -508,29 +508,41 @@ a {
 .business {
     width: 100vw;
     height: 60vh;
-    background-image: url(./images/business-from-bg.jpg);
     background-color: #00081A;
-    background-blend-mode: luminosity;
-    background-repeat: no-repeat;
-    background-position: center;
+    /* background-blend-mode:luminosity; */
     position: relative;
-    background-attachment: fixed;
-    z-index: 999;
+    /* background-attachment: fixed; */
+    /* z-index: 10; */
+}
+.business-wrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+    background-image: url(./images/business-from-bg.jpg);  
+    background-repeat: no-repeat;
+    background-position: center; 
+    mix-blend-mode: luminosity;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
 }
 .business-content {
     /* background-color: red; */
     width: 100%;
-    height: 80%;
+    height: 100%;
     text-align: center;
-    padding-top: 100px;
-    /* display: flex;
+    /* padding-top: 100px; */
+    display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column; */
+    flex-direction: column;
+    position: relative;
+    z-index: 20;
 }
 .business-content p:nth-child(1) {
     font-size: 2.5em;
-    color: #2BE4AC;
+    color: #46B1C9;
 }
 .business-content h2 {
     font-size: 7em;
@@ -539,7 +551,7 @@ a {
 .business-button{
     width: 13%;
     background-color: #46B1C9;
-    height: 25%;
+    height: 15%;
     /* outline: none; */
     border: none;
     color: white;
@@ -602,7 +614,7 @@ a {
 .more-title-start span {
     margin-left: 10px;
     font-weight: 700;
-    color: #6653E8;
+    color: #46B1C9;
 }
 .more-title h1{
     font-size: 40px;
@@ -647,7 +659,7 @@ a {
     height: auto;
 }
 .img-back {
-    background-color: #6653E8;
+    background-color: #46B1C9;
     height: 50vh;
     width: 3.5vw;
     align-self: center;
@@ -669,7 +681,7 @@ a {
     height: 100vh;
     position: relative;
     align-self: center;
-    background-color: red;
+    /* background-color: red; */
     padding: 80px 0 100px;
     margin: 20px 0 50px;
 }
@@ -681,13 +693,13 @@ a {
 .member-meet span {
     margin-left: 10px;
     font-weight: 700;
-    color: #6653E8;
+    color: #46B1C9;
 }
 .member-header h2 {
     font-size: 3em;
 }
 .member-people {
-    background-color: #6653E8;
+    /* background-color: #46B1C9; */
     width: 90%;
     height: 90%;
     display: flex;
@@ -696,7 +708,7 @@ a {
 }
 .member-box {
     width: 30%;
-    background-color: #2BE4AC;
+    /* background-color: #2BE4AC; */
     text-align: center;
 }
 .member-box:hover .member-pic{

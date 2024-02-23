@@ -83,7 +83,6 @@
         <div class="description-content">
             <div class="content-header">
                 <div class="content-header-start">
-                    <img src="./images/section-title-shape.png" alt="">
                     <p>Start your journey at NOCXI</p>                    
                 </div>
                 <h2>Join our teams!</h2>
@@ -149,23 +148,23 @@
                             <div>
                                 <!-- pattern [0-9]{12} -->
                                 <label for="form-phonenumb">Phone<em>(*)</em></label>&nbsp;
-                                <input type="text" name="Phone number" id="form-phonenumb" pattern="^[0-9]{3}-[0-9]{3}-[0-9]{4}$" placeholder=" 123-456-7890" required>
+                                <input type="text" name="Phone number" id="form-phonenumb" pattern="^[0-9]{3}-[0-9]{3}-[0-9]{4}$" placeholder=" 123-456-7890" title="Write according to the placeholder" required>
                             </div>
                             <div>
                                 <label for="form-email">Email<em>(*)</em></label>&nbsp;
-                                <!-- <input type="text" name="email" id="form-email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" placeholder=" abc123@domain.com" required> -->
-                                <input type="email" name="Email" id="form-email" placeholder=" abc123@domain.com" required>
+                                <!-- <input type="text" name="email" id="form-email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" placeholder=" abc123@domain.com" title="Write according to the placeholder" required> -->
+                                <input type="email" name="Email" id="form-email" placeholder=" abc123@domain.com" title="Write according to the placeholder" required>
                             </div>
                         </fieldset>
                         <fieldset class="form-address-details">
                             <legend>Address</legend>
                             <div class="home-address">
                                 <label for="first-address">Permanent home address<em>(*)</em></label>&nbsp;
-                                <input type="text" name="Home Address" id="first-address" pattern="^[A-Za-z0-9 ,$" placeholder=" Eg: Street A, City B" required>
+                                <input type="text" name="Home Address" id="first-address" pattern="^[A-Za-z0-9 ,$" placeholder=" Eg: Street A, City B" title="Write according to the placeholder" required>
                             </div>
                             <div class="postal-address">
                                 <label for="second-address">Postal address<em>(*)</em></label>&nbsp;
-                                <input type="text" name="Postal Address" id="second-address" pattern="[0-9]{6}" placeholder=" Eg: 100000" required>
+                                <input type="text" name="Postal Address" id="second-address" pattern="[0-9]{6}" placeholder=" Eg: 100000" title="Write according to the placeholder" required>
                             </div>
                         </fieldset>                        
                     </section>
