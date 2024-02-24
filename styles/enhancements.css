@@ -370,8 +370,6 @@ a {
     width: 100%;
     height: 180vh;
     margin: 50px 0;
-    word-spacing: 5px;
-    line-height: 1.3em;
 }
 .enhance-title {
     width: 100%;
@@ -396,6 +394,8 @@ a {
     display: flex;
     justify-content: space-around;
     margin: 2em auto;
+    word-spacing: 5px;
+    line-height: 1.3em;
 }
 .enhance-content h1,h2 {
     color: #002C57;
@@ -414,8 +414,8 @@ a {
     text-align: center;
     padding: 10px;
     border-bottom: 4px solid #001020;
-    border-top-left-radius: 45px;
-    border-top-right-radius: 45px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
     background-color: #84C0C6;
 }
 
