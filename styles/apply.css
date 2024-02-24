@@ -28,7 +28,7 @@ a {
     align-items: center;
     box-shadow: 0 0 10px 2px grey;
     z-index: 100;
-    position: sticky;
+    position: fixed;
     /* background-color: blue; */
     font-family: 'Kumbh Sans', sans-serif;
 
@@ -312,7 +312,7 @@ a {
     display: flex;
     justify-content: center;
     font-family: 'Kumbh Sans', sans-serif;
-    
+    margin-top: 15vh;
 }
 .hero-items {
     width: 50%;

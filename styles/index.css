@@ -32,7 +32,7 @@ a {
     align-items: center;
     box-shadow: 0 0 10px 2px grey;
     z-index: 100;
-    position:sticky;
+    position: fixed;
     /* background-color: blue; */
 }
 .logo {
