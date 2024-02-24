@@ -27,11 +27,9 @@ a {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 0 10px 2px grey;
-    z-index: 100;
-    position: sticky;
+    z-index: 200;
+    position: fixed;
     /* background-color: blue; */
-    font-family: 'Kumbh Sans', sans-serif;
-
 }
 .logo {
     width: 11%;
@@ -186,19 +184,19 @@ a {
     height: 35%;
     /* background-color: red; */
     border-radius: 8px;
-    border: 1px solid #84C0C6;
+    border: 1px solid #002C57;
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
 .log-in span{
     /* background-color: red; */
-    color: #46B1C9;
+    color: #002C57;
     font-size: 14px;
     transition: 0.3s ease-in-out;
 }
 .log-in p{
     /* background-color: red; */
-    color: #46B1C9;
+    color: #002C57;
     font-size: 14px;
     transition: 0.3s ease-in-out;
 }
@@ -208,7 +206,7 @@ a {
 .start{
     width: 40%;
     height: 35%;
-    background-color: #84C0C6;
+    background-color: #002C57;
     outline: none;
     border: none;
     border-radius: 8px;
@@ -274,6 +272,9 @@ a {
     padding-left: 2%;
     font-size: 17px;
 }
+.search-box label{
+    display: none;
+}
 .icon-control a{
     height: 30%;
     width: 20%;
@@ -300,6 +301,12 @@ a {
     cursor: pointer;
 }
 
+
+
+
+
+
+
 /* HERO */
 .hero-content {
     width: 100%;
@@ -312,8 +319,7 @@ a {
     display: flex;
     justify-content: center;
     text-align: center;
-    font-family: 'Kumbh Sans', sans-serif;
-    
+    margin-top: 15vh;
 }
 .hero-items {
     width: 50%;
@@ -346,71 +352,13 @@ a {
     color: whitesmoke;
 }
 
-@keyframes line {
-    0%{
-        width: 0;
-        opacity: 0;
-    }
-    100%{
-        width: 110%;
-        opacity: 1;
-    }
-}
-@keyframes drop {
-    0% {
-        opacity: 0;
-        top: 35px;
-    }
-    100% {
-        opacity: 1;
-        top: 50px;
-    }
-}
-@keyframes hiringText {
-    0%{
-        transform: translateY(0);
-    }
-    25% {
-        transform: translateY(-20%);
-    }
-    50% {
-        transform: translateY(-5%);
-    }
-    75%{
-        transform: translateY(-20%);
-    }
-    100%{
-        transform: translateY(0);
-    }
-}
-@keyframes titleHero1 {
-    0%{
-        transform: translateY(-20vh);
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(0vh);
-        opacity: 1;
-    }
-}
-@keyframes titleHero2 {
-    0%{
-        transform: translateY(20vh);
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(0vh);
-        opacity: 1;
-    }
-}
-@keyframes background {
-    0%{
-        scale: 1.1;
-    }
-    100%{
-        scale: 1;
-    }
-}
+
+
+
+
+
+
+
 
 /* SERVICE */
 .service {
@@ -505,13 +453,19 @@ a {
     z-index: 10;
 }
 
+
+
+
+
+
+
 /* BUSINESS */
 .business {
     width: 100vw;
     height: 60vh;
     background-color: #00081A;
     position: relative;
-    z-index: 999;
+    z-index: 100;
     display: flex;
     /* justify-content: center; */
     align-items: center;
@@ -549,15 +503,15 @@ a {
     font-weight: 500;
     /* margin: 20px 0; */
 }
-.business-content h2 {
+.business-content h1 {
     font-size: 7em;
     color: white;
     margin: 25px 0;
 }
 .business-button{
     width: 12%;
-    background-color: #46B1C9;
-    height: 25%;
+    background-color: #002C57;
+    height: 15%;
     /* outline: none; */
     border: none;
     color: white;
@@ -589,6 +543,12 @@ a {
 .business-button:hover::after{
     height: 100%;
 }
+
+
+
+
+
+
 
 /* MORE */
 .more {
@@ -625,7 +585,7 @@ a {
 .more-title-start span {
     /* margin-left: 10px; */
     font-weight: 700;
-    color:#46B1C9;
+    color:#002C57;
     /* background-color: red; */
 }
 .more-title h1{
@@ -634,7 +594,7 @@ a {
 }
 .more-text {
     font-size: 1.1rem;
-    color: gray;
+    color: #454648;
     /* margin-top: 300px; */
     line-height: 2rem;
     
@@ -655,12 +615,12 @@ a {
     padding: 20px 0;
 }
 .more-features p {
-    color: gray;
+    color: #454648;
     /* margin-top: 10px; */
     line-height:1.8rem;
     /* max-lines: 2; */
 }
-.more-features h3{
+.more-features h2{
     margin-bottom:20px;
 }
 .more-features img {
@@ -692,14 +652,11 @@ a {
 }
 
 
-@keyframes slideLeft {
-    from {
-        transform: translateX(300px);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
+
+
+
+
+
 
 /* MEMBERS */
 .member {
@@ -719,7 +676,7 @@ a {
 .member-meet span {
     /* margin-left: 10px; */
     font-weight: 700;
-    color: #46B1C9;
+    color: #002C57;
 }
 .member-header h2 {
     font-size: 3em;
@@ -741,9 +698,6 @@ a {
     transform: scale(1.05);
     background-blend-mode: luminosity;
 }
-/* .member-pic img{
-    background-color: #1B1525;
-} */
 .member-pic {
     width: 24vw;
     height: 50vh;
@@ -753,16 +707,39 @@ a {
     background-position: center;
     margin: 0 auto;
     transition: 0.4s ease;
+    display: flex;
+    justify-content: right;
+    transition: 0.4s ease;
 }
 .member-social {
     /* background-color: red; */
-    width: 100%;
+    width: 20%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
     align-self: center;
+    justify-content: flex-end;
     /* justify-content: flex-end; */
+}
+.social-links {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    font-size: 1.5em;
+    background-color: gray;
+    text-align: center;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
+    position: relative;
+}
+.social-links p {
+    display: none;
+}
+.member-box:hover .social-links{
+    transform: translateY(-90deg);
 }
 .member-info {
     height: 10vh;
@@ -781,8 +758,15 @@ a {
     color: #002C57;
 }
 .member-info p {
-    color: gray;
+    color: #454648;
 }
+
+
+
+
+
+
+
 
 /* FOOTER */
 .footer{
@@ -829,7 +813,7 @@ a {
 .about-col img{
     width: 65%;
 }
-.about-col p{
+.about-col p,.about-col label{
     font-size: 1rem;
     line-height: 1.8rem;
     opacity: 0.8;
@@ -850,7 +834,7 @@ a {
     padding: 1% 1%;
     /* background-color: red; */
 }
-.links-col p{
+.links-col h3{
     font-size: 1.1rem;
     font-weight: 700;
     margin-bottom: 40px;
@@ -877,7 +861,7 @@ a {
     /* background-color: lightpink; */
     padding: 1% 1%;
 }
-.contact-col p{
+.contact-col h3{
     font-size: 1.1rem;
     font-weight: 700;
     margin-bottom: 40px;
@@ -912,4 +896,56 @@ a {
 .icon-col span{
     margin: 0 12px;
     display: block;
+}
+
+
+
+
+
+
+/* ANIMATION */
+@keyframes line {
+    0%{
+        width: 0;
+        opacity: 0;
+    }
+    100%{
+        width: 110%;
+        opacity: 1;
+    }
+}
+@keyframes drop {
+    0% {
+        opacity: 0;
+        top: 35px;
+    }
+    100% {
+        opacity: 1;
+        top: 50px;
+    }
+}
+@keyframes hiringText {
+    0%{
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-20%);
+    }
+    50% {
+        transform: translateY(-5%);
+    }
+    75%{
+        transform: translateY(-20%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes slideLeft {
+    from {
+        transform: translateX(300px);
+    }
+    to {
+        transform: translateX(0);
+    }
 }

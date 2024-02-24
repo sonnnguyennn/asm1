@@ -32,7 +32,7 @@ a {
     align-items: center;
     box-shadow: 0 0 10px 2px grey;
     z-index: 100;
-    position:sticky;
+    position: fixed;
     /* background-color: blue; */
 }
 .logo {
@@ -184,32 +184,33 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width:38%;
+    width: 36%;
     height: 35%;
     /* background-color: red; */
     border-radius: 8px;
-    border: 1px solid #84C0C6;
+    border: 1px solid #002C57;
     cursor: pointer;
     transition: 0.3s ease-in-out;
-    padding-right: 2%;
 }
 .log-in span{
-    color: #46B1C9;
+    /* background-color: red; */
+    color: #002C57;
     font-size: 14px;
     transition: 0.3s ease-in-out;
 }
 .log-in p{
-    color: #46B1C9;
+    /* background-color: red; */
+    color: #002C57;
     font-size: 14px;
     transition: 0.3s ease-in-out;
 }
 .log-in span{
-    margin: 0 10px;
+    margin: 0 10px 0 0;
 }
 .start{
     width: 40%;
     height: 35%;
-    background-color: #46B1C9;
+    background-color: #002C57;
     outline: none;
     border: none;
     border-radius: 8px;
@@ -272,6 +273,9 @@ a {
     border: none;
     padding-left: 2%;
     font-size: 17px;
+}
+.search-box label{
+    display: none;
 }
 .icon-control a{
     height: 30%;
@@ -401,6 +405,7 @@ a {
 .container{
     height: 85vh;
     overflow: hidden;
+    margin-top: 15vh;
 }
 .main-slide{
     width: 100vw;
@@ -443,7 +448,7 @@ a {
     transform: translateY(0);
     font-weight: 400;
 }
-.hero-content h2{
+.hero-content h1{
     font-size: 10rem;
     color: white;
     animation: titleHero1 3s ease-in-out;
@@ -463,7 +468,7 @@ a {
 .discover{
     width: 24%;
     height: 100%;
-    background-color: #46B1C9;
+    background-color: #002C57;
     border: none;
     display: flex;
     justify-content: center;
@@ -518,6 +523,9 @@ a {
     font-size: 1.4em;
     transition: 0.3s ease-in-out;
 }
+.video p {
+    display: none;
+}
 .video-des{
     color: whitesmoke;
     font-style: 1rem;
@@ -570,7 +578,7 @@ a {
     left: 10%;
     font-size: 1.3rem;
     font-weight: 700;
-    color: white;
+    color: #002C57;
     z-index: 70;
     transition: 0.65s ease-in-out 0.2s;
 }
@@ -671,7 +679,7 @@ a {
     padding: 0 6%;
 }
 .get-to-know-title{
-    color: #46B1C9;
+    color: #002C57;
     font-size: 1rem;
     font-weight: 700;
 }
@@ -717,7 +725,7 @@ a {
 }
 .discover-2{
     width: 41%;
-    background-color: #46B1C9;
+    background-color: #002C57;
     height: 11%;
     /* outline: none; */
     border: none;
@@ -1019,7 +1027,7 @@ a {
     margin-bottom: 50px;
 }
 .project-tagline{
-    color: #46B1C9;
+    color: #002C57;
     font-size: 1rem;
     font-weight: 700;
 }
@@ -1051,13 +1059,13 @@ a {
     background-color: red;
 }
 .background1{
-    background-color: #9782A2;
+    background-color: #664677;
 }
 .background2{
-    background-color: #8293A2;
+    background-color: #3d5c77;
 }
 .background3{
-    background-color: #A2A282;
+    background-color: #575729;
 }
 .project-img:nth-child(2){
     background-color: red;
@@ -1105,15 +1113,15 @@ a {
 }
 
 .content-tagline1{
-    color: #9782A2;
+    color: #664677;
     font-weight: 600;
 }
 .content-tagline2{
-    color:  #8293A2;
+    color:  #3d5c77;
     font-weight: 600;
 }
 .content-tagline3{
-    color:  #A2A282;
+    color:  #575729;
     font-weight: 600;
 }
 .project-tagline{
@@ -1168,13 +1176,13 @@ a {
     transition: 0.4s ease-in-out;
 }
 .btn-text1{
-    color: #9782A2;
+    color: #664677;
 }
 .btn-text2{
-    color:  #8293A2;
+    color:  #3d5c77;
 }
 .btn-text3{
-    color:  #A2A282;
+    color:  #575729;
 }
 .project-item:hover .project-btn::after{
     height: 100%;
@@ -1251,7 +1259,7 @@ a {
 .about-col img{
     width: 65%;
 }
-.about-col p{
+.about-col p,.about-col label{
     font-size: 1rem;
     line-height: 1.8rem;
     opacity: 0.8;
@@ -1272,7 +1280,7 @@ a {
     padding: 1% 1%;
     /* background-color: red; */
 }
-.links-col p{
+.links-col h3{
     font-size: 1.1rem;
     font-weight: 700;
     margin-bottom: 40px;
@@ -1299,7 +1307,7 @@ a {
     /* background-color: lightpink; */
     padding: 1% 1%;
 }
-.contact-col p{
+.contact-col h3{
     font-size: 1.1rem;
     font-weight: 700;
     margin-bottom: 40px;

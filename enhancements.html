@@ -16,7 +16,7 @@
 <body>
     <header class="header">
         <div class="logo">
-            <a href="index.html"><img src="./images/logo.png" alt=""></a>
+            <img src="./images/logo.png" alt="nocxi-logo"></a>
         </div>
         <ul class="main-menu">
             <li class="drop"><a href="index.html">Home</a></li>
@@ -50,12 +50,13 @@
             <div class="iconsearch-ctr">
                 <div class="wrap"></div>
                 <div class="search-box">
-                    <input type="text" placeholder=" Search here..">
+                    <label for="search-input">Start searching</label>
+                    <input type="text" id="search-input" placeholder=" Search here..">
                     <div class="icon">
-                        <img src="https://img.icons8.com/fluency-systems-regular/48/000000/search--v1.png" alt="search-icon">
+                        <img src="https://img.icons8.com/fluency-systems-regular/48/000000/search--v1.png" alt="search-icon-small">
                     </div>
                 </div>
-                <img class="search" src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-search-logistic-delivery-kiranshastry-solid-kiranshastry.png" alt="search-icon">
+                <img class="search" src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-search-logistic-delivery-kiranshastry-solid-kiranshastry.png" alt="search-icon-big">
             </div>
         </div>
     </header>
@@ -83,7 +84,7 @@
         <div class="enhance-content">
             <div class="enhancement-1">
                 <h1>@keyframes</h1>
-                <h3>Description</h3>
+                <h2>Description</h2>
                 <p>
                     @keyframes in CSS is a rule that allows you to create 
                     animations by gradually changing from one set of CSS styles to another. 
@@ -91,7 +92,7 @@
                     The animation is defined by using the @keyframes keyword 
                     followed by a unique name for the animation sequence.
                 </p>
-                <h3>Explanation</h3>
+                <h2>Explanation</h2>
                 <ol>
                     <li>
                         <strong>Declaration:</strong> Begin by declaring the @keyframes 
@@ -123,35 +124,35 @@
                     <li>
                         <strong>Implement the Animation:</strong> After creating your custom
                         animation using @keyframes, apply the animation by using the 'animation' 
-                        property. Specify the name of the animation (slide-in in this example), 
+                        property. Specify the name of the animation, 
                         duration, and any other desired properties. <br>
                         <br>
                         For example: <br>
                         img{ animation: slideRight 1s ease;  }
                     </li>
                 </ol>
-                <h3>Reference(s)</h3>
+                <h2>Reference(s)</h2>
                 <ul>
                     <li>
-                        <a href="https://www.youtube.com/watch?v=PjR97QzOrJM&list=PL4cUxeGkcC9iGYgmEd2dm3zAKzyCGDtM5&index=5">CSS Animation Tutorial #4 - Keyframes by Net Ninja</a>
+                        <a href="https://youtu.be/PjR97QzOrJM?si=NrNl7PlS-SvWGUIz" target="_blank">CSS Animation Tutorial #4 - Keyframes</a>
                     </li>
                     <li>
-                        <a href="https://www.w3schools.com/css/css3_animations.asp">CSS Animations by W3Schools</a>                        
+                        <a href="https://www.w3schools.com/css/css3_animations.asp" target="_blank">CSS Animations by W3Schools</a>                        
                     </li>
                 </ul>
-                <h3>Implementation</h3>
+                <h2>Implementation</h2>
                 <ul>
                     <li>
                         <a href="./index.html" target="_blank">Home's header & hiring</a>
                     </li>
                     <li>
-                        <a href="./about.html" target="_blank">About us's more-img class (load-in)</a>
+                        <a href="./about.html#more-img" target="_blank">About us's more-img class (load-in)</a>
                     </li>
                 </ul>
             </div>
             <div class="enhancement-2">
                 <h1>@media</h1>
-                <h3>Description</h3>
+                <h2>Description</h2>
                 <p>
                     @media in CSS is used for creating responsive designs by 
                     applying styles based on specific conditions like screen width 
@@ -159,7 +160,7 @@
                     devices or screen sizes by defining CSS rules that activate only 
                     when certain conditions are met.
                 </p>
-                <h3>Explanation</h3>
+                <h2>Explanation</h2>
                 <ol>
                     <li>
                         <strong>Add @media Rule:</strong> Insert @media rules in your CSS file, followed by the specific condition. <br>
@@ -211,19 +212,19 @@
                         }
                     </li>
                 </ol>
-                <h3>Reference(s)</h3>
+                <h2>Reference(s)</h2>
                 <ul>
                     <li>
-                        <a href="https://www.w3schools.com/css/css_rwd_images.asp">Responsive Web Design - Images by W3Schools</a>
+                        <a href="https://www.w3schools.com/css/css_rwd_images.asp" target="_blank">Responsive Web Design - Images by W3Schools</a>
                     </li>
                     <li>
-                        <a href="https://www.w3schools.com/cssref/css3_pr_mediaquery.php">CSS @media Rule by W3Schools</a>
+                        <a href="https://www.w3schools.com/cssref/css3_pr_mediaquery.php" target="_blank">CSS @media Rule by W3Schools</a>
                     </li>
                 </ul>
-                <h3>Implementation</h3>
+                <h2>Implementation</h2>
                 <ul>
                     <li>
-                        <a href="./apply.html">Apply/Hiring page</a>
+                        <a href="./apply.html" target="_blank">Apply/Hiring page</a>
                     </li>
                 </ul>
             </div>
@@ -233,12 +234,13 @@
         <img class="footer-bg" src="./images/footer.jpg" alt="footer">
         <img class="footer-bg2" src="./images/footer.jpg" alt="footer">
         <div class="about-col">
-            <img src="./images/logo-(white).png" alt="logo">
+            <img src="./images/logo-(white).png" alt="nocxi-logo">
             <p>Subsrcibe for our upcoming latest articles and news resources</p>
-            <input type="email" placeholder=" Email address">
+            <label for="footer-email">Write your email below to get notify!</label>
+            <input type="email" id="footer-email" placeholder=" Email address">
         </div>
         <div class="links-col">
-            <p>Links</p>
+            <h3>Links</h3>
             <ul>
                 <li>About us</li>
                 <li>Meet our team</li>
@@ -248,7 +250,7 @@
             </ul>
         </div>
         <div class="contact-col">
-            <p>Contacts</p>
+            <h3>Contacts</h3>
             <ul>
                 <li>
                     <span class="fa-solid fa-phone"></span>
