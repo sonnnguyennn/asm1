@@ -497,6 +497,7 @@ fieldset {
     padding-bottom: 0.8em;
     position: relative;
     border-radius: 20px;
+    text-align: left;
 }
 fieldset div{
     width: fit-content;

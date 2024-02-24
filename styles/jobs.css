@@ -274,6 +274,9 @@ a {
     padding-left: 2%;
     font-size: 17px;
 }
+.search-box label{
+    display: none;
+}
 .icon-control a{
     height: 30%;
     width: 20%;

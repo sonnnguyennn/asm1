@@ -272,6 +272,9 @@ a {
     padding-left: 2%;
     font-size: 17px;
 }
+.search-box label{
+    display: none;
+}
 .icon-control a{
     height: 30%;
     width: 20%;
@@ -297,6 +300,12 @@ a {
     object-fit: contain;
     cursor: pointer;
 }
+
+
+
+
+
+
 
 /* HERO */
 .hero-content {
@@ -343,71 +352,13 @@ a {
     color: whitesmoke;
 }
 
-@keyframes line {
-    0%{
-        width: 0;
-        opacity: 0;
-    }
-    100%{
-        width: 110%;
-        opacity: 1;
-    }
-}
-@keyframes drop {
-    0% {
-        opacity: 0;
-        top: 35px;
-    }
-    100% {
-        opacity: 1;
-        top: 50px;
-    }
-}
-@keyframes hiringText {
-    0%{
-        transform: translateY(0);
-    }
-    25% {
-        transform: translateY(-20%);
-    }
-    50% {
-        transform: translateY(-5%);
-    }
-    75%{
-        transform: translateY(-20%);
-    }
-    100%{
-        transform: translateY(0);
-    }
-}
-@keyframes titleHero1 {
-    0%{
-        transform: translateY(-20vh);
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(0vh);
-        opacity: 1;
-    }
-}
-@keyframes titleHero2 {
-    0%{
-        transform: translateY(20vh);
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(0vh);
-        opacity: 1;
-    }
-}
-@keyframes background {
-    0%{
-        scale: 1.1;
-    }
-    100%{
-        scale: 1;
-    }
-}
+
+
+
+
+
+
+
 
 /* SERVICE */
 .service {
@@ -502,6 +453,12 @@ a {
     z-index: 10;
 }
 
+
+
+
+
+
+
 /* BUSINESS */
 .business {
     width: 100vw;
@@ -554,7 +511,7 @@ a {
 .business-button{
     width: 12%;
     background-color: #002C57;
-    height: 25%;
+    height: 15%;
     /* outline: none; */
     border: none;
     color: white;
@@ -586,6 +543,12 @@ a {
 .business-button:hover::after{
     height: 100%;
 }
+
+
+
+
+
+
 
 /* MORE */
 .more {
@@ -689,14 +652,11 @@ a {
 }
 
 
-@keyframes slideLeft {
-    from {
-        transform: translateX(300px);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
+
+
+
+
+
 
 /* MEMBERS */
 .member {
@@ -738,9 +698,6 @@ a {
     transform: scale(1.05);
     background-blend-mode: luminosity;
 }
-/* .member-pic img{
-    background-color: #1B1525;
-} */
 .member-pic {
     width: 24vw;
     height: 50vh;
@@ -750,16 +707,39 @@ a {
     background-position: center;
     margin: 0 auto;
     transition: 0.4s ease;
+    display: flex;
+    justify-content: right;
+    transition: 0.4s ease;
 }
 .member-social {
     /* background-color: red; */
-    width: 100%;
+    width: 20%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
     align-self: center;
+    justify-content: flex-end;
     /* justify-content: flex-end; */
+}
+.social-links {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    font-size: 1.5em;
+    background-color: gray;
+    text-align: center;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
+    position: relative;
+}
+.social-links p {
+    display: none;
+}
+.member-box:hover .social-links{
+    transform: translateY(-90deg);
 }
 .member-info {
     height: 10vh;
@@ -780,6 +760,13 @@ a {
 .member-info p {
     color: #454648;
 }
+
+
+
+
+
+
+
 
 /* FOOTER */
 .footer{
@@ -909,4 +896,56 @@ a {
 .icon-col span{
     margin: 0 12px;
     display: block;
+}
+
+
+
+
+
+
+/* ANIMATION */
+@keyframes line {
+    0%{
+        width: 0;
+        opacity: 0;
+    }
+    100%{
+        width: 110%;
+        opacity: 1;
+    }
+}
+@keyframes drop {
+    0% {
+        opacity: 0;
+        top: 35px;
+    }
+    100% {
+        opacity: 1;
+        top: 50px;
+    }
+}
+@keyframes hiringText {
+    0%{
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-20%);
+    }
+    50% {
+        transform: translateY(-5%);
+    }
+    75%{
+        transform: translateY(-20%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes slideLeft {
+    from {
+        transform: translateX(300px);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
