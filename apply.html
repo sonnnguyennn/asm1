@@ -130,14 +130,18 @@
                                     <input type="text" name="Last Name" id="form-general-lname" pattern="^[A-Za-z ]{1,15}$" title="Please enter only alphabetical characters" required>
                                 </div>
                             </div>
+                            <div id="bday">
+                                <label for="form-general-bday">DoB<em>(*)</em></label>&nbsp;
+                                <input type="text" name="DoB" id="form-general-bday" pattern="(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}" title="Please enter the date according to the placeholder" placeholder="dd/mm/yyyy" required>
+                            </div>
                             <div id="gender">Gender<em>(*)</em>
                                 &nbsp;
-                                <input type="radio" name="Gender" value="Male" id="form-gender-male" required>
+                                <input type="radio" name="Gender" value="Male" id="form-gender-male" title="Choose one" required>
                                 <label for="form-gender-male">Male</label>
                                 <input type="radio" name="Gender" value="Female" id="form-gender-female" required>
                                 <label for="form-gender-female">Female</label>
                                 <input type="radio" name="Gender" value="Others" id="form-gender-others" required>
-                                <label for="form-gender-others">Others</label>                              
+                                <label for="form-gender-others">Others</label>
                             </div>
                             <div id="id">
                                 <label for="form-general-ID">National identification number<em>(*)</em></label>&nbsp;
@@ -387,7 +391,7 @@
                                 <input type="radio" name="Design and Develop tools familiarity" id="product-requirement-3" value="4"> 4
                                 <input type="radio" name="Design and Develop tools familiarity" id="product-requirement-3" value="5"> 5
                                 <br><br>
-                                <span class="form-expertise">Expert in:</span>&nbsp;
+                                <span class="product-requirement-4">Expert in:</span>&nbsp;
                                 <input type="checkbox" name="Language[]" id="html" value="HTML">
                                 <label for="html">HTML</label>
                                 <input type="checkbox" name="Language[]" id="css" value="CSS">
@@ -400,10 +404,16 @@
                                 <label for="python">Python</label>
                                 <input type="checkbox" name="Language[]" id="others" value="Others">
                                 <label for="others">Others</label>
-                            </div>
-                            <div>
+                                <br><br>
                                 <label for="checkbox-others">If select others, please note them down below:</label><br>
                                 <textarea name="Other language(s)" id="checkbox-others" cols="50" rows="5" placeholder=" Write here."></textarea>
+                                <br><br>
+                                <label for="product-requirement-5">
+                                    How do you incorporate user-centered design principles into the product 
+                                    development process for websites? Share an example of how you ensured 
+                                    the end product met user needs and expectations.
+                                </label>
+                                <textarea name="Skill questions for P.D." id="product-requirement-5" cols="30" rows="5"></textarea>
                             </div>
                         </fieldset>                        
                     </section>

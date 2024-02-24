@@ -405,6 +405,7 @@ a {
 .container{
     height: 85vh;
     overflow: hidden;
+    margin-top: 15vh;
 }
 .main-slide{
     width: 100vw;

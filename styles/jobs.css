@@ -389,12 +389,12 @@ a {
     text-align: left;
     background-color: #46B1C9;
 }
-.bar1 p,.bar1 ul,.bar3 p,.bar3 ul {
+.jobs-bar ul,ol,p {
     margin-left: 20px;
 }
 .bar2 {
     /* width: 90%; */
-    text-align: right;
+    /* text-align: right; */
     /* display: flex;
     flex-direction: column;
     justify-content: flex-end; */

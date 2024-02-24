@@ -173,7 +173,7 @@ a {
     bottom: -9px;
     left: -6px;
     animation: line 0.5s ease-in-out 0s;
-    /* rotate: -1deg; */
+    rotate: -1deg;
 } 
 .hiring:hover{
     animation: hiringText 2.5s ease-in-out infinite;
