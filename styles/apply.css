@@ -16,6 +16,16 @@ a {
     text-decoration: none;
 }
 
+
+
+
+
+
+
+
+
+
+
 /* HEADER */
 
 .header{
@@ -186,19 +196,19 @@ a {
     height: 35%;
     /* background-color: red; */
     border-radius: 8px;
-    border: 1px solid #84C0C6;
+    border: 1px solid #002C57;
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
 .log-in span{
     /* background-color: red; */
-    color: #46B1C9;
+    color: #002C57;
     font-size: 14px;
     transition: 0.3s ease-in-out;
 }
 .log-in p{
     /* background-color: red; */
-    color: #46B1C9;
+    color: #002C57;
     font-size: 14px;
     transition: 0.3s ease-in-out;
 }
@@ -208,7 +218,7 @@ a {
 .start{
     width: 40%;
     height: 35%;
-    background-color: #84C0C6;
+    background-color: #002C57;
     outline: none;
     border: none;
     border-radius: 8px;
@@ -274,6 +284,9 @@ a {
     padding-left: 2%;
     font-size: 17px;
 }
+.search-box label{
+    display: none;
+}
 .icon-control a{
     height: 30%;
     width: 20%;
@@ -299,6 +312,17 @@ a {
     object-fit: contain;
     cursor: pointer;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 /* HERO */
 .hero-content {
@@ -345,43 +369,13 @@ a {
     color: whitesmoke;
 }
 
-@keyframes line {
-    0%{
-        width: 0;
-        opacity: 0;
-    }
-    100%{
-        width: 110%;
-        opacity: 1;
-    }
-}
-@keyframes drop {
-    0% {
-        opacity: 0;
-        top: 35px;
-    }
-    100% {
-        opacity: 1;
-        top: 50px;
-    }
-}
-@keyframes hiringText {
-    0%{
-        transform: translateY(0);
-    }
-    25% {
-        transform: translateY(-20%);
-    }
-    50% {
-        transform: translateY(-5%);
-    }
-    75%{
-        transform: translateY(-20%);
-    }
-    100%{
-        transform: translateY(0);
-    }
-}
+
+
+
+
+
+
+
 
 
 /* DESCRIPTION */
@@ -425,7 +419,7 @@ a {
 }
 .content-header-start {
     display: flex;
-    color: #46B1C9;
+    color: #002C57;
     font-weight: 600;
 }
 .content-header h2{
@@ -458,6 +452,10 @@ a {
 
 
 
+
+
+
+
 /* FORM */
 .form-background {
     width: 100%;
@@ -484,7 +482,7 @@ form {
     /* float: inherit; */
 }
 form em {
-    color: red;
+    color: #770000;
 }
 .form-sections {
     font-size: 20px;
@@ -495,7 +493,6 @@ fieldset {
     width: 80%;
     border: 2px solid #222 ;
     align-items: center;
-    text-align: justify;
     margin: 0 auto 2.2em;
     padding-bottom: 0.8em;
     position: relative;
@@ -597,10 +594,17 @@ table {
     margin: 0 auto 20px;
     text-align: center;
 }
-th {
+table th {
+    border: 1px solid black;
+    border-radius: 10px;
+}
+table label {
+    width: 100%;
+    font-weight: 700;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border: 1px solid black;
+    background-color: #cbcbcb;
 }
 table textarea {
     border: 1px solid black;
@@ -615,6 +619,14 @@ th {
 h3 {
     font-weight: 500;
 }
+
+
+
+
+
+
+
+
 
 /* FOOTER */
 .footer{
@@ -662,7 +674,7 @@ h3 {
 .about-col img{
     width: 65%;
 }
-.about-col p{
+.about-col p,.about-col label{
     font-size: 1rem;
     line-height: 1.8rem;
     opacity: 0.8;
@@ -683,7 +695,7 @@ h3 {
     padding: 1% 1%;
     /* background-color: red; */
 }
-.links-col p{
+.links-col h3{
     font-size: 1.1rem;
     font-weight: 700;
     margin-bottom: 40px;
@@ -710,7 +722,7 @@ h3 {
     /* background-color: lightpink; */
     padding: 1% 1%;
 }
-.contact-col p{
+.contact-col h3{
     font-size: 1.1rem;
     font-weight: 700;
     margin-bottom: 40px;
@@ -761,4 +773,49 @@ h3 {
     width: 100vw;
     height: 8vh;
     background-color: #001020;
+}
+
+
+
+
+
+
+/* ANIMATIONS */
+
+@keyframes line {
+    0%{
+        width: 0;
+        opacity: 0;
+    }
+    100%{
+        width: 110%;
+        opacity: 1;
+    }
+}
+@keyframes drop {
+    0% {
+        opacity: 0;
+        top: 35px;
+    }
+    100% {
+        opacity: 1;
+        top: 50px;
+    }
+}
+@keyframes hiringText {
+    0%{
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-20%);
+    }
+    50% {
+        transform: translateY(-5%);
+    }
+    75%{
+        transform: translateY(-20%);
+    }
+    100%{
+        transform: translateY(0);
+    }
 }

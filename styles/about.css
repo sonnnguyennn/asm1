@@ -184,19 +184,19 @@ a {
     height: 35%;
     /* background-color: red; */
     border-radius: 8px;
-    border: 1px solid #84C0C6;
+    border: 1px solid #002C57;
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
 .log-in span{
     /* background-color: red; */
-    color: #46B1C9;
+    color: #002C57;
     font-size: 14px;
     transition: 0.3s ease-in-out;
 }
 .log-in p{
     /* background-color: red; */
-    color: #46B1C9;
+    color: #002C57;
     font-size: 14px;
     transition: 0.3s ease-in-out;
 }
@@ -206,7 +206,7 @@ a {
 .start{
     width: 40%;
     height: 35%;
-    background-color: #84C0C6;
+    background-color: #002C57;
     outline: none;
     border: none;
     border-radius: 8px;
@@ -546,14 +546,14 @@ a {
     font-weight: 500;
     /* margin: 20px 0; */
 }
-.business-content h2 {
+.business-content h1 {
     font-size: 7em;
     color: white;
     margin: 25px 0;
 }
 .business-button{
     width: 12%;
-    background-color: #46B1C9;
+    background-color: #002C57;
     height: 25%;
     /* outline: none; */
     border: none;
@@ -622,7 +622,7 @@ a {
 .more-title-start span {
     /* margin-left: 10px; */
     font-weight: 700;
-    color:#46B1C9;
+    color:#002C57;
     /* background-color: red; */
 }
 .more-title h1{
@@ -631,7 +631,7 @@ a {
 }
 .more-text {
     font-size: 1.1rem;
-    color: gray;
+    color: #454648;
     /* margin-top: 300px; */
     line-height: 2rem;
     
@@ -652,12 +652,12 @@ a {
     padding: 20px 0;
 }
 .more-features p {
-    color: gray;
+    color: #454648;
     /* margin-top: 10px; */
     line-height:1.8rem;
     /* max-lines: 2; */
 }
-.more-features h3{
+.more-features h2{
     margin-bottom:20px;
 }
 .more-features img {
@@ -716,7 +716,7 @@ a {
 .member-meet span {
     /* margin-left: 10px; */
     font-weight: 700;
-    color: #46B1C9;
+    color: #002C57;
 }
 .member-header h2 {
     font-size: 3em;
@@ -778,7 +778,7 @@ a {
     color: #002C57;
 }
 .member-info p {
-    color: gray;
+    color: #454648;
 }
 
 /* FOOTER */
@@ -826,7 +826,7 @@ a {
 .about-col img{
     width: 65%;
 }
-.about-col p{
+.about-col p,.about-col label{
     font-size: 1rem;
     line-height: 1.8rem;
     opacity: 0.8;
@@ -847,7 +847,7 @@ a {
     padding: 1% 1%;
     /* background-color: red; */
 }
-.links-col p{
+.links-col h3{
     font-size: 1.1rem;
     font-weight: 700;
     margin-bottom: 40px;
@@ -874,7 +874,7 @@ a {
     /* background-color: lightpink; */
     padding: 1% 1%;
 }
-.contact-col p{
+.contact-col h3{
     font-size: 1.1rem;
     font-weight: 700;
     margin-bottom: 40px;

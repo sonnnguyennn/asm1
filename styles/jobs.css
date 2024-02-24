@@ -184,32 +184,33 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width:38%;
+    width: 36%;
     height: 35%;
     /* background-color: red; */
     border-radius: 8px;
-    border: 1px solid #84C0C6;
+    border: 1px solid #002C57;
     cursor: pointer;
     transition: 0.3s ease-in-out;
-    padding-right: 2%;
 }
 .log-in span{
-    color: #46B1C9;
+    /* background-color: red; */
+    color: #002C57;
     font-size: 14px;
     transition: 0.3s ease-in-out;
 }
 .log-in p{
-    color: #46B1C9;
+    /* background-color: red; */
+    color: #002C57;
     font-size: 14px;
     transition: 0.3s ease-in-out;
 }
 .log-in span{
-    margin: 0 10px;
+    margin: 0 10px 0 0;
 }
 .start{
     width: 40%;
     height: 35%;
-    background-color: #46B1C9;
+    background-color: #002C57;
     outline: none;
     border: none;
     border-radius: 8px;
@@ -301,6 +302,8 @@ a {
 
 
 
+
+
 /* HERO */
 .hero-content {
     width: 100%;
@@ -349,6 +352,11 @@ a {
 
 
 
+
+
+
+
+
 /* JOBS */
 .jobs {
     width: 100%;
@@ -364,7 +372,7 @@ a {
 .jobs-title span {
     font-size: 1.2em;
     font-weight: 500;
-    color: #46B1C9;
+    color: #002C57;
 }
 .jobs-title h1 {
     font-size: 3em;
@@ -373,6 +381,7 @@ a {
     width: 100%;
     margin: 10px 2px ;
 }
+
 .bar1,.bar3 {
     text-align: left;
     background-color: #46B1C9;
@@ -381,18 +390,16 @@ a {
     margin-left: 20px;
 }
 .bar2 {
-    width: 90%;
+    /* width: 90%; */
     text-align: right;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    background-color: red;
+    justify-content: flex-end; */
+    /* background-color: red; */
 }
-
-
 .jobs-button{
     width: 12%;
-    background-color: #46B1C9;
+    background-color: #002C57;
     /* height: 25%; */
     height: 8vh;
     /* outline: none; */
@@ -426,6 +433,11 @@ a {
 .jobs-button:hover::after{
     height: 100%;
 }
+
+
+
+
+
 
 
 
@@ -474,7 +486,7 @@ a {
 .about-col img{
     width: 65%;
 }
-.about-col p{
+.about-col p,.about-col label{
     font-size: 1rem;
     line-height: 1.8rem;
     opacity: 0.8;
@@ -495,7 +507,7 @@ a {
     padding: 1% 1%;
     /* background-color: red; */
 }
-.links-col p{
+.links-col h2{
     font-size: 1.1rem;
     font-weight: 700;
     margin-bottom: 40px;
@@ -522,7 +534,7 @@ a {
     /* background-color: lightpink; */
     padding: 1% 1%;
 }
-.contact-col p{
+.contact-col h2{
     font-size: 1.1rem;
     font-weight: 700;
     margin-bottom: 40px;
