@@ -735,7 +735,7 @@ a {
     transition: transform 0.5s ease;
     position: relative;
 }
-.social-links p {
+.social-links h1 {
     display: none;
 }
 .member-box:hover .social-links{
