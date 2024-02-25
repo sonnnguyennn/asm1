@@ -391,13 +391,12 @@ a {
 
 }
 .description-img {
-    background-image: url(https://img.freepik.com/free-photo/researchers-looking-alternative-energy-souces_23-2149311493.jpg);
     background-repeat: no-repeat;
     border-radius: 20px;
-    width: 54%;
+    width: 50%;
     height: 70%;
     /* background-color: red; */
-    margin-left: 4rem;
+    margin-left: 5rem;
     margin-right: 5rem;
     position: relative;
 }
@@ -545,15 +544,18 @@ form input[type=text], input[type=email] ,select {
     border-radius: 5px;
     padding: 3px 0;
 }
-input[type=radio] {
+form input[type=radio] {
     cursor: pointer;
     margin: 0 2px 0 10px;
 }
-input[type=radio] + label {
+form input[type=radio] + label,input[type=checkbox] + label {
     cursor: pointer;
 }
 form input[type=radio]:checked + label {
     color: #002c57;
+}
+form input[type=checkbox]:checked + label {
+    color: #002C57;
 }
 input[type=checkbox] {
     cursor: pointer;

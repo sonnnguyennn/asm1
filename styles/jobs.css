@@ -383,13 +383,18 @@ a {
 .jobs-bar {
     width: 100%;
     margin: 10px 2px ;
+    word-spacing: 5px;
+    line-height: 1.5em;
 }
-
+.jobs-bar span{
+    font-size: 1.3em;
+    font-weight: 600;
+}
 .bar1,.bar3 {
     text-align: left;
     background-color: #46B1C9;
 }
-.jobs-bar ul,ol,p {
+.jobs-bar ul,.jobs-bar ol,.jobs-bar p {
     margin-left: 20px;
 }
 .bar2 {
