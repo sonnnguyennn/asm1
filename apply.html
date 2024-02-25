@@ -21,25 +21,24 @@
         </div>
         <ul class="main-menu">
             <li class="drop"><a href="index.html">Home</a></li>
-            <li class="drop"><a href="">Pages</a>
+            <li class="drop"><a href="#">Pages</a>
                 <ul class="pages-drop">
-                    <li><a href="team.html">Our Team</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="FAQs.html">FAQs</a></li>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">FAQs</a></li>
                 </ul>
             </li>
-            <li class="drop"><a href="#">Services</a>
+            <li class="drop"><a href="./jobs.html">Jobs</a>
                 <ul class="services-drop">
-                    <li><a href="app.html">Applications</a></li>
-                    <li><a href="servers.html">Servers Resources</a></li>
-                    <li><a href="UIUX.html">UI/UX Designing</a></li>
-                    <li><a href="cyber-secuity.html">Cyber Security</a></li>
+                    <li><a href="#">Server Administrator</a></li>
+                    <li><a href="#">Security Specialist</a></li>
+                    <li><a href="#">Product Development</a></li>
                 </ul>
             </li>
-            <li class="drop"><a href="about.html">About us</a></li>
-            <li class="drop"><a href="enhancements.html">Enhancements</a></li>
+            <li class="drop"><a href="./about.html">About us</a></li>
+            <li class="drop"><a href="./enhancements.html">Enhancements</a></li>
             <li class="hiring">
-                <a href="jobs.html">We are Hiring!</a>
+                <a href="./jobs.html">We are Hiring!</a>
             </li>
         </ul>
         <div class="icon-control">
@@ -106,7 +105,9 @@
                     <div class="helpdesk-des">
                         The Help Desk is located in ATC620. Open 9 A.M. to 5 P.M. Monday to Friday <br>
                         Kindly check your email frequently for the response pertaining to the job application. <br>
-                        <em>All (*) marked fields are required unless specified optional</em>
+                        Please only complete the part according to the job reference number you wrote in the bracket. <br>
+                        The <em>(*)</em> marked fields in other jobs can be can be omitted. <br>
+                        <em>All (*) marked fields are required.</em>
                     </div>
 
                     <br><hr>
@@ -119,19 +120,26 @@
                             <div id="name">
                                 <div>
                                     <label for="form-general-fname">First Name<em>(*)</em></label>&nbsp;
-                                    <input type="text" name="First Name" id="form-general-fname" pattern="^[A-Za-z ]{1,15}$" title="Please enter only alphabetical characters" required>
+                                    <input type="text" name="First Name" id="form-general-fname" pattern="^[A-Za-z]{1,20}$" title="Please enter only alphabetical characters" required>
                                 </div>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <div>
                                     <label for="form-general-lname">Last Name<em>(*)</em></label>&nbsp;
-                                    <input type="text" name="Last Name" id="form-general-lname" pattern="^[A-Za-z ]{1,15}$" title="Please enter only alphabetical characters" required>
+                                    <input type="text" name="Last Name" id="form-general-lname" pattern="^[A-Za-z]{1,20}$" title="Please enter only alphabetical characters" required>
                                 </div>
                             </div>
                             <div id="bday">
                                 <label for="form-general-bday">DoB<em>(*)</em></label>&nbsp;
                                 <input type="text" name="DoB" id="form-general-bday" pattern="(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}" title="Please enter the date according to the placeholder" placeholder="dd/mm/yyyy" required>
                             </div>
-                            <div id="gender">Gender<em>(*)</em>
+                            <div id="id">
+                                <label for="form-general-ID">National identification number<em>(*)</em></label>&nbsp;
+                                <input type="text" name="NID" id="form-general-ID" pattern="[A-Z0-9]{12}" title="Please enter your national ID" required>
+                            </div>
+                        </fieldset>
+                        <fieldset class="form-gender-detail">
+                            <legend>Gender</legend>
+                            <div id="gender">Your gender<em>(*)</em>
                                 &nbsp;
                                 <input type="radio" name="Gender" value="Male" id="form-gender-male" title="Choose one" required>
                                 <label for="form-gender-male">Male</label>
@@ -140,32 +148,45 @@
                                 <input type="radio" name="Gender" value="Others" id="form-gender-others" required>
                                 <label for="form-gender-others">Others</label>
                             </div>
-                            <div id="id">
-                                <label for="form-general-ID">National identification number<em>(*)</em></label>&nbsp;
-                                <input type="text" name="NID" id="form-general-ID" pattern="[A-Z0-9]{12}" title="Please enter your national ID" required>
-                            </div>
                         </fieldset>
                         <fieldset class="form-contact-details">
                             <legend>Contact</legend>
                             <div>
-                                <!-- pattern [0-9]{12} -->
                                 <label for="form-phonenumb">Phone<em>(*)</em></label>&nbsp;
-                                <input type="text" name="Phone number" id="form-phonenumb" pattern="^[0-9]{3}-[0-9]{3}-[0-9]{4}$" placeholder=" 123-456-7890" title="Write according to the placeholder" required>
+                                <input type="text" name="Phone number" id="form-phonenumb" pattern="[0-9 ]{8-12}" placeholder=" 012345678901" title="Write according to the placeholder" required>
                             </div>
                             <div>
                                 <label for="form-email">Email<em>(*)</em></label>&nbsp;
-                                <input type="email" name="Email" id="form-email" placeholder=" abc123@domain.com" title="Write according to the placeholder" required>
+                                <input type="email" name="Email" id="form-email" placeholder=" abc123@gmail.com" title="Write according to the placeholder" required>
                             </div>
                         </fieldset>
                         <fieldset class="form-address-details">
                             <legend>Address</legend>
-                            <div class="home-address">
-                                <label for="first-address">Permanent home address<em>(*)</em></label>&nbsp;
-                                <input type="text" name="Home Address" id="first-address" pattern="[A-Za-z0-9\s,'-]*" placeholder=" Eg: Street A, City B" title="Write according to the placeholder" required>
+                            <div class="street-address">
+                                <label for="first-address">Street address<em>(*)</em></label>&nbsp;
+                                <input type="text" name="Street Address" id="first-address" maxlength="40" placeholder=" Eg: Street A" title="Write according to the placeholder" required>
+                            </div>
+                            <div class="suburd-address">
+                                <label for="second-address">Suburb/town<em>(*)</em></label>&nbsp;
+                                <input type="text" name="Suburb/town" id="second-address" maxlength="40" placeholder=" Eg: Suburb B" title="Write according to the placeholder" required>
                             </div>
                             <div class="postal-address">
-                                <label for="second-address">Postal address<em>(*)</em></label>&nbsp;
-                                <input type="text" name="Postal Address" id="second-address" pattern="[A-Za-z0-9\s,'-.#]*" placeholder=" Eg: 100000" title="Write according to the placeholder" required>
+                                <label for="third-address">Postcode<em>(*)</em></label>&nbsp;
+                                <input type="text" name="Postcode" id="third-address" pattern="[0-9]{4}" placeholder=" Eg: 1234" title="Write according to the placeholder" required>
+                            </div>
+                            <div class="state-address">
+                                <label for="fourth-address">Select State:<em>(*)</em></label>&nbsp;
+                                <select id="fourth-address" name="State">
+                                    <option value="">Please select</option>
+                                    <option value="VIC">VIC</option>
+                                    <option value="NSW">NSW</option>
+                                    <option value="QLD">QLD</option>
+                                    <option value="NT">NT</option>
+                                    <option value="WA">WA</option>
+                                    <option value="SA">SA</option>
+                                    <option value="TAS">TAS</option>
+                                    <option value="ACT">ACT</option>
+                                </select>
                             </div>
                         </fieldset>                        
                     </section>
@@ -263,13 +284,9 @@
                         <h2 class="form-sections">Section D - Employment Desired</h2>
                         <fieldset id="sec4">
                             <legend>Employment</legend>
-                            <div>Applying for position:<em>(*)</em>
-                                <input type="radio" name="Position" value="ServerAdministrator" id="position-server" required="required" checked>
-                                <label for="position-server">Server Administrator</label>
-                                <input type="radio" name="Position" value="SecuritySpecialist" id="position-security" required="required">
-                                <label for="position-security">Security Specialist</label>
-                                <input type="radio" name="Position" value="ProductDevelopment" id="position-product" required="required">
-                                <label for="position-product">Product Development</label>
+                            <div>
+                                <label for="reference-number">Job reference number:<em>(*)</em></label>&nbsp;
+                                <input type="text" name="Job Reference Number" id="reference-number" pattern="[A-Za-z0-9]{5}" required>
                             </div>
                             <div>
                                 <label for="year-experience">Years of experience for the selected position<em>(*)</em></label>&nbsp;
@@ -284,7 +301,7 @@
                                 </select> 
                             </div>
                             <div>
-                                <h2>For Server Administrator:</h2>
+                                <h2>For Server Administrator - SA101:</h2>
                                 <br>
                                 <label for="server-requirement-1">
                                     Do you have any degree in Computer Science, Information Technology, or related field?<br>
@@ -299,9 +316,9 @@
                                 <textarea name="Certification for S.A." id="server-requirement-2" cols="30" rows="5"></textarea>
                                 <br><br>
                                 <span id="server-requirement-3">
-                                    How familiar are you with virtualization technologies (e.g., VMware, Hyper-V) on the scale of 1-5 ?
+                                    How familiar are you with virtualization technologies (e.g., VMware, Hyper-V) on the scale of 1-5 ?<em>(*)</em>
                                 </span><br>
-                                <input type="radio" name="Virtual Technology familiarity" id="server-requirement-3-1" value="1">
+                                <input type="radio" name="Virtual Technology familiarity" id="server-requirement-3-1" value="1" checked required>
                                 <label for="server-requirement-3-1">1</label>
                                 <input type="radio" name="Virtual Technology familiarity" id="server-requirement-3-2" value="2">
                                 <label for="server-requirement-3-2">2</label>
@@ -318,7 +335,7 @@
                                 <textarea name="Skill question for S.A." id="server-requirement-4" cols="30" rows="5"></textarea>
                             </div>
                             <div>
-                                <h2>For Security Specialist:</h2>
+                                <h2>For Security Specialist - SS201:</h2>
                                 <br>
                                 <label for="security-requirement-1">
                                     Do you have any degree in Cybersecurity, Information Technology, or a related field ? <br>
@@ -335,9 +352,9 @@
                                 <textarea name="Certification for S.S." id="security-requirement-2" cols="30" rows="5"></textarea>
                                 <br><br>
                                 <span id="security-requirement-3">
-                                    How familiar are you with security regulatory compliance (e.g., GDPR, HIPAA) on the scale of 1-5 ?
+                                    How familiar are you with security regulatory compliance (e.g., GDPR, HIPAA) on the scale of 1-5 ?<em>(*)</em>
                                 </span><br>
-                                <input type="radio" name="Regulatory Compliance familiarity" id="security-requirement-3-1" value="1">
+                                <input type="radio" name="Regulatory Compliance familiarity" id="security-requirement-3-1" value="1" checked required>
                                 <label for="security-requirement-3-1">1</label>
                                 <input type="radio" name="Regulatory Compliance familiarity" id="security-requirement-3-2" value="2">
                                 <label for="security-requirement-3-2">2</label>
@@ -357,7 +374,7 @@
                                 <textarea name="Skill question for S.S." id="security-requirement-4" cols="30" rows="5"></textarea>
                             </div>
                             <div>
-                                <h2>For Product Development:</h2>
+                                <h2>For Product Development - PD303:</h2>
                                 <br>
                                 <label for="product-requirement-1">
                                     Do you have any degree in Product Design, Engineering, or a related field ? <br>
@@ -374,10 +391,10 @@
                                 <textarea name="Project for P.D." id="product-requirement-2" cols="30" rows="7"></textarea>
                                 <br><br>
                                 <span id="product-requirement-3">
-                                    How familiar are you with product design and development tools on the scale of 1-5 ?
+                                    How familiar are you with product design and development tools on the scale of 1-5 ?<em>(*)</em>
                                 </span>
                                 <br>
-                                <input type="radio" name="Design and Develop tools familiarity" id="product-requirement-3-1" value="1">
+                                <input type="radio" name="Design and Develop tools familiarity" id="product-requirement-3-1" value="1" checked required>
                                 <label for="product-requirement-3-1">1</label>
                                 <input type="radio" name="Design and Develop tools familiarity" id="product-requirement-3-2" value="2">
                                 <label for="product-requirement-3-2">2</label>
@@ -389,7 +406,7 @@
                                 <label for="product-requirement-3-5">5</label>
                                 <br><br>
                                 <span class="product-requirement-4">Expert in:</span>&nbsp;
-                                <input type="checkbox" name="Language[]" id="html" value="HTML">
+                                <input type="checkbox" name="Language[]" id="html" value="HTML" checked>
                                 <label for="html">HTML</label>
                                 <input type="checkbox" name="Language[]" id="css" value="CSS">
                                 <label for="css">CSS</label>
@@ -400,7 +417,7 @@
                                 <input type="checkbox" name="Language[]" id="python" value="Python">     
                                 <label for="python">Python</label>
                                 <input type="checkbox" name="Language[]" id="others" value="Others">
-                                <label for="others">Others</label>
+                                <label for="others">Others skills..</label>
                                 <br><br>
                                 <label for="checkbox-others">If select others, please note them down below:</label><br>
                                 <textarea name="Other language(s)" id="checkbox-others" cols="50" rows="5" placeholder=" Write here."></textarea>
