@@ -458,7 +458,7 @@ description: [about.html]
 
 
 
-.member-pic {
+.member-front-pic {
     width: 24vw;
     height: 50vh;
     background-image: url(../images/member-3.png);
@@ -469,15 +469,14 @@ description: [about.html]
     display: flex;
     justify-content: right;
 }
-.member-social {
-    /* background-color: red; */
+/* .member-social {
+    background-color: red;
     width: 20%;
-    height: 100%;
+    height: 40%;
     display: flex;
     flex-direction: column;
     align-self: center;
     justify-content: flex-end;
-    /* justify-content: flex-end; */
 }
 .social-links {
     width: 50px;
@@ -497,26 +496,67 @@ description: [about.html]
 }
 .social-links p {
     display: none;
-}
-.member-info {
+} */
+.member-introduce {
     height: 10vh;
     line-height: 2em;
-    /* background-color: #002c57; */
+    background-color: #002c57;
     display: block;
     align-self: center;
     padding: 10px 0;
     margin: 20px 0;
 }
-.member-info h3 {
+.member-introduce h3 {
     font-size: 1.5em;
     transition: 0.5s ease-in-out;
 }
-.member-info h3:hover {
+.member-introduce h3:hover {
     color: #002C57;
 }
-.member-info p {
+.member-introduce p {
     color: #454648;
 }
+
+.member-container {
+    width: 100%;
+    overflow: hidden;
+}
+.member-info {
+    width: 50%;
+    height: 50vh;
+    background-color: #002C57;
+    overflow: hidden;
+    line-height: 25px;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.member-info dt {
+    float: left;
+    width: 150px; 
+    clear: left;
+    font-weight: bold; 
+}
+.member-info dd {
+    margin-left: 160px;
+}
+figure {
+    width: 50%;
+    float: right;
+    box-sizing: border-box;
+    padding: 10px;
+}
+figure img {
+    /* float: right; */
+    width: 50%;
+    /* height: 50%; */
+    border: 5px solid black;
+    border-radius: 1px;
+}
+
+
+
+
 .member-schedule {
     width: 100%;
     /* height: ; */
