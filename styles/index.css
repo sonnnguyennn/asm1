@@ -33,6 +33,8 @@ a {
     box-shadow: 0 0 10px 2px grey;
     z-index: 100;
     position: fixed;
+    /* display: none; */
+    /* visibility: hidden; */
     /* background-color: blue; */
 }
 .logo {
@@ -1139,7 +1141,7 @@ a {
     height: 1px;
     left: 0;
     top: 50%;
-    background-color: #46B1C9;
+    background-color: #002c57;
 }
 .project-tagline::after{
     content: "";
@@ -1148,7 +1150,7 @@ a {
     height: 1px;
     right: 0;
     top: 50%;
-    background-color:#46B1C9;
+    background-color:#002c57;
 }
 .project-content h3{
     font-size: 1.3rem;
