@@ -103,7 +103,26 @@ description: [jobs.html]
 
 
 
-
+@keyframes titleHero1 {
+    0%{
+        transform: translateY(-20vh);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0vh);
+        opacity: 1;
+    }
+}
+@keyframes titleHero2 {
+    0%{
+        transform: translateY(20vh);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0vh);
+        opacity: 1;
+    }
+}
 @keyframes background {
     0%{
         scale: 1.1;
