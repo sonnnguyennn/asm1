@@ -167,7 +167,6 @@ a {
     bottom: -9px;
     left: -6px;
     animation: line 0.5s ease-in-out 0s;
-    rotate: -1deg;
 } 
 .hiring:hover{
     animation: hiringText 2.5s ease-in-out infinite;
@@ -228,7 +227,7 @@ a {
 }
 .iconsearch-ctr{
     height: 35%;
-    aspect-ratio: 1;
+    aspect-ratio: 1 / 1;
     /* background-color: #84C0C6 ; */
     display: flex;
     justify-content: center;
@@ -262,7 +261,7 @@ a {
 .wrap{
     width: 100vw;
     height: 50vh;
-    background-color: #001020;
+    background-color: #001020 ;
     top: 0;
     left: 0;
     opacity: 0.4;
@@ -302,7 +301,7 @@ a {
 }
 .icon img{
     width: 45%;
-    aspect-ratio: 1;
+    aspect-ratio: 1 / 1;
     object-fit: contain;
     cursor: pointer;
 }
@@ -450,7 +449,7 @@ a {
     left: -5%;
     height: 100%;
     opacity: 0.4;
-    rotate: 180deg;
+    /* rotate: 180deg; */
     z-index: 50;
 }
 .footer-bg2{

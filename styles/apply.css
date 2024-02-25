@@ -173,7 +173,6 @@ a {
     bottom: -9px;
     left: -6px;
     animation: line 0.5s ease-in-out 0s;
-    rotate: -1deg;
 } 
 .hiring:hover{
     animation: hiringText 2.5s ease-in-out infinite;
@@ -234,7 +233,7 @@ a {
 }
 .iconsearch-ctr{
     height: 35%;
-    aspect-ratio: 1;
+    aspect-ratio: 1 / 1;
     /* background-color: #84C0C6 ; */
     display: flex;
     justify-content: center;
@@ -268,7 +267,7 @@ a {
 .wrap{
     width: 100vw;
     height: 50vh;
-    background-color: #001020;
+    background-color: #001020 ;
     top: 0;
     left: 0;
     opacity: 0.4;
@@ -308,7 +307,7 @@ a {
 }
 .icon img{
     width: 45%;
-    aspect-ratio: 1;
+    aspect-ratio: 1 / 1;
     object-fit: contain;
     cursor: pointer;
 }
@@ -389,13 +388,12 @@ a {
 
 }
 .description-img {
-    background-image: url(https://img.freepik.com/free-photo/researchers-looking-alternative-energy-souces_23-2149311493.jpg);
     background-repeat: no-repeat;
     border-radius: 20px;
-    width: 54%;
+    width: 50%;
     height: 70%;
     /* background-color: red; */
-    margin-left: 4rem;
+    margin-left: 5rem;
     margin-right: 5rem;
     position: relative;
 }
@@ -546,15 +544,18 @@ form input[type=text], input[type=email] ,select {
     border-radius: 5px;
     padding: 3px 0;
 }
-input[type=radio] {
+form input[type=radio] {
     cursor: pointer;
     margin: 0 2px 0 10px;
 }
-input[type=radio] + label {
+form input[type=radio] + label,input[type=checkbox] + label {
     cursor: pointer;
 }
 form input[type=radio]:checked + label {
     color: #002c57;
+}
+form input[type=checkbox]:checked + label {
+    color: #002C57;
 }
 input[type=checkbox] {
     cursor: pointer;
@@ -651,7 +652,7 @@ h3 {
     left: -5%;
     height: 100%;
     opacity: 0.4;
-    rotate: 180deg;
+    transform: rotate(180deg);
     z-index: 50;
 }
 .footer-bg2{
