@@ -1063,15 +1063,15 @@ a {
     width: 100%;
     height: 40%;
     position: relative;
-    background-color: red;
+    /* background-color: red; */
 }
-.background1{
+.background-1{
     background-color: #664677;
 }
-.background2{
+.background-2{
     background-color: #3d5c77;
 }
-.background3{
+.background-3{
     background-color: #575729;
 }
 .project-img:nth-child(2){
@@ -1095,13 +1095,13 @@ a {
     mix-blend-mode: luminosity;
     transition: 0.4s ease-in-out;
 }
-.background1::after{
+.background-1::after{
     background-image: url(./images/project-1.jpg);
 }
-.background2::after{
+.background-2::after{
     background-image: url(./images/project-2.jpg);
 }
-.background3::after{
+.background-3::after{
     background-image: url(./images/project-3.jpg);
 }
 .project-content{
