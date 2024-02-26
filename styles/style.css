@@ -2,7 +2,7 @@
 filename: [style.css]
 author: [cos10026.2 - g5]
 created: [25/02/2024]
-last modified: [25/02/2024]
+last modified: [26/02/2024]
 description: [all web pages]
 */
 
@@ -44,17 +44,13 @@ a {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 0 10px 2px grey;
-    z-index: 100;
+    z-index: 999;
     position: fixed;
-    /* display: none; */
-    /* visibility: hidden; */
-    /* background-color: blue; */
 }
 .logo {
     width: 11%;
     margin-left: 3%;
     cursor: pointer;
-    /* background-color: red; */
 }
 .logo img{
     width: 100%;
@@ -69,7 +65,6 @@ a {
     font-size: 16px;
     font-weight: 400;
     line-height: 32px;
-    /* background-color: gray; */
 }
 .drop{
     position: relative;
@@ -117,7 +112,6 @@ a {
 }
 .pages-drop li, .services-drop li{
     transition: 0.2s linear;
-    /* border-radius: 10px; */
     padding-left: 10px;
 }
 .pages-drop li:nth-child(3), .services-drop li:nth-child(4){
@@ -179,7 +173,6 @@ a {
     justify-content: space-around;
     align-items: center;
     margin-right: 2%;
-    /* background-color:lightblue; */
 }
 .log-in{
     display: flex;
@@ -187,20 +180,17 @@ a {
     align-items: center;
     width: 36%;
     height: 35%;
-    /* background-color: red; */
     border-radius: 8px;
     border: 1px solid #002C57;
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
 .log-in span{
-    /* background-color: red; */
     color: #002C57;
     font-size: 14px;
     transition: 0.3s ease-in-out;
 }
 .log-in p{
-    /* background-color: red; */
     color: #002C57;
     font-size: 14px;
     transition: 0.3s ease-in-out;
@@ -228,7 +218,6 @@ a {
 .iconsearch-ctr{
     height: 35%;
     aspect-ratio: 1 / 1;
-    /* background-color: #84C0C6 ; */
     display: flex;
     justify-content: center;
     border-radius: 5px;
@@ -346,7 +335,6 @@ a {
 .about-col{
     width: 23%;
     height: 65%;
-    /* background-color: lightblue; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -374,9 +362,8 @@ a {
     flex-direction: column;
     justify-content: space-between;
     padding: 1% 1%;
-    /* background-color: red; */
 }
-.links-col h3{
+.links-col h2{
     font-size: 1.1rem;
     font-weight: 700;
     margin-bottom: 40px;
@@ -387,7 +374,6 @@ a {
     flex-direction: column;
     justify-content: space-between;
     flex: 1;
-    /* background-color: blue; */
 }
 .links-col ul li{
     font-size: 0.9rem;
@@ -400,10 +386,9 @@ a {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    /* background-color: lightpink; */
     padding: 1% 1%;
 }
-.contact-col h3{
+.contact-col h2{
     font-size: 1.1rem;
     font-weight: 700;
     margin-bottom: 40px;
@@ -433,7 +418,6 @@ a {
     padding: 1% 1%;
     font-size: 2rem;
     color:#46B1C9;
-    /* background-color: red; */
 }
 .icon-col span{
     margin: 0 12px;

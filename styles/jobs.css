@@ -2,7 +2,7 @@
 filename: [jobs.css]
 author: [cos10026.2 - g5]
 created: [10/02/2024]
-last modified: [25/02/2024]
+last modified: [26/02/2024]
 description: [jobs.html]
 */
 
@@ -63,7 +63,7 @@ description: [jobs.html]
     width: 14%;
     height: 10%;
 }
-.hero-items h2{
+.hero-items h1{
     font-size: 4em;
     color: white;
     animation: titleHero1 3s ease-in-out;
