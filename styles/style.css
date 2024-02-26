@@ -455,8 +455,9 @@ a {
     align-items: center;
     justify-content: space-evenly;
 }
-.ref p{
+.ref h1{
     font-weight: 700;
+    font-size: 1em;
 }
 .ref a{
     /* margin:auto; */
