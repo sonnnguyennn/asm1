@@ -7,6 +7,12 @@ description: [jobs.html]
 */
 
 
+
+
+
+
+
+
 /* HEADER */
 .drop:nth-child(3){
     opacity: 1;
@@ -79,7 +85,6 @@ description: [jobs.html]
     background-color: #002c57;
     border: none;
     position: relative;
-    /* text-align: center; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -140,14 +145,6 @@ description: [jobs.html]
     justify-content: space-around;
     align-items: center;
 }
-
-
-
-
-
-
-
-
 .job-item{
     width: 30%;
     height: 90%;
@@ -169,16 +166,6 @@ description: [jobs.html]
 .job-item:hover .job-item-inner {
     transform: rotateY(180deg);
 }
-
-
-
-
-
-
-
-
-
-
 .job-item:first-child:hover{
     z-index: 20;
     transform: translateX(111%);
@@ -210,9 +197,6 @@ description: [jobs.html]
     z-index: 15;
     transition: 1s ease-in-out;
 }
-
-
-
 .job-item:nth-child(2):hover::before{
     transform: scale(2);
 }
@@ -276,27 +260,6 @@ description: [jobs.html]
     z-index: 15;
     transition: 1s ease-in-out;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .job-front, .job-back {
     position: absolute;
     width: 100%;
@@ -368,7 +331,6 @@ description: [jobs.html]
     justify-content: center;  
     padding: 1% 12%;
     display: flex;
-    /* align-items: center; */
 }
 .requirements::before{
     content: "";
@@ -515,7 +477,7 @@ description: [jobs.html]
 
 
 
-
+/* ANIMATIONS */
 @keyframes titleHero1 {
     0%{
         transform: translateY(-20vh);

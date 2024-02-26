@@ -346,8 +346,20 @@ description: [about.html]
     position: relative;
     display: flex;
     flex-direction: column;
-
     align-items: center;
+}
+.member-header, .member-group, .member-people, .member-schedule {
+    position: relative;
+    z-index: 20;
+}
+.circle-bg{
+    position: absolute;
+    width: 40%;
+    aspect-ratio: 1 / 1;
+    right: 0;
+    bottom: -3%;
+    z-index: 10;
+    transform: rotate(45deg);
 }
 .member-header {
     width: 100%;

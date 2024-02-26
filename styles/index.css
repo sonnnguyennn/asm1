@@ -7,6 +7,9 @@ description: [index.html]
 */
 
 
+
+
+
 /* HEADER */
 .drop:nth-child(1){
     opacity: 1;
@@ -21,6 +24,9 @@ description: [index.html]
     height: 5%;
     background-color: #84C0C6;
 }
+
+
+
 
 /* HERO CONTENT */
 .container{
