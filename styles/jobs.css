@@ -370,7 +370,7 @@ description: [jobs.html]
     line-height: 1.4em;
     margin: 1em 0;
     color: white;
-    font-weight: 400;
+    font-weight: 300;
 }
 .back-wrap:hover .requirements{
     right: -88%;
@@ -423,14 +423,10 @@ description: [jobs.html]
     font-size: 90%;
     border-radius: 5px;
     pointer-events: auto;
-    margin: 0 auto;
+    margin: 2% auto;
     cursor: pointer;
     position: relative;
     animation: jobButton 3s ease-in-out infinite ;
-}
-.see-more::before{
-    content: "";
-
 }
 .jobs a{
     width: 12%;
