@@ -30,7 +30,7 @@ description: [enhancements.html]
 .hero-content {
     width: 100vw;
     height: 45vh;
-    background-image: url(../images/page-header-bg.png);
+    background-image: url(./images/page-header-bg.png);
     background-position: center;
     background-color: #1B1525;
     background-size: cover;
@@ -136,45 +136,3 @@ description: [enhancements.html]
 }
 
 
-
-
-
-
-/* ANIMATION */
-@keyframes line {
-    0%{
-        width: 0;
-        opacity: 0;
-    }
-    100%{
-        width: 110%;
-        opacity: 1;
-    }
-}
-@keyframes drop {
-    0% {
-        opacity: 0;
-        top: 35px;
-    }
-    100% {
-        opacity: 1;
-        top: 50px;
-    }
-}
-@keyframes hiringText {
-    0%{
-        transform: translateY(0);
-    }
-    25% {
-        transform: translateY(-20%);
-    }
-    50% {
-        transform: translateY(-5%);
-    }
-    75%{
-        transform: translateY(-20%);
-    }
-    100%{
-        transform: translateY(0);
-    }
-}
