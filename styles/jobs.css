@@ -36,7 +36,6 @@ description: [jobs.html]
 .hero-wrap{
     background-image: url(./images/job-hero.jpg);
     background-position: center;
-    /* background-color: #1B1525; */
     background-size: cover;
     mix-blend-mode: luminosity;
     background-repeat: no-repeat;
@@ -60,7 +59,9 @@ description: [jobs.html]
     /* background-color: lightblue; */
 }
 .hero-items h1{
-    font-size: 4em;
+    font-variant: inherit;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 5em;
     color: white;
     animation: titleHero1 3s ease-in-out;
 }
@@ -70,8 +71,6 @@ description: [jobs.html]
     font-weight: 400;
     margin: 15px 0 40px;
     animation: titleHero1 3s ease-in-out;
-    /* background-color: red; */
-    /* width: %; */
     text-align: center;
 }
 .hero-button{
@@ -93,7 +92,6 @@ description: [jobs.html]
     font-weight: 700;
     position: relative;
     z-index: 20;
-    /* background-color: red; */
 }
 .hero-button::before{
     content: "";
@@ -123,19 +121,15 @@ description: [jobs.html]
     height: 110vh;
     background-color: rgb(240,240,240);
     display:flex;
-    /* justify-content: space-evenly; */
     align-items: center;
-    /* justify-content: space-between; */
     flex-direction: column;
     overflow: hidden;
 }
 .jobs-title{
     height: 10%;
-    /* background-color: lightseagreen; */
     display: flex;
     margin: 1.2% 0 0.2%;
     font-size: 1.4em;
-    /* justify-content: center; */
     align-items: center;
 }
 .jobs-container{
@@ -145,9 +139,6 @@ description: [jobs.html]
     flex-direction:row;
     justify-content: space-around;
     align-items: center;
-    /* background-color: lightpink; */
-    /* margin-top: 3%; */
-    /* overflow: hidden; */
 }
 
 
@@ -165,8 +156,6 @@ description: [jobs.html]
     position: relative;
     z-index: 10;
     border-radius: 15px;
-    /* pointer-events: none; */
-    /* box-shadow: 0 0 5px 1px; */
 }
 .job-item-inner{
     position: relative;
@@ -175,7 +164,6 @@ description: [jobs.html]
     height: 100%;
     transition: transform 0.6s ease-in-out;
     transform-style:preserve-3d;
-    /* background-color: white; */
     z-index: 20;
 }
 .job-item:hover .job-item-inner {
@@ -207,8 +195,6 @@ description: [jobs.html]
 .job-item:first-child{
     position: relative;
     z-index: 20;
-    /* transition-property: transform, z-index;
-    transition-delay: 0.8s, -0.1s; */
 }
 .job-item:first-child::before{
     content: "";
@@ -240,10 +226,8 @@ description: [jobs.html]
     z-index: 10;
 }
 .job-item:nth-child(2){
-    /* transition-delay: 0.7s; */
     position: relative;
     z-index: 20;
-    /* transform: translateZ(500px); */
 }
 .job-item:nth-child(2)::before{
     content: "";
@@ -277,8 +261,6 @@ description: [jobs.html]
 .job-item:nth-child(3){
     position: relative;
     z-index: 20;
-    /* transition-property: transform, z-index;
-    transition-delay: 0.8s, -0.1s; */
 }
 .job-item:nth-child(3)::before{
     content: "";
@@ -340,7 +322,6 @@ description: [jobs.html]
     height: 100%;
     border-radius: 10px;
     position: relative;
-    /* background-color: lightblue; */
     display: flex;
     flex-direction: column;
     text-align: right;
@@ -358,7 +339,6 @@ description: [jobs.html]
     text-align: left;
     justify-content: space-evenly;
     padding: 5px 10px;
-    /* pointer-events: auto; */
 }
 .back-container ul li {
     list-style: disc;
@@ -385,7 +365,6 @@ description: [jobs.html]
     text-align: left;
     padding: 1% 12%;
     display: flex;
-    /* justify-content: space-around; */
     align-items: center;
 }
 .requirements::before{
@@ -393,7 +372,6 @@ description: [jobs.html]
     position: absolute;
     width: 100%;
     height: 100%;
-    /* background-color: red; */
     top: 0;
     left: 0;
     background-repeat: no-repeat;
@@ -402,7 +380,6 @@ description: [jobs.html]
     mix-blend-mode: luminosity;
     opacity: 0.4;
     z-index: 10;
-    /* background-blend-mode: luminosity; */
 }
 .require-slide-1::before {
     background-image: url(./images/feature-2.jpg);
@@ -416,7 +393,6 @@ description: [jobs.html]
 .requirements ol {
     position: relative;
     z-index: 20;
-    /* background-color: red; */
 }
 .requirements ol span {
     margin:1.5em 5px;
@@ -448,11 +424,9 @@ description: [jobs.html]
     border-radius: 10px 10px 0 0;
 }
 .item-content{
-    /* background-color: lightsalmon; */
     display: flex;
     flex: 1;
     flex-direction: column;
-    /* justify-content: space-evenly; */
     padding: 3% 5%;
     border-radius: 0 0 15px 15px;
 }
@@ -460,11 +434,9 @@ description: [jobs.html]
     font-size: 1.4em;
     font-weight: 700;
     margin: 0.8em 0;
-    /* background-color: red; */
 }
 .job-des{
     font-weight: 400;
-    /* line-height: 1.3em; */
     line-height: 1.8em;
 }
 .job-des span{
@@ -516,7 +488,6 @@ description: [jobs.html]
     justify-content: center;
     align-items:center;
     cursor: pointer;
-    /* margin: 50px auto; */
 }
 .jobs-button p{
     position: relative;
@@ -528,7 +499,6 @@ description: [jobs.html]
     width: 100%;
     height: 0;
     z-index: 30;
-    /* background-color: red; */
     top: 0;
     left: 0;
     background-color: black;
