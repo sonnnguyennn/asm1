@@ -373,18 +373,18 @@ description: [about.html]
 .member-meet span::before {
     content: "";
     position: absolute;
-    width: 40%;
+    width: 95%;
     height: 1px;
-    left: -50%;
+    left: -102%;
     top: 50%;
     background-color: #002c57;
 }
 .member-meet span::after {
     content: "";
     position: absolute;
-    width: 40%;
+    width: 95%;
     height: 1px;
-    right: -50%;
+    right: -102%;
     top: 50%;
     background-color: #002c57;
 }
