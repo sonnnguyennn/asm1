@@ -104,7 +104,7 @@ description: [enhancements.html]
     word-spacing: 5px;
     line-height: 1.3em;
 }
-.enhance-content h1,h2 {
+.enhance-content h1, .enhance-content h2 {
     color: #002C57;
 }
 .enhance-content ul {
