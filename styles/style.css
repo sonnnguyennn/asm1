@@ -445,6 +445,25 @@ a {
     left: 0;
     z-index: 55;
 }
+.ref{
+    width: 100vw;
+    height: 6vh;
+    background-color: #001020;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.ref p{
+    font-weight: 700;
+}
+.ref a{
+    /* margin:auto; */
+    /* margin: 20px 0; */
+    font-weight: 200;
+    text-decoration:underline;
+}
 
 
 
