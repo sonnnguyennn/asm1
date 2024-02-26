@@ -2,7 +2,7 @@
 filename: [about.css]
 author: [cos10026.2 - g5]
 created: [10/02/2024]
-last modified: [25/02/2024]
+last modified: [26/02/2024]
 description: [about.html]
 */
 
@@ -77,12 +77,10 @@ description: [about.html]
 .service {
     width: 100vw;
     height: 65vh;
-    /* background-color: red; */
     text-align: center;
     display: flex;
     justify-content: center;
     position: relative;
-    /* margin: 100px 0; */
 }
 .service-row {
     width: 90%;
@@ -90,14 +88,12 @@ description: [about.html]
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    /* background-color: blue; */
     margin: auto 0;
     position: relative;
 }
 .service-box {
     height: 55%;
     width: 28%;
-    /* background-color: #46B1C9; */
     position: relative;
     display: flex;
     align-items: flex-end;
@@ -136,7 +132,6 @@ description: [about.html]
     background-image: url(./images/project-3.jpg);
 }
 .service-content {
-    /* height: auto; */
     width: 20vw;
     background-color: whitesmoke;
     padding: 20px;
@@ -177,7 +172,6 @@ description: [about.html]
     position: relative;
     z-index: 100;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
 }
 .business-wrap{
@@ -195,13 +189,11 @@ description: [about.html]
     opacity: 0.6;
 }
 .business-content {
-    /* background-color: red; */
     width: 100%;
     height: 100%;
     text-align: center;
     position: relative;
     z-index: 20;
-    /* padding-top: 100px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -211,7 +203,6 @@ description: [about.html]
     font-size: 2.5em;
     color: #46B1C9;
     font-weight: 500;
-    /* margin: 20px 0; */
 }
 .business-content h1 {
     font-size: 7em;
@@ -222,7 +213,6 @@ description: [about.html]
     width: 12%;
     background-color: #002C57;
     height: 15%;
-    /* outline: none; */
     border: none;
     color: white;
     font-size: 1rem;
@@ -232,7 +222,6 @@ description: [about.html]
     justify-content: center;
     align-items:center;
     cursor: pointer;
-    /* margin: 20px auto; */
 }
 .business-button span{
     position: relative;
@@ -244,7 +233,6 @@ description: [about.html]
     width: 100%;
     height: 0;
     z-index: 30;
-    /* background-color: red; */
     top: 0;
     left: 0;
     background-color: black;
@@ -267,16 +255,13 @@ description: [about.html]
     display: flex;
     align-content: center;
     position: relative;
-    /* background-color: blue; */
 }
 .more-row {
     width: 90%;
     height: 90%;
-    /* background-color: red; */
     margin: auto;
     display: flex;
     justify-content: space-around;
-    /* align-items:center; */
     position: relative;
 }
 .more-content {
@@ -287,16 +272,13 @@ description: [about.html]
     align-self: center;
     justify-content: space-between;
     align-items: center;
-    /* background-color: #2BE4AC; */
 }
 .more-title-start{
     margin: 10px 0;
 }
 .more-title-start span {
-    /* margin-left: 10px; */
     font-weight: 700;
     color:#002C57;
-    /* background-color: red; */
 }
 .more-title h1{
     font-size: 40px;
@@ -305,30 +287,21 @@ description: [about.html]
 .more-text {
     font-size: 1.1rem;
     color: #454648;
-    /* margin-top: 300px; */
     line-height: 2rem;
-    
-    /* background-color: red; */
 }
 .more-features {
     display: flex;
-    /* flex-direction: row; */
     height: 50%;
-    /* background-color: red; */
 }
 .features-1, .features-2 {
     height: 100%;
     width: 100%;
     display: inline-block;
-    /* background-color: blue; */
-    /* align-self: center; */
     padding: 20px 0;
 }
 .more-features p {
     color: #454648;
-    /* margin-top: 10px; */
     line-height:1.8rem;
-    /* max-lines: 2; */
 }
 .more-features h2{
     margin-bottom:20px;
@@ -336,7 +309,6 @@ description: [about.html]
 .more-features img {
     width: 25%;
     height: auto;
-    /* margin-bottom: -20px; */
     transition: transform 0.5s ease
 }
 .more-features img:hover {
@@ -370,68 +342,105 @@ description: [about.html]
 /* MEMBERS */
 .member {
     width: 100%;
-    height: 180vh;
+    height: 250vh;
     position: relative;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
-    background-color: lightblue;
+
     align-items: center;
 }
 .member-header {
     width: 100%;
     text-align: center;
-    /* margin-bottom: 50px; */
-    background-color: lightcoral;
 }
 .member-meet span {
-    /* margin-left: 10px; */
     font-weight: 700;
     color: #002C57;
     position: relative;
-    /* margin: 100px 0;  */
-    /* display: block; */
-    /* background-color: red; */
 }
 .member-meet span::before {
     content: "";
     position: absolute;
-    width: 70%;
+    width: 40%;
     height: 1px;
-    left: -80%;
+    left: -50%;
     top: 50%;
     background-color: #002c57;
 }
 .member-meet span::after {
     content: "";
     position: absolute;
-    width: 70%;
+    width: 40%;
     height: 1px;
-    right: -80%;
+    right: -50%;
     top: 50%;
     background-color: #002c57;
 }
-.member-header h2 {
+.member-header h1 {
     font-size: 2.5rem;
-    margin: 10px 0;
-    /* font-size: 3em; */
+    font-size: 3em;
 }
+
+
+
+/* MEMBER - GROUP */
+.member-group {
+    width: 70%;
+    height: 20%;
+    line-height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: #001020;
+    border-radius: 20px;
+    margin-top: 50px;
+    color: white;
+}
+.member-group dt {
+    float: left;
+    width: 150px; 
+    clear: left;
+    font-weight: bold; 
+}
+.member-group dd {
+    margin-left: 160px;
+}
+.group-photo {
+    width: 60%;
+    height: 90%;
+    aspect-ratio: 4 / 3;
+    float: right;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.group-photo img {
+    object-fit: cover;
+    float: right;
+    width: 70%;
+    height: 100%;
+    border: 5px solid #002C57;
+    border-radius: 20px;
+}
+
+
+
+
+
+/* MEMBER - INDIVIDUAL */
 .member-people {
-    background-color: #46B1C9;
     width: 90%;
-    height: 75vh;
+    height: 80vh;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    /* margin: 0 auto; */
-    flex: 1;
+    margin-top: 50px;
 }
 .member-box {
     width: 30%;
-    height: 70%;
-    /* background-color: red; */
+    height: 65vh;
     perspective: 1000px;
 }
 .member-box-inner {
@@ -439,7 +448,7 @@ description: [about.html]
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform 0.8s ease;
+    transition: transform 1s ease;
     transform-style: preserve-3d;
 }
 .member-box-front, .member-box-back {
@@ -449,19 +458,19 @@ description: [about.html]
     height: 100%; 
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    box-shadow: 0 0 10px 5px lightgrey;
 }
 .member-box-front {
     width: 100%;
     height: 65vh;
     text-align: center;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
-    background-color: #002C57;
 }
 .member-box-back {
     width: 100%;
-    height: 100%;
-    background-color: blueviolet;
+    height: 65vh;
     transform: rotateY(180deg);
 }
 
@@ -470,91 +479,105 @@ description: [about.html]
 }
 
 
-
-
+/* MEMBER - FRONT */
 .member-front-pic {
     width: 24vw;
     height: 50vh;
-    background-image: url(../images/member-3.png);
     background-repeat: no-repeat;
     background-color: #00081A;
     background-position: center;
-    margin: 0 auto;
     display: flex;
-    justify-content: right;
+    align-self: center;
+    margin: 20px;
 }
+.person1 .member-front-pic {
+    background-image: url(./images/member-1.jpg);
+}
+.person2 .member-front-pic {
+    background-image: url(./images/member-2.jpg);
+}
+.person3 .member-front-pic {
+    background-image: url(./images/member-3.jpg);
+}
+
 .member-introduce {
-    height: 10vh;
+    width: 24vw;
+    height: 12vh;
     line-height: 2em;
-    background-color: #002c57;
     display: block;
     align-self: center;
     padding: 10px 0;
-    margin: 20px 0;
 }
-.member-introduce h3 {
+.member-introduce h2{
     font-size: 1.5em;
     transition: 0.5s ease-in-out;
-}
-.member-introduce h3:hover {
-    color: #002C57;
 }
 .member-introduce p {
     color: #454648;
 }
 
-.member-container {
-    width: 100%;
-    overflow: hidden;
-}
+
+
+/* MEMBER - BACK */
 .member-info {
-    width: 50%;
-    height: 50vh;
-    background-color: #002C57;
-    overflow: hidden;
-    line-height: 25px;
+    width: 100%;
+    height: 90%;
+    line-height: 30px;
     float: left;
     padding: 10px;
     box-sizing: border-box;
 }
 .member-info dt {
     float: left;
-    width: 150px; 
+    width: 100px; 
     clear: left;
     font-weight: bold; 
+    text-align: left;
 }
 .member-info dd {
-    margin-left: 160px;
+    margin-left: 200px;
+    text-align: left;
 }
-figure {
-    width: 50%;
-    float: right;
-    box-sizing: border-box;
-    padding: 10px;
-}
-figure img {
-    /* float: right; */
-    width: 50%;
-    /* height: 50%; */
-    border: 5px solid black;
-    border-radius: 1px;
-}
-
-
-
-
-.member-schedule {
+.member-email {
     width: 100%;
-    /* height: ; */
+    height: 10%;
+    display: flex;
+}
+.member-email h1 {
+    font-size: 1.1em;
+    padding: 10px;
+    align-self: center;
+}
+.member-email a {
+    float: right;
+    margin-left: 5em;
+    align-self: center;
+    text-align: left;
+}
+
+
+
+
+
+
+
+/* TABLE */
+.member-schedule {
+    width: 60%;
 }
 .member-schedule table {
-    width: 70%;
+    width: 100%;
     text-align: center;
-    margin: 100px auto;
+    line-height: 30px;
+    margin-top: 80px;
+    color: white;
 }
-table, td, th {
-    border: 2px solid black;
+table, td, th, caption {
+    border: 3px solid #46B1C9;
+    border-collapse: collapse;
     text-align: center;
+    background-color: #001020;
+
 }
 caption {
     font-weight: 700;
@@ -563,3 +586,12 @@ caption {
 }
 
 
+/* ANIMATION */
+@keyframes slideLeft {
+    from {
+        transform: translateX(300px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}

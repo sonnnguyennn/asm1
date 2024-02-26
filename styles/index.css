@@ -39,7 +39,6 @@ description: [index.html]
     animation: background 4s ease-in-out;
     overflow: hidden;
     background-color: #00081A;
-    /* mix-blend-mode: luminosity; */
 }
 .section-wrap{
     position: absolute;
@@ -78,7 +77,6 @@ description: [index.html]
 .button-row{
     width: 50%;
     height: 10%;
-    /* background-color: red; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,7 +88,6 @@ description: [index.html]
     width: 25%;
     background-color: #002C57;
     height: 100%;
-    /* outline: none; */
     border: none;
     color: white;
     font-size: 1rem;
@@ -167,13 +164,11 @@ description: [index.html]
     justify-content: space-between;
     align-items: center;
     padding: 0 10%;
-    /* background-color: red; */
 }
 .feature{
     height: 65%;
     aspect-ratio: 11 / 10;
     position: relative;
-    /* margin: 0 1.8%; */
     overflow: hidden;
     cursor: pointer;
     background-repeat: no-repeat;
@@ -257,7 +252,6 @@ description: [index.html]
 .get-to-know{
     width: 100%;
     height: 100vh;
-    /* background-color: lightblue; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -266,7 +260,6 @@ description: [index.html]
 }
 .get-to-know-background{
     position: absolute;
-    /* top: 13%; */
     bottom: 0;
     right: 0;
     z-index: 50;
@@ -275,14 +268,12 @@ description: [index.html]
 .img-box {
     width: 49%;
     height: 76%;
-    /* background-color: lightgrey; */
     position: relative;
     z-index: 60;
 }
 .get-to-know-right{
     width: 49%;
     height: 76%;
-    /* background-color: lightgrey */
     z-index: 60;
 }
 .box-1{
@@ -332,7 +323,6 @@ description: [index.html]
 .solutions{
     width: 100%;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
 }
 .solutions span{
@@ -350,7 +340,6 @@ description: [index.html]
     width: 41%;
     background-color: #002C57;
     height: 11%;
-    /* outline: none; */
     border: none;
     color: white;
     font-size: 1rem;
@@ -436,7 +425,6 @@ description: [index.html]
     justify-content: space-between;
     width: 80%;
     height: 20%;
-    /* background-color: red; */
     align-items: center;
     z-index: 60;
 }
@@ -463,7 +451,6 @@ description: [index.html]
 .service-content{
     width: 80%;
     height: 50%;
-    /* background-color: red; */
     margin-top: 2%;
     display: flex;
     justify-content: space-between;
@@ -480,7 +467,6 @@ description: [index.html]
     align-items: center;
     text-align: center;
     padding: 0 3%;
-    /* outline: 1px solid #9FB7B9; */
     box-shadow: 0 0 2px 0.01em grey;
     transition: 0.4s ease-in-out;
 }
@@ -514,7 +500,6 @@ description: [index.html]
 
 /* FEEDBACKS */
 .feedbacks{
-    /* background-color: #; */
     width: 100vw;
     height: 65vh;
     background-color: #00081A;
@@ -546,7 +531,6 @@ description: [index.html]
     height: 80%;
     display:flex;
     flex-direction: row;
-    /* justify-content:start; */
     overflow: hidden;
 }
 .feedback-item{
@@ -585,7 +569,6 @@ description: [index.html]
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    /* background-color: lightcoral; */
     width: 80%;
 }
 .fa-quote-left{
@@ -619,7 +602,6 @@ description: [index.html]
     align-items: center;
 }
 .project-texts{
-    /* background-color: lightpink; */
     text-align: center;
     margin-bottom: 50px;
 }
@@ -637,7 +619,6 @@ description: [index.html]
     height:60%;
     display: flex;
     justify-content: space-between;
-    /* background-color: lightcoral; */
 }
 .project-item{
     width: 32%;
@@ -653,7 +634,6 @@ description: [index.html]
     width: 100%;
     height: 40%;
     position: relative;
-    /* background-color: red; */
 }
 .background-1{
     background-color: #664677;
@@ -695,7 +675,6 @@ description: [index.html]
     background-image: url(./images/project-3.jpg);
 }
 .project-content{
-    /* background-color: lightblue; */
     flex: 1;
     width: 75%;
     display: flex;
