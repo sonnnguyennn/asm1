@@ -439,19 +439,31 @@ a {
     margin: 0 12px;
     display: block;
 }
-
-
-.cp-right{
-    text-align: center;
-    color: white;
-    font-size: 0.8rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 8vh;
+.aside-wrap aside{
+    float: right;
+    width: 25vw;
+    height: 35%;
     background-color: #001020;
+    transform: translate(-15%, 103%);
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    color: white;
+    text-align: center;
+    padding: 2%;
+    line-height: 1.6em;
+    z-index: 80;
 }
+.aside-wrap{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 55;
+}
+
+
+
 
 
 
