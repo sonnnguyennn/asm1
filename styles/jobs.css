@@ -157,9 +157,9 @@ description: [jobs.html]
 .jobs{
     width: 100%;
     height: 110vh;
-    background-color: lightblue;
+    background-color: rgb(240,240,240);
     display:flex;
-    /* justify-content: center; */
+    /* justify-content: space-evenly; */
     align-items: center;
     /* justify-content: space-between; */
     flex-direction: column;
@@ -169,7 +169,7 @@ description: [jobs.html]
     height: 10%;
     /* background-color: lightseagreen; */
     display: flex;
-    margin: 1% 0;
+    margin: 1.2% 0 0.2%;
     font-size: 1.4em;
     /* justify-content: center; */
     align-items: center;
@@ -181,8 +181,9 @@ description: [jobs.html]
     flex-direction:row;
     justify-content: space-around;
     align-items: center;
-    background-color: lightpink;
+    /* background-color: lightpink; */
     /* margin-top: 3%; */
+    /* overflow: hidden; */
 }
 
 
@@ -199,11 +200,13 @@ description: [jobs.html]
     transition: 1.9s ease-in-out;
     position: relative;
     z-index: 10;
-    /* border-radius: 15px; */
+    border-radius: 15px;
+    /* pointer-events: none; */
+    /* box-shadow: 0 0 5px 1px; */
 }
 .job-item-inner{
     position: relative;
-    border-radius: 15px;
+    border-radius: 10px;
     width: 100%;
     height: 100%;
     transition: transform 0.6s ease-in-out;
@@ -354,32 +357,132 @@ description: [jobs.html]
     height: 100%;
     -webkit-backface-visibility: hidden; 
     backface-visibility: hidden;
-    border-radius: 15px;
-    transform: rotateX(0deg)
+    border-radius: 10px;
+    transform: rotateX(0deg);
+    box-shadow: 0 0 10px 5px lightgrey;
 }
 .job-front{
-    background-color: lightgoldenrodyellow;
+    background-color: white;
     display: flex;
     flex-direction: column;
 }
 .job-back{
     background-color: white;
     transform: rotateY(180deg);
+    position: relative;
 }
+.back-wrap{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: relative;
+    /* background-color: lightblue; */
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    pointer-events: none;
+}
+.back-container{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 20;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: space-evenly;
+    padding: 5px 10px;
+    /* pointer-events: auto; */
+}
+.back-container ul li {
+    list-style: disc;
+    margin-left: 10%;
+    line-height: 1.4em;
+}
+.back-container ul strong {
+    margin: 0.4em 5px;
+    display: block;
+    font-size: 1.1em;
+}
+
+.requirements{
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    border-radius: 0px 10px 10px 0px;
+    background-color:#00081A;
+    transition: 0.4s ease-in-out 0.2s;
+    text-align: left;
+    padding: 1% 12%;
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+}
+.requirements::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    mix-blend-mode: luminosity;
+    opacity: 0.4;
+    z-index: 10;
+    /* background-blend-mode: luminosity; */
+}
+.require-slide-1::before {
+    background-image: url(./images/feature-2.jpg);
+}
+.require-slide-2::before {
+    background-image: url(./images/feature-1.jpg);
+}
+.require-slide-3::before {
+    background-image: url(./images/feature-3.jpg);
+}
+.requirements ol {
+    position: relative;
+    z-index: 20;
+    /* background-color: red; */
+}
+.requirements ol strong {
+    margin:1.5em 5px;
+    display: block;
+    font-size: 1.1em;
+    color: white;
+}
+.requirements ol li {
+    line-height: 1.4em;
+    margin: 1em 0;
+    color: white;
+    font-weight: 400;
+}
+.back-wrap:hover .requirements{
+    right: -88%;
+}   
+
 .item-img{
     width: 100%;
     height: 40%;
     background-color: #fff;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 .item-img img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 15px 15px 0 0;
+    border-radius: 10px 10px 0 0;
 }
 .item-content{
-    background-color: lightsalmon;
+    /* background-color: lightsalmon; */
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -391,6 +494,7 @@ description: [jobs.html]
     font-size: 1.4em;
     font-weight: 700;
     margin: 0.8em 0;
+    /* background-color: red; */
 }
 .job-des{
     font-weight: 400;
@@ -399,11 +503,28 @@ description: [jobs.html]
 }
 .turn-back{
     width: 100%;
-    height: 20%;
+    height: 17%;
     background-color: #002c57;
     color: white;
-    margin: 15px 0;
-    font-size: 1em;
+    margin: 5% 0;
+    font-size: 90%;
+}
+.see-more{
+    width: 90%;
+    height: 10%;
+    background-color: #002c57;
+    color: white;
+    font-size: 90%;
+    border-radius: 5px;
+    pointer-events: auto;
+    margin: 0 auto;
+    cursor: pointer;
+    position: relative;
+    animation: jobButton 3s ease-in-out infinite ;
+}
+.see-more::before{
+    content: "";
+
 }
 .jobs a{
     width: 12%;
@@ -459,4 +580,24 @@ aside {
     border: 2px solid #002C57;
     border-radius: 10px;
     opacity: 1;
+}
+
+
+
+@keyframes jobButton {
+    0%{
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-10%);
+    }
+    50% {
+        transform: translateY(-3%);
+    }
+    75%{
+        transform: translateY(-10%);
+    }
+    100%{
+        transform: translateY(0);
+    }
 }
