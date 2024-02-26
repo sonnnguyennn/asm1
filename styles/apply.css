@@ -31,7 +31,7 @@ description: [apply.html]
     font-family: 'Kumbh Sans', sans-serif;
     width: 100vw;
     height: 45vh;
-    background-image: url(../images/page-header-bg.png);
+    background-image: url(./images/page-header-bg.png);
     background-position: center;
     background-color: #1B1525;
     background-size: cover;
@@ -226,9 +226,6 @@ legend {
     margin-bottom: 2.2em;
     display: flex;
 }
-/* .form-address-details {
-    display: flex;
-} */
 label {
     display: inline-block; 
 }
