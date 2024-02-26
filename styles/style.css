@@ -244,6 +244,7 @@ a {
     align-items: center;
     transition: 0.45s ease-in-out;
     transform: translateY(-100vh);
+    /* background-color: red; */
 }
 .wrap{
     width: 100vw;
@@ -256,15 +257,19 @@ a {
     transform: translateY(-100vh);
     transition: 0.45s ease-in-out;
 }
-.search-box input{
+.search-box label{
     width: 60%;
     height: 18%;
+}
+label input {
+    width: 100%;
+    height: 100%;
     outline: none;
     border: none;
     padding-left: 2%;
     font-size: 17px;
 }
-.search-box label{
+label span{
     display: none;
 }
 .icon-control a{
