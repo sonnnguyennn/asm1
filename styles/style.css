@@ -465,8 +465,6 @@ label span{
     font-size: 1em;
 }
 .ref a{
-    /* margin:auto; */
-    /* margin: 20px 0; */
     font-weight: 200;
     text-decoration:underline;
 }
