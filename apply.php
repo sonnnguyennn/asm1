@@ -1,3 +1,9 @@
+<?php 
+    include("./include.php");
+?>
+<?php 
+    showHeader();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,12 +21,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <header class="header">
+    <!-- <header class="header">
         <div class="logo">
             <img src="./images/logo.png" alt="nocxi-logo">
         </div>
         <ul class="main-menu">
-            <li class="drop"><a href="index.html">Home</a></li>
+            <li class="drop"><a href="index.php">Home</a></li>
             <li class="drop"><a href="#">Pages</a>
                 <ul class="pages-drop">
                     <li><a href="#">Our Team</a></li>
@@ -28,17 +34,17 @@
                     <li><a href="#">FAQs</a></li>
                 </ul>
             </li>
-            <li class="drop"><a href="./jobs.html">Jobs</a>
+            <li class="drop"><a href="jobs.php">Jobs</a>
                 <ul class="services-drop">
                     <li><a href="#">Server Administrator</a></li>
                     <li><a href="#">Security Specialist</a></li>
                     <li><a href="#">Product Development</a></li>
                 </ul>
             </li>
-            <li class="drop"><a href="./about.html">About us</a></li>
-            <li class="drop"><a href="./enhancements.html">Enhancements</a></li>
+            <li class="drop"><a href="about.php">About us</a></li>
+            <li class="drop"><a href="enhancements.php">Enhancements</a></li>
             <li class="hiring">
-                <a href="./jobs.html">We are Hiring!</a>
+                <a href="jobs.php">We are Hiring!</a>
             </li>
         </ul>
         <div class="icon-control">
@@ -61,8 +67,8 @@
                 <img class="search" src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-search-logistic-delivery-kiranshastry-solid-kiranshastry.png" alt="search-icon-big">
             </div>
         </div>
-    </header>
-    <section class="hero-content">
+    </header> -->
+    <!-- <section class="hero-content">
         <div class="hero-items">
             <ul class="hero-navi">
                 <li>
@@ -96,9 +102,44 @@
             </div>
             <div class="content-start">Fill out the form below to apply!</div>
         </div>
-    </section>
+    </section> -->
     
     <main>
+        <section class="hero-content">
+            <div class="hero-items">
+                <ul class="hero-navi">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        /
+                    </li>
+                    <li>
+                        <a href="apply.html">Apply</a>
+                    </li>
+                </ul>
+                <h2>Application Form</h2>
+            </div>
+        </section>
+        <section class="description">
+            <img class="description-img" src="https://img.freepik.com/free-photo/researchers-looking-alternative-energy-souces_23-2149311493.jpg" alt="people working together">
+            <div class="description-content">
+                <div class="content-header">
+                    <div class="content-header-start">
+                        <p>Start your journey at NOCXI</p>                    
+                    </div>
+                    <h2>Join our teams!</h2>
+                </div>
+                <div class="content-text">
+                    Welcome to our dynamic and innovative tech company! 
+                    We're hiring cybersecurity experts, security specialists, and server providers. 
+                    As leaders in the field, we prioritize safeguarding digital assets. Our tech team fosters innovation and growth. 
+                    If you're passionate about cybersecurity and want to shape the future, explore exciting opportunities with us. 
+                    Be a key player in the world of digital security!
+                </div>
+                <div class="content-start">Fill out the form below to apply!</div>
+            </div>
+        </section>
         <div class="form-background">
             <div class="form-container">
                 <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php">
@@ -446,7 +487,7 @@
     </main>
         
 
-    <footer class="footer">
+    <!-- <footer class="footer">
         <img class="footer-bg" src="./images/footer.jpg" alt="footer">
         <img class="footer-bg2" src="./images/footer.jpg" alt="footer">
         <div class="about-col">
@@ -499,6 +540,9 @@
         <a href="https://icons8.com/icons" target="_blank">Icon8</a>
         <a href="https://fontawesome.com/icons" target="_blank">Font Awesome</a>
         <a href="https://pixydrops.com/" target="_blank">Pixydrops</a>
-    </section>
+    </section> -->
+<?php 
+    showFooter();
+?>
 </body>
 </html>
