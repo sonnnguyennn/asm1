@@ -1,3 +1,9 @@
+<?php 
+    include("./include.php");
+?>
+<?php 
+    showHeader();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +21,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <header class="header">
+    <!-- <header class="header">
         <div class="logo">
             <img src="./images/logo.png" alt="nocxi-logo">
         </div>
@@ -61,7 +67,7 @@
                 <img class="search" src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-search-logistic-delivery-kiranshastry-solid-kiranshastry.png" alt="search-icon-big">
             </div>
         </div>
-    </header>
+    </header> -->
     <section class="hero-content">
         <div class="hero-items">
             <ul class="hero-navi">
@@ -232,7 +238,7 @@
             </div>
         </div>
     </section>
-    <footer class="footer">
+    <!-- <footer class="footer">
         <img class="footer-bg" src="./images/footer.jpg" alt="footer">
         <img class="footer-bg2" src="./images/footer.jpg" alt="footer">
         <div class="about-col">
@@ -285,6 +291,9 @@
         <a href="https://icons8.com/icons" target="_blank">Icon8</a>
         <a href="https://fontawesome.com/icons" target="_blank">Font Awesome</a>
         <a href="https://pixydrops.com/" target="_blank">Pixydrops</a>
-    </section>
+    </section> -->
+<?php 
+    showFooter();
+?>
 </body>
 </html>
