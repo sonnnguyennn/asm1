@@ -142,7 +142,7 @@
         </section>
         <div class="form-background">
             <div class="form-container">
-                <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php">
+                <form method="post" action="processEOI.php" novalidate="novalidate">
                     <!-- Title -->
                     <h1>Job Application</h1>
                     <div class="helpdesk-des">
@@ -184,7 +184,7 @@
                             <legend>Gender</legend>
                             <div id="gender">Your gender<em>(*)</em>
                                 &nbsp;
-                                <input type="radio" name="Gender" value="Male" id="form-gender-male" title="Choose one" required>
+                                <input type="radio" name="Gender" value="Male" id="form-gender-male" required>
                                 <label for="form-gender-male">Male</label>
                                 <input type="radio" name="Gender" value="Female" id="form-gender-female" required>
                                 <label for="form-gender-female">Female</label>
