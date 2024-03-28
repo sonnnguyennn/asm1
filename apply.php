@@ -142,7 +142,7 @@
         </section>
         <div class="form-background">
             <div class="form-container">
-                <form method="post" action="./processEOI.php">
+                <form method="post" action="./processEOI.php" novalidate>
                     <!-- Title -->
                     <h1>Job Application</h1>
                     <div class="helpdesk-des">
