@@ -1,9 +1,3 @@
-<?php 
-    include("./include.php");
-?>
-<?php 
-    showHeader();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +15,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-
+    <?php 
+        include_once("header.php");
+    ?>
     <main>
         <section class="hero-content">
             <div class="hero-items">
@@ -81,12 +77,12 @@
                             <div id="name">
                                 <div>
                                     <label for="form-general-fname">First Name<em>(*)</em></label>&nbsp;
-                                    <input type="text" name="First Name" id="form-general-fname" pattern="^[A-Za-z]{1,20}$" title="Please enter only alphabetical characters" required>
+                                    <input type="text" name="FirstName" id="form-general-fname" pattern="^[A-Za-z]{1,20}$" title="Please enter only alphabetical characters" required>
                                 </div>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <div>
                                     <label for="form-general-lname">Last Name<em>(*)</em></label>&nbsp;
-                                    <input type="text" name="Last Name" id="form-general-lname" pattern="^[A-Za-z]{1,20}$" title="Please enter only alphabetical characters" required>
+                                    <input type="text" name="LastName" id="form-general-lname" pattern="^[A-Za-z]{1,20}$" title="Please enter only alphabetical characters" required>
                                 </div>
                             </div>
                             <div id="bday">
@@ -114,7 +110,7 @@
                             <legend>Contact</legend>
                             <div>
                                 <label for="form-phonenumb">Phone<em>(*)</em></label>&nbsp;
-                                <input type="text" name="Phone number" id="form-phonenumb" pattern="[0-9 ]{8-12}" placeholder=" 012345678901" title="Write according to the placeholder" required>
+                                <input type="text" name="PhoneNumb" id="form-phonenumb" pattern="[0-9 ]{8-12}" placeholder=" 012345678901" title="Write according to the placeholder" required>
                             </div>
                             <div>
                                 <label for="form-email">Email<em>(*)</em></label>&nbsp;
@@ -125,11 +121,11 @@
                             <legend>Address</legend>
                             <div class="street-address">
                                 <label for="first-address">Street address<em>(*)</em></label>&nbsp;
-                                <input type="text" name="Street Address" id="first-address" maxlength="40" placeholder=" Eg: Street A" title="Write according to the placeholder" required>
+                                <input type="text" name="StreetAddress" id="first-address" maxlength="40" placeholder=" Eg: Street A" title="Write according to the placeholder" required>
                             </div>
                             <div class="suburd-address">
                                 <label for="second-address">Suburb/town<em>(*)</em></label>&nbsp;
-                                <input type="text" name="Suburb/town" id="second-address" maxlength="40" placeholder=" Eg: Suburb B" title="Write according to the placeholder" required>
+                                <input type="text" name="SuburbTown" id="second-address" maxlength="40" placeholder=" Eg: Suburb B" title="Write according to the placeholder" required>
                             </div>
                             <div class="postal-address">
                                 <label for="third-address">Postcode<em>(*)</em></label>&nbsp;
@@ -238,18 +234,52 @@
                         </fieldset>
                     </section>
 
+                    <br><hr>
+
+                    <!-- Employ Desire -->
+                    <section>
+                        <h2 class="form-sections">Section D - Employment Desired</h2>
+                        <fieldset id="sec4">
+                            <legend>Employment</legend>
+                            <div>
+                                <label for="reference-number">Job reference number:<em>(*)</em></label>&nbsp;
+                                <input type="text" name="Job Reference Number" id="reference-number" pattern="[A-Za-z0-9]{5}" required>
+                            </div>
+                            <div>
+                                <span class="jobs-requirement-chk">Expert in:</span>&nbsp;
+                                <input type="checkbox" name="Language[]" id="html" value="HTML" checked>
+                                <label for="html">HTML</label>
+                                <input type="checkbox" name="Language[]" id="css" value="CSS">
+                                <label for="css">CSS</label>
+                                <input type="checkbox" name="Language[]" id="javasc" value="JavaScript">
+                                <label for="javasc">JavaScript</label>
+                                <input type="checkbox" name="Language[]" id="php" value="PHP">
+                                <label for="php">PHP</label>
+                                <input type="checkbox" name="Language[]" id="python" value="Python">     
+                                <label for="python">Python</label>
+                                <input type="checkbox" name="Language[]" id="others" value="Others">
+                                <label for="others">Other languages..</label>
+                                <br><br>
+                                <!-- <label for="checkbox-others">If select other languages, please note them down below:</label><br>
+                                <textarea name="OtherLanguage" id="checkbox-others" cols="20" rows="5" placeholder=" Write here."></textarea>
+                                <br><br> -->
+                                <label for="jobs-requirement-text">Other job-related skills:</label>
+                                <br>
+                                <textarea name="OtherSkills" id="jobs-requirement-text" cols="30" rows="5" placeholder="Write here."></textarea>
+                            </div>
+                        </fieldset>                        
+                    </section>
                     <!-- Buttons -->
                     <div class="form-actions">
                         <input type="submit" value="Submit">
-                        <input type="reset" value="Reset form">                
+                        <input type="reset" value="Reset form">
                     </div>
                 </form>                
             </div>
         </div>
-                
     </main>
+    <?php 
+        include_once("footer.php");
+    ?>
 </body>
 </html>
-<?php 
-    showFooter();
-?>
