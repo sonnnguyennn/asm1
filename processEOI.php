@@ -1,5 +1,44 @@
 <?php
-include "settings.php";
+require("settings.php");
+
+
+
+
+// Function to validate job reference number
+// function validateJobReferenceNumber($jobRefNumber) {
+//     return preg_match("/^[a-zA-Z0-9]{5}$/", $jobRefNumber);
+// }
+
+// Function to validate name
+// function validateName($name) {
+//     return preg_match("/^[a-zA-Z]{1,20}$/", $name);
+// }
+
+
+
+// Function to validate email address
+// function validateEmailAddress($email) {
+//     return filter_var($email, FILTER_VALIDATE_EMAIL);
+// }
+
+// Function to validate phone number
+// function validatePhoneNumber($phone) {
+//     return preg_match("/^[\d\s]{8,12}$/", $phone);
+// }
+
+// Function to validate other skills if checkbox selected
+// function validateLanguageSkills($skills, $isChecked) {
+//     return !$isChecked || !empty($skills);
+// }
+
+// Function to validate postcode 
+// function isValidPostcode($postcode) {
+//     // Implement logic to validate postcode 
+//     return true; // For now, assuming all postcodes are valid
+// }
+
+
+
 // Function to sanitize input data
 function sanitizeInput($data) {
     $data = trim($data);
@@ -8,46 +47,17 @@ function sanitizeInput($data) {
     return $data;
 }
 
-// Function to validate job reference number
-function validateJobReferenceNumber($jobRefNumber) {
-    return preg_match("/^[a-zA-Z0-9]{5}$/", $jobRefNumber);
-}
-
-// Function to validate name
-function validateName($name) {
-    return preg_match("/^[a-zA-Z]{1,20}$/", $name);
-}
-
 // Function to validate date of birth
-function validateDateOfBirth($dob) {
+function calculateAge($dob) {
     $dobTimestamp = strtotime(str_replace('/', '-', $dob));
     $currentTimestamp = time();
-    $minDobTimestamp = strtotime('-80 years', $currentTimestamp);
-    $maxDobTimestamp = strtotime('-15 years', $currentTimestamp);
-    return ($dobTimestamp !== false && $dobTimestamp >= $minDobTimestamp && $dobTimestamp <= $maxDobTimestamp);
+    // $minDobTimestamp = strtotime('-80 years', $currentTimestamp);
+    // $maxDobTimestamp = strtotime('-15 years', $currentTimestamp);
+    $ageInSeconds = $currentTimestamp - $dobTimestamp;
+    $ageInYears = floor($ageInSeconds / (60 * 60 * 24 * 365));
+    return $ageInYears;
+    // return ($dobTimestamp !== false && $dobTimestamp >= $minDobTimestamp && $dobTimestamp <= $maxDobTimestamp);
 }
-
-// Function to validate email address
-function validateEmailAddress($email) {
-    return filter_var($email, FILTER_VALIDATE_EMAIL);
-}
-
-// Function to validate phone number
-function validatePhoneNumber($phone) {
-    return preg_match("/^[\d\s]{8,12}$/", $phone);
-}
-
-// Function to validate other skills if checkbox selected
-function validateOtherSkills($skills, $isChecked) {
-    return !$isChecked || !empty($skills);
-}
-
-// Function to validate postcode against state
-function isValidPostcode($postcode, $state) {
-    // Implement logic to validate postcode against state
-    return true; // For now, assuming all postcodes are valid
-}
-
 // Function to add an EOI record to the table
 function addEOIRecord($jobRefNumber, $firstName, $lastName, $dob, $gender, $streetAddress, $suburbTown, $state, $postcode, $email, $phone, $otherSkills) {
     // Implement database insertion logic here
@@ -58,142 +68,193 @@ function addEOIRecord($jobRefNumber, $firstName, $lastName, $dob, $gender, $stre
     return true; // Placeholder return value
 }
 
-// Validate and sanitize form data here
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $jobRefNumber = sanitizeInput($_POST['JobReferenceNumber']);
-    $firstName = sanitizeInput($_POST['FirstName']);
-    $lastName = sanitizeInput($_POST['LastName']);
-    $dob = sanitizeInput($_POST['DoB']);
-    $gender = sanitizeInput($_POST['Gender']);
-    $streetAddress = sanitizeInput($_POST['StreetAddress']);
-    $suburbTown = sanitizeInput($_POST['SuburbTown']);
-    $state = sanitizeInput($_POST['State']);
-    $postcode = sanitizeInput($_POST['Postcode']);
-    $email = sanitizeInput($_POST['EmailAddress']);
-    $phone = sanitizeInput($_POST['PhoneNumber']);
-    $otherSkills = isset($_POST['OtherSkills']) ? sanitizeInput($_POST['OtherSkills']) : '';
 
-    if (!validateJobReferenceNumber($jobRefNumber)) {
-        die("Error: Job reference number must be exactly 5 alphanumeric characters.");
-    }
-    if (!validateName($firstName)) {
-        die("Error: First name must be max 20 alphabetical characters.");
-    }
-    if (!validateName($lastName)) {
-        die("Error: Last name must be max 20 alphabetical characters.");
-    }
-    if (!validateDateOfBirth($dob)) {
-        die("Error: Date of birth must be between 15 and 80 years ago.");
-    }
-    if (!in_array($gender, array("Male", "Female", "Others"))) {
-        die("Error: Gender is required.");
-    }
-    if (strlen($streetAddress) > 40) {
-        die("Error: Street address must be max 40 characters.");
-    }
-    if (strlen($suburbTown) > 40) {
-        die("Error: Suburb/town must be max 40 characters.");
-    }
-    if (!in_array($state, array("VIC", "NSW", "QLD", "NT", "WA", "SA", "TAS", "ACT"))) {
-        die("Error: State is required and must be one of VIC, NSW, QLD, NT, WA, SA, TAS, ACT.");
-    }
-    if (!preg_match("/^\d{4}$/", $postcode) || !isValidPostcode($postcode, $state)) {
-        die("Error: Postcode is required and must be exactly 4 digits matching the selected state.");
-    }
-    if (!validateEmailAddress($email)) {
-        die("Error: Email address is required and must be in a valid format.");
-    }
-    if (!validatePhoneNumber($phone)) {
-        die("Error: Phone number must be 8 to 12 digits or spaces.");
-    }
-    if (!validateOtherSkills($otherSkills, isset($_POST['OtherSkills']))) {
-        die("Error: Other skills field cannot be empty if checkbox selected.");
-    }
+$conn = @mysqli_connect($host, $user, $password, $database);
 
-    // All data is validated, proceed with adding the record to the database
-    if (addEOIRecord($jobRefNumber, $firstName, $lastName, $dob, $gender, $streetAddress, $suburbTown, $state, $postcode, $email, $phone, $otherSkills)) {
-        echo "EOI record added successfully!";
-    } else {
-        echo "Error: Failed to add EOI record.";
-    }
 
-    $host = "feenix-mariadb.swin.edu.au";
-    $user = "s104814302";
-    $password = "260905";
-    $database = "s104814302_db";
-    
-    $conn = mysqli_connect($host, $user, $password, $database);
-    
-    // Check connection
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-    
-    // Check if the 'eoi' table exists, if not, create it
-    $tableExistsQuery = "SHOW TABLES LIKE 'eoi'";
-    $tableExistsResult = mysqli_query($conn, $tableExistsQuery);
-    
-    if (mysqli_num_rows($tableExistsResult) == 0) {
-        // Table doesn't exist, create it
-        $createTableQuery = "CREATE TABLE eoi (
-            EOInumber INT AUTO_INCREMENT PRIMARY KEY,
-            JobReferenceNumber VARCHAR(5),
-            FirstName VARCHAR(20),
-            LastName VARCHAR(20),
-            DoB DATE,
-            NID VARCHAR(12),
-            Gender ENUM('Male', 'Female', 'Others'),
-            PhoneNumber VARCHAR(15),
-            Email VARCHAR(255),
-            StreetAddress VARCHAR(255),
-            SuburbTown VARCHAR(255),
-            Postcode VARCHAR(10),
-            State VARCHAR(20),
-            Education VARCHAR(50),
-            CollegeUniversity TEXT,
-            Courses TEXT,
-            CertificatesGrades TEXT,
-            School TEXT,
-            Subjects TEXT,
-            ExpWorkingCompanies ENUM('Yes', 'No'),
-            PastExperience TEXT,
-            References TEXT,
-            YearsExperience VARCHAR(50),
-            DegreeForSA TEXT,
-            CertificationForSA TEXT,
-            VirtualTechnologyFamiliarity ENUM('1', '2', '3', '4', '5'),
-            SkillQuestionForSA TEXT,
-            DegreeForSS TEXT,
-            CertificationForSS TEXT,
-            RegulatoryComplianceFamiliarity ENUM('1', '2', '3', '4', '5'),
-            SkillQuestionForSS TEXT,
-            DegreeForPD TEXT,
-            ProjectForPD TEXT,
-            DesignDevelopToolsFamiliarity ENUM('1', '2', '3', '4', '5'),
-            Language TEXT,
-            OtherLanguages TEXT,
-            SkillQuestionsForPD TEXT,
-            Status ENUM('New', 'Current', 'Final') DEFAULT 'New'
-        )";
-    
-        if (mysqli_query($conn, $createTableQuery)) {
-            echo "Table 'eoi' created successfully.";
-        } else {
-            echo "Error creating table: " . mysqli_error($conn);
+if (!$conn) {
+    die("Connection failed " . mysqli_connect_error());
+}
+else { 
+    // Validate and sanitize form data here
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $jobRefNumber = sanitizeInput($_POST['reference-number']);
+        $firstName = sanitizeInput($_POST['FirstName']);
+        $lastName = sanitizeInput($_POST['LastName']);
+        $dob = sanitizeInput($_POST['DoB']);
+        $nationid = sanitizeInput($_POST['NID']);
+        $gender = sanitizeInput($_POST['Gender']);
+        $streetAddress = sanitizeInput($_POST['StreetAddress']);
+        $suburbTown = sanitizeInput($_POST['SuburbTown']);
+        $state = sanitizeInput($_POST['State']);
+        $postcode = sanitizeInput($_POST['Postcode']);
+        $email = sanitizeInput($_POST['Email']);
+        $phone = sanitizeInput($_POST['PhoneNumb']);
+        $languages = sanitizeInput($_POST['Language[]']);
+        $otherlanguage = sanitizeInput($_POST['OtherLanguage']);
+        $otherSkills = sanitizeInput($_POST['OtherSkills']);
+        $errMsg = "";
+        $formComplete = true;
+
+        if (empty($jobRefNumber) || empty($firstName) || empty($lastName) || empty($dob) || empty($nationid) || empty($gender) || empty($streetAddress) || empty($suburbTown) || empty($state) || empty($postcode) || empty($email) || empty($phone) || empty($languages) || empty($otherSkills)) {
+            $errMsg = "Please fill out all the required fields in order to submit.";
         }
-    }
-    
-    // Insert data into the 'eoi' table
-    $insertQuery = "INSERT INTO eoi (JobReferenceNumber, FirstName, LastName, DoB, NID, Gender, PhoneNumber, Email, StreetAddress, SuburbTown, Postcode, State, Education, CollegeUniversity, Courses, CertificatesGrades, School, Subjects, ExpWorkingCompanies, PastExperience, References, YearsExperience, DegreeForSA, CertificationForSA, VirtualTechnologyFamiliarity, SkillQuestionForSA, DegreeForSS, CertificationForSS, RegulatoryComplianceFamiliarity, SkillQuestionForSS, DegreeForPD, ProjectForPD, DesignDevelopToolsFamiliarity, Language, OtherLanguages, SkillQuestionsForPD) 
-    VALUES ('$jobRefNumber', '$firstName', '$lastName', '$dob', '$nid', '$gender', '$phoneNumber', '$email', '$streetAddress', '$suburbTown', '$postcode', '$state', '$education', '$collegeUniversity', '$courses', '$certificatesGrades', '$school', '$subjects', '$expWorkingCompanies', '$pastExperience', '$references', '$yearsExperience', '$degreeForSA', '$certificationForSA', '$virtualTechFamiliarity', '$skillQuestionForSA', '$degreeForSS', '$certificationForSS', '$regulatoryComplianceFamiliarity', '$skillQuestionForSS', '$degreeForPD', '$projectForPD', '$designDevelopToolsFamiliarity', '$languages', '$otherLanguages', '$skillQuestionsForPD')";
-    
-    if (mysqli_query($conn, $insertQuery)) {
-        $eoiNumber = mysqli_insert_id($conn);
-        echo "Expression of Interest submitted successfully. Your EOInumber is: $eoiNumber";
-    } else {
-        echo "Error: " . $insertQuery . "<br>" . mysqli_error($conn);
-    }
-    
+        else {
+            if (!preg_match("/^[a-zA-Z0-9]{5}$/", $jobRefNumber)) {
+                $errMsg = "Error: Job reference number must be exactly 5 alphanumeric characters.";
+            }
+            else if (!($jobRefNumber == 'SA101') || $jobRefNumber == 'SS201' || $jobRefNumber == 'PD303'){
+                $errMsg = "Job Reference Number must match the ones in jobs page.";
+            }
+            if (!preg_match("/^[a-zA-Z]{1,20}$/", $firstname)) {
+                $errMsg = "Error: First name must be max 20 alphabetical characters.";
+            }
+            if (!preg_match("/^[a-zA-Z]{1,20}$/", $lastName)) {
+                $errMsg = "Error: Last name must be max 20 alphabetical characters.";
+            }
+            if (!preg_match("/^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$/",$dob)) {
+                $errMsg = "Error: Please filled in your DoB correctly.";
+            }
+            elseif (calculateAge($dob) < 15 || calculateAge($dob) > 80) {
+                $errMsg = "Age must be between 15 and 80 years old.";
+            }
+            if (!preg_match("/^[A-Z0-9]{12}$/", $nationid)) {
+                $errMsg = "Error: National ID must be 12 digits.";
+            }
+            if (!in_array($gender, array("Male", "Female", "Others"))) {
+                $errMsg = "Error: Gender is required.";
+            }
+            if (strlen($streetAddress) > 40) {
+                $errMsg = "Error: Street address must be max 40 characters.";
+            }
+            if (strlen($suburbTown) > 40) {
+                $errMsg = "Error: Suburb/town must be max 40 characters.";
+            }
+            if ((!in_array($state, array("VIC", "NSW", "QLD", "NT", "WA", "SA", "TAS", "ACT"))) || ($state == "")) {
+                $errMsg = "Error: State is required and must be one of VIC, NSW, QLD, NT, WA, SA, TAS, ACT.";
+            }
+            if (!preg_match("/^\d{4}$/", $postcode)) {
+                $errMsg = "Error: Postcode is required and must be exactly 4 digits.";
+            }
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                $errMsg = "Error: Email address is required and must be in a valid format.";
+            }
+            if (!preg_match("/^[\d\s]{8,12}$/", $phone)) {
+                $errMsg = "Error: Phone number must be 8 to 12 digits or spaces.";
+            }
+            if (empty($_POST["Language"])) {
+                $errMsg = "Error: Language skills field cannot be empty.";
+            }
+
+            if ($errMsg != "") {
+                echo "<p>$errMsg</p><br>";
+                $formComplete = false;
+            }
+            else {
+
+                // Check if the 'eoi' table exists, if not, create it
+                $tableExistsQuery = "SELECT * FROM eoi";
+                $tableExistsResult = mysqli_query($conn, $tableExistsQuery);
+
+                if (mysqli_num_rows($tableExistsResult) == 0) {
+                    // Table doesn't exist, create it
+                    $createTableQuery = "CREATE TABLE eoi (
+                        EOInumber INT AUTO_INCREMENT PRIMARY KEY,
+                        JobReferenceNumber VARCHAR(5) NOT NULL,
+                        FirstName VARCHAR(20) NOT NULL,
+                        LastName VARCHAR(20) NOT NULL,
+                        DoB DATE NOT NULL,
+                        NID VARCHAR(12) NOT NULL,
+                        Gender ENUM('Male', 'Female', 'Others') NOT NOT NULL,
+                        PhoneNumber VARCHAR(12) NOT NOT NULL,
+                        Email VARCHAR(255) NOT NOT NULL,
+                        StreetAddress VARCHAR(255) NOT NOT NULL,
+                        SuburbTown VARCHAR(255) NOT NULL,
+                        Postcode VARCHAR(10) NOT NULL,
+                        StateOfAUS ENUM('VIC', 'NSW', 'QLD', 'NT', 'WA', 'SA', 'TAS', 'ACT') NOT NULL,
+                        Education VARCHAR(50) NOT NULL,
+                        CollegeUniversity TEXT,
+                        Courses TEXT,
+                        CertificatesGrades TEXT,
+                        School TEXT,
+                        Subjects TEXT,
+                        ExpWorkingCompanies ENUM('Yes', 'No') NOT NULL,
+                        PastExperience TEXT,
+                        JobReferences TEXT,
+                        Languages VARCHAR(255),
+                        SkillQuestion TEXT,
+                        AppStatus ENUM('New', 'Current', 'Final') DEFAULT 'New'
+                        -- CONSTRAINT chk_phone_length CHECK (LENGTH(PhoneNumber) BETWEEN 8 AND 12)
+                    )";
+                    if (mysqli_query($conn, $createTableQuery)) {
+                        echo "Table 'eoi' created successfully.";
+                    } else {
+                        echo "Error creating table: " . mysqli_error($conn);
+                    }
+                } 
+                else if (mysqli_num_rows($tableExistsResult) == 1) {
+                    // Insert data into the 'eoi' table
+                    //Education, CollegeUniversity, Courses, CertificatesGrades, School, Subjects, ExpWorkingCompanies, PastExperience, JobReferences
+                    $insertQuery = "INSERT INTO eoi (JobReferenceNumber, FirstName, LastName, DoB, NID, Gender, StreetAddress, SuburbTown, StateOfAUS, Postcode, Email, PhoneNumber, SkillQuestion) 
+                    VALUES ($jobRefNumber, $firstName, $lastName, $dob, $nationid, $gender, $streetAddress, $suburbTown, $state, $postcode, $email, $phone, $otherSkills)";
+                    
+                    $result = mysqli_query($conn, $insertQuery);
+                    if ($result) {
+                        $eoiNumber = mysqli_insert_id($conn);
+                        echo "Expression of Interest submitted successfully. Your EOInumber is: $eoiNumber";
+                    } else {
+                        echo "Error: " . $insertQuery . "<br>" . mysqli_error($conn);
+                    }
+
+
+                    // All data is validated, proceed with adding the record to the database
+                    if (addEOIRecord($jobRefNumber, $firstName, $lastName, $dob, $gender, $streetAddress, $suburbTown, $state, $postcode, $email, $phone, $otherSkills)) {
+                        echo '<div class="alert"> Expression of Interest submitted successfully. Your EOInumber is: '. $eoiNumber .'</div><br>';
+                        echo '<a href="index.php">Go back to Homepage</a>';
+                    } else {
+                        echo "Error: Failed to add EOI record.";
+                    }
+                }
+            }
+        }
+        
+        
+        // Check if a message needs to be displayed
+        // $submitMsg = "Expression of Interest submitted successfully. Your EOInumber is: $eoiNumber";
+        // if (!empty($submitMsg)) {
+        //     echo '<div class="alert">' . $submitMsg . '</div> <br>';
+        //     echo '<a href="index.php">Go back to Homepage</a>';
+        // }
+
+        // Insert data into the 'eoi' table
+        //Education, CollegeUniversity, Courses, CertificatesGrades, School, Subjects, ExpWorkingCompanies, PastExperience, JobReferences
+        // $insertQuery = "INSERT INTO eoi (JobReferenceNumber, FirstName, LastName, DoB, NID, Gender, StreetAddress, SuburbTown, StateOfAUS, Postcode, Email, PhoneNumber, SkillQuestion) 
+        // VALUES ($jobRefNumber, $firstName, $lastName, $dob, $nationid, $gender, $streetAddress, $suburbTown, $state, $postcode, $email, $phone, $otherSkills)";
+        
+        // $result = mysqli_query($conn, $insertQuery);
+        // if ($result) {
+        //     $eoiNumber = mysqli_insert_id($conn);
+        //     echo "Expression of Interest submitted successfully. Your EOInumber is: $eoiNumber";
+        // } else {
+        //     echo "Error: " . $insertQuery . "<br>" . mysqli_error($conn);
+        // }
+            
+        // Define a function to insert a new record into the 'eoi' table
+        // function insertRecord($conn, $jobRefNumber, $firstName, $lastName, $streetAddress, $suburbTown, $state, $postcode, $emailAddress, $phoneNumber, $skill1, $skill2, $skill3, $otherSkills) {
+        //     $status = 'New'; // Default status for new records
+
+        //     $sql = "INSERT INTO eoi (JobReferenceNumber, FirstName, LastName, StreetAddress, SuburbTown, State, Postcode, EmailAddress, PhoneNumber, Skill1, Skill2, Skill3, OtherSkills, Status) VALUES ('$jobRefNumber', '$firstName', '$lastName', '$streetAddress', '$suburbTown', '$state', '$postcode', '$emailAddress', '$phoneNumber', '$skill1', '$skill2', '$skill3', '$otherSkills', '$status')";
+
+        //     if (mysqli_query($conn, $sql)) {
+        //         echo "New record created successfully.";
+        //     } else {
+        //         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        //     }
+        // }
+
+        // Example usage:
+        // insertRecord($conn, '123ABC', 'John', 'Doe', '123 Main St', 'Anytown', 'CA', '12345', 'john@example.com', '555-1234', 'Programming', 'Database Management', 'Problem Solving', 'Other skills description');
+    } 
     mysqli_close($conn);
 }
 ?>

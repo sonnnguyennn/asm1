@@ -3,7 +3,7 @@ filename: [style.css]
 author: [cos10026.2 - g5]
 created: [10/02/2024]
 last modified: [25/02/2024]
-description: [apply.html]
+description: [apply.php]
 */
 
 
@@ -151,7 +151,7 @@ description: [apply.html]
 .form-background {
     width: 100%;
     height: fit-content;
-    background-color: red;
+    background-color: #00081A;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -203,8 +203,8 @@ hr {
     border: none;
     margin: 0 6.7em;
 }
-legend {
-    width: 20vw;
+fieldset legend {
+    width: 10vw;
     text-align: center;
     margin: 0 50px;
     border: 3px solid #1B1525;
