@@ -16,7 +16,7 @@
 </head>
 <body>
     <?php 
-        include_once("header.php");
+        include_once("header.inc");
     ?>
     <main>
         <section class="hero-content">
@@ -77,32 +77,32 @@
                             <div id="name">
                                 <div>
                                     <label for="form-general-fname">First Name<em>(*)</em></label>&nbsp;
-                                    <input type="text" name="FirstName" id="form-general-fname" pattern="^[A-Za-z]{1,20}$" title="Please enter only alphabetical characters" required>
+                                    <input type="text" name="FirstName" id="form-general-fname"  title="Please enter only alphabetical characters" >
                                 </div>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <div>
                                     <label for="form-general-lname">Last Name<em>(*)</em></label>&nbsp;
-                                    <input type="text" name="LastName" id="form-general-lname" pattern="^[A-Za-z]{1,20}$" title="Please enter only alphabetical characters" required>
+                                    <input type="text" name="LastName" id="form-general-lname"  title="Please enter only alphabetical characters" >
                                 </div>
                             </div>
                             <div id="bday">
                                 <label for="form-general-bday">DoB<em>(*)</em></label>&nbsp;
-                                <input type="text" name="DoB" id="form-general-bday" pattern="(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}" title="Please enter the date according to the placeholder" placeholder="dd/mm/yyyy" required>
+                                <input type="date" name="DoB" id="form-general-bday"  title="Please enter the date according to the placeholder" placeholder="dd/mm/yyyy" >
                             </div>
                             <div id="id">
                                 <label for="form-general-ID">National identification number<em>(*)</em></label>&nbsp;
-                                <input type="text" name="NID" id="form-general-ID" pattern="[A-Z0-9]{12}" title="Please enter your national ID" required>
+                                <input type="text" name="NID" id="form-general-ID"  title="Please enter your national ID" >
                             </div>
                         </fieldset>
                         <fieldset class="form-gender-detail">
                             <legend>Gender</legend>
                             <div id="gender">Your gender<em>(*)</em>
                                 &nbsp;
-                                <input type="radio" name="Gender" value="Male" id="form-gender-male" required>
+                                <input type="radio" name="Gender" value="Male" id="form-gender-male" >
                                 <label for="form-gender-male">Male</label>
-                                <input type="radio" name="Gender" value="Female" id="form-gender-female" required>
+                                <input type="radio" name="Gender" value="Female" id="form-gender-female" >
                                 <label for="form-gender-female">Female</label>
-                                <input type="radio" name="Gender" value="Others" id="form-gender-others" required>
+                                <input type="radio" name="Gender" value="Others" id="form-gender-others" >
                                 <label for="form-gender-others">Others</label>
                             </div>
                         </fieldset>
@@ -110,26 +110,26 @@
                             <legend>Contact</legend>
                             <div>
                                 <label for="form-phonenumb">Phone<em>(*)</em></label>&nbsp;
-                                <input type="text" name="PhoneNumb" id="form-phonenumb" pattern="[0-9 ]{8-12}" placeholder=" 012345678901" title="Write according to the placeholder" required>
+                                <input type="text" name="PhoneNumb" id="form-phonenumb"  placeholder=" 012345678901" title="Write according to the placeholder" >
                             </div>
                             <div>
                                 <label for="form-email">Email<em>(*)</em></label>&nbsp;
-                                <input type="email" name="Email" id="form-email" placeholder=" abc123@gmail.com" title="Write according to the placeholder" required>
+                                <input type="email" name="Email" id="form-email" placeholder=" abc123@gmail.com" title="Write according to the placeholder" >
                             </div>
                         </fieldset>
                         <fieldset class="form-address-details">
                             <legend>Address</legend>
                             <div class="street-address">
                                 <label for="first-address">Street address<em>(*)</em></label>&nbsp;
-                                <input type="text" name="StreetAddress" id="first-address" maxlength="40" placeholder=" Eg: Street A" title="Write according to the placeholder" required>
+                                <input type="text" name="StreetAddress" id="first-address"  placeholder=" Eg: Street A" title="Write according to the placeholder" >
                             </div>
                             <div class="suburd-address">
                                 <label for="second-address">Suburb/town<em>(*)</em></label>&nbsp;
-                                <input type="text" name="SuburbTown" id="second-address" maxlength="40" placeholder=" Eg: Suburb B" title="Write according to the placeholder" required>
+                                <input type="text" name="SuburbTown" id="second-address"  placeholder=" Eg: Suburb B" title="Write according to the placeholder" >
                             </div>
                             <div class="postal-address">
                                 <label for="third-address">Postcode<em>(*)</em></label>&nbsp;
-                                <input type="text" name="Postcode" id="third-address" pattern="[0-9]{4}" placeholder=" Eg: 1234" title="Write according to the placeholder" required>
+                                <input type="text" name="Postcode" id="third-address"  placeholder=" Eg: 1234" title="Write according to the placeholder" >
                             </div>
                             <div class="state-address">
                                 <label for="fourth-address">Select State:<em>(*)</em></label>&nbsp;
@@ -158,7 +158,7 @@
                             <legend>Academic level</legend>
                             <div>
                                 <label for="academic-level">Highest level of education<em>(*)</em></label>&nbsp;
-                                <select name="Education" id="academic-level" required>
+                                <select name="Education" id="academic-level" >
                                     <option value="" selected="selected">Please select</option>
                                     <option value="Primary">Primary</option>
                                     <option value="Secondary">Secondary</option>
@@ -179,15 +179,15 @@
                                 <tr>
                                     <td>
                                         <label for="textarea1">College/University</label><br>
-                                        <textarea name="College/University" id="textarea1" cols="25" rows="7"></textarea>
+                                        <textarea name="CollegeUniversity" id="textarea1" cols="25" rows="7"></textarea>
                                     </td>
                                     <td>
                                         <label for="textarea2">Course(s)</label><br>
-                                        <textarea name="Course(s)" id="textarea2" cols="25" rows="7"></textarea>
+                                        <textarea name="Courses" id="textarea2" cols="25" rows="7"></textarea>
                                     </td>
                                     <td>
-                                        <label for="textarea3">Certificates & Grades</label><br>
-                                        <textarea name="Certificates & Grades" id="textarea3" cols="25" rows="7"></textarea>
+                                        <label for="textarea3">Degrees</label><br>
+                                        <textarea name="Degrees" id="textarea3" cols="25" rows="7"></textarea>
                                     </td>
                                 </tr>
                                 <tr>
@@ -201,36 +201,10 @@
                                     </td>
                                     <td>
                                         <label for="textarea6">Certificates & Grades</label><br>
-                                        <textarea name="Certificates & Grades" id="textarea6" cols="25" rows="7"></textarea>
+                                        <textarea name="Certificates" id="textarea6" cols="25" rows="7"></textarea>
                                     </td>
                                 </tr>
                             </table>
-                        </fieldset>
-                    </section>
-                    
-                    <br><hr>
-                    
-                    <!-- References -->
-                    <section id="sec3">
-                        <h2 class="form-sections">Section C - Working Experience</h2>
-                        <fieldset>
-                            <legend>Experience</legend>
-                            <div>
-                                <span>Do you have experience working in companies before ?<em>(*)</em></span>
-                                <br>
-                                <input type="radio" name="Experience" value="Yes" id="work-experience-yes" required>
-                                <label for="work-experience-yes">Yes</label>
-                                <input type="radio" name="Experience" value="No" id="work-experience-no" required>
-                                <label for="work-experience-no">No</label>
-                            </div>
-                            <div>
-                                <label for="behavior">How was your experience working with the last company ?</label><br>
-                                <textarea name="Past experience" id="behavior" cols="40" rows="7" placeholder=" Note the experience down here."></textarea>
-                            </div>
-                            <div>
-                                <label for="references">References list</label><br>
-                                <textarea name="References" id="references" cols="40" rows="7" placeholder=" Write the references from your past works here." required></textarea>
-                            </div>
                         </fieldset>
                     </section>
 
@@ -238,31 +212,34 @@
 
                     <!-- Employ Desire -->
                     <section>
-                        <h2 class="form-sections">Section D - Employment Desired</h2>
+                        <h2 class="form-sections">Section C - Employment Desired</h2>
                         <fieldset id="sec4">
                             <legend>Employment</legend>
                             <div>
+                                <span>Do you have experience working in companies before ?<em>(*)</em></span>
+                                <br>
+                                <input type="radio" name="Experience" value="Yes" id="work-experience-yes" >
+                                <label for="work-experience-yes">Yes</label>
+                                <input type="radio" name="Experience" value="No" id="work-experience-no" >
+                                <label for="work-experience-no">No</label>
+                            </div>
+                            <div>
                                 <label for="reference-number">Job reference number:<em>(*)</em></label>&nbsp;
-                                <input type="text" name="Job Reference Number" id="reference-number" pattern="[A-Za-z0-9]{5}" required>
+                                <input type="text" name="JobReferenceNumber" id="reference-number"  >
                             </div>
                             <div>
                                 <span class="jobs-requirement-chk">Expert in:</span>&nbsp;
-                                <input type="checkbox" name="Language[]" id="html" value="HTML" checked>
+                                <input type="checkbox" name="Language[]" id="html" value="HTML" >
                                 <label for="html">HTML</label>
-                                <input type="checkbox" name="Language[]" id="css" value="CSS">
-                                <label for="css">CSS</label>
+                                <input type="checkbox" name="Language[]" id="c++" value="C++">
+                                <label for="c++">C++</label>
                                 <input type="checkbox" name="Language[]" id="javasc" value="JavaScript">
                                 <label for="javasc">JavaScript</label>
                                 <input type="checkbox" name="Language[]" id="php" value="PHP">
                                 <label for="php">PHP</label>
-                                <input type="checkbox" name="Language[]" id="python" value="Python">     
+                                <input type="checkbox" name="Language[]" id="python" value="Python">
                                 <label for="python">Python</label>
-                                <input type="checkbox" name="Language[]" id="others" value="Others">
-                                <label for="others">Other languages..</label>
                                 <br><br>
-                                <!-- <label for="checkbox-others">If select other languages, please note them down below:</label><br>
-                                <textarea name="OtherLanguage" id="checkbox-others" cols="20" rows="5" placeholder=" Write here."></textarea>
-                                <br><br> -->
                                 <label for="jobs-requirement-text">Other job-related skills:</label>
                                 <br>
                                 <textarea name="OtherSkills" id="jobs-requirement-text" cols="30" rows="5" placeholder="Write here."></textarea>
@@ -279,7 +256,7 @@
         </div>
     </main>
     <?php 
-        include_once("footer.php");
+        include_once("footer.inc");
     ?>
 </body>
 </html>
