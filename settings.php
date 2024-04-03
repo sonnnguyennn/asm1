@@ -1,8 +1,8 @@
 <?php
-    $host = "localhost"; // Change to your host name
-    $user = "root"; // Change to your database username
-    $pass = ""; // Change to your database password if any, otherwise leave it empty
-    $database = "test"; // Change to your database name
+    $host = "feenix-mariadb.swin.edu.au"; // Change to your host name
+    $user = "s104971728"; // Change to your database username
+    $password = "171005"; // Change to your database password if any, otherwise leave it empty
+    $database = "s104971728_db"; // Change to your database name
 
     // $conn = @mysqli_connect($host, $user, $pass, $database);
 

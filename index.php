@@ -16,7 +16,7 @@
 </head>
 <body>
     <?php 
-        include_once("header.php");
+        include_once("header.inc");
     ?>
     <div class="container">
         <section class="main-slide">
@@ -258,7 +258,7 @@
         </div>
     </section>
     <?php 
-        include_once("footer.php");
+        include_once("footer.inc");
     ?>
 </body>
 </html>

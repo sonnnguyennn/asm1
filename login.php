@@ -52,13 +52,70 @@
 
 <!-- <?php 
     require_once("settings.php");
+
+    function sanitizeInput($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
     
-    $conn = @mysqli_connect($host, $user, $pass, $database);
+    $conn = @mysqli_connect($host, $user, $password, $database);
     
     if (!$conn) {
         die("Connection failed". mysqli_connect_error());
     }
     else {
-        
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $email = sanitise_input($_POST['Email']);
+            $password = sanitise_input($_POST['Password']);
+            $retypepassword = sanitise_input($_POST['RetypePassword']);
+        }
+
+        if (empty($email) || empty($password) || empty($retypepassword)) {
+            die('Please fill in the information to register.');
+        }
+        else {
+            if ($retypepassword != $password) {
+                die("Error: Retype password must match password.");
+            }
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                die("Error: Email address is required and must be in a valid format.");
+            }
+            else {
+                $registerQuery = "SHOW TABLES LIKE 'users'";
+                $registerResult = mysqli_query($conn, $registerQuery);
+                if (mysqli_num_rows($registerResult) == 0) {
+                    $createTableQuery = "CREATE TABLE users (
+                        id INT AUTO_INCREMENT PRIMARY KEY,
+                        email VARCHAR(255) UNIQUE NOT NULL,
+                        pass VARCHAR(255) NOT NULL,
+                        -- position VARCHAR(50) NOT NULL
+                    );";
+
+                    if (mysqli_query($conn, $createTableQuery)) {
+                        $insertQuery = "INSERT INTO users (email, pass) VALUES ('$email', '$password');";
+                        $result = mysqli_query($conn, $insertQuery);
+                        if ($result) {
+                            echo '<span>Go to <a href="index.php">Login</a> page</span>';
+                        } else {
+                            echo "Error: " . $insertQuery . "<br>" . mysqli_error($conn);
+                        }
+                    } 
+                    else {
+                        echo "Error creating table: " . mysqli_error($conn);
+                    }
+                } 
+                else {
+                    $insertQuery = "INSERT INTO users (email, pass) VALUES ('$email', '$password');";
+                    $result = mysqli_query($conn, $insertQuery);
+                    if ($result) {
+                        echo '<span>Go to <a href="index.php">Login</a> page</span>';
+                    } else {
+                        echo "Error: " . $insertQuery . "<br>" . mysqli_error($conn);
+                    }
+                }
+            }
+        }
     }
 ?> -->

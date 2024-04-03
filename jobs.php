@@ -16,7 +16,7 @@
 </head>
 <body>
     <?php 
-        include_once("header.php");
+        include_once("header.inc");
     ?>
     <section class="hero-content">
         <div class="hero-wrap"></div>
@@ -203,7 +203,7 @@
         </a>
     </section>
     <?php 
-        include_once("footer.php");
+        include_once("footer.inc");
     ?>
 </body>
 </html>
