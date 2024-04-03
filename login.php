@@ -98,7 +98,7 @@
                 </div>
                 <?php 
                     if (isset($err_message)) {
-                        echo "<p>$err_message</p>";
+                        echo "<p class='alert'>$err_message</p>";
                     }
                 ?>
             </form>
