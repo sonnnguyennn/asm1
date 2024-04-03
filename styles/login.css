@@ -110,7 +110,7 @@ form .text-box{
     cursor: pointer;
     font-size: 14px;
 }
-.login {
+#login {
     width: 100%;
     height: 50px;
     background-color: rgb(196,59,104);

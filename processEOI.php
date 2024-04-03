@@ -53,7 +53,7 @@ function addEOIRecord($conn, $jobRefNumber, $firstName, $lastName, $dob, $gender
 }
 
 
-$conn = mysqli_connect($host, $user, $password, $database);
+$conn = @mysqli_connect($host, $user, $password, $database);
 
 
 if (!$conn) {

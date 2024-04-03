@@ -9,6 +9,7 @@
 -->
 <?php 
     require("settings.php");
+    session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -78,78 +79,80 @@
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
     } else {
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            if (isset($_POST["list_all_EOI"])) {
-                // List all EOIs
-                $sql = "SELECT * FROM eoi;";
-            } elseif(isset($_POST['list_by_job_reference'])) {
-                // List all EOIs for a particular position (given a job reference number)
-                $job_reference = sanitize_input($_POST['job_reference']);
-                $sql = "SELECT * FROM eoi WHERE JobReferenceNumber = '$job_reference';";
-            } elseif(isset($_POST['list_by_applicant_name'])) {
-                // List all EOIs for a particular applicant given their first name, last name, or both
-                $firstname = sanitize_input($_POST['FirstName']);
-                $lastname = sanitize_input($_POST['LastName']);
-                $sql = "SELECT * FROM eoi WHERE FirstName LIKE '%$firstname%' OR LastName LIKE '%$lastname%';";
-            } elseif(isset($_POST["delete_job_ref"])) {
-                // Delete EOIs for a particular job reference number
-                $job_reference = sanitize_input($_POST["DeleteJobRef"]);
-                $sql = "DELETE FROM eoi WHERE JobReferenceNumber = '$job_reference';";
-            } elseif(isset($_POST["change_EOI_status"])) {
-                // Change the status of an EOI
-                $newStatusEOI = ($_POST['newStatusEOI']);
-                $selectedEOI = ($_POST['selectEOI']);
-                $sql = "UPDATE eoi SET AppStatus = '$newStatusEOI' WHERE EOInumber = '$selectedEOI'";
-                if ($result = mysqli_query($conn, $sql)) {
-                    echo "Successfully change status of EOI:$selectedEOI to $newStatusEOI";
+        if ($_SESSION['position'] == 1) {
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                if (isset($_POST["list_all_EOI"])) {
+                    // List all EOIs
+                    $sql = "SELECT * FROM eoi;";
+                } elseif(isset($_POST['list_by_job_reference'])) {
+                    // List all EOIs for a particular position (given a job reference number)
+                    $job_reference = sanitize_input($_POST['job_reference']);
+                    $sql = "SELECT * FROM eoi WHERE JobReferenceNumber = '$job_reference';";
+                } elseif(isset($_POST['list_by_applicant_name'])) {
+                    // List all EOIs for a particular applicant given their first name, last name, or both
+                    $firstname = sanitize_input($_POST['FirstName']);
+                    $lastname = sanitize_input($_POST['LastName']);
+                    $sql = "SELECT * FROM eoi WHERE FirstName LIKE '%$firstname%' OR LastName LIKE '%$lastname%';";
+                } elseif(isset($_POST["delete_job_ref"])) {
+                    // Delete EOIs for a particular job reference number
+                    $job_reference = sanitize_input($_POST["DeleteJobRef"]);
+                    $sql = "DELETE FROM eoi WHERE JobReferenceNumber = '$job_reference';";
+                } elseif(isset($_POST["change_EOI_status"])) {
+                    // Change the status of an EOI
+                    $newStatusEOI = ($_POST['newStatusEOI']);
+                    $selectedEOI = ($_POST['selectEOI']);
+                    $sql = "UPDATE eoi SET AppStatus = '$newStatusEOI' WHERE EOInumber = '$selectedEOI'";
+                    if ($result = mysqli_query($conn, $sql)) {
+                        echo "Successfully change status of EOI ID:$selectedEOI to $newStatusEOI";
+                    }
                 }
-            }
 
-            // Execute the query
-            $result = mysqli_query($conn, $sql);
-            if ($result == false) {
-                echo "Error: " . mysqli_error($conn);
-            } else {
-                // if (is_bool($result)) {
-                //     echo "Query executed successfully, but no result set returned.";
-                // }
-                if (!is_bool($result)) {
-                    if (mysqli_num_rows($result) > 0) {
-                        echo "<h2>EOIs</h2>";
-                        echo "<table border='1' style='margin-bottom: 10vh'>";
-                        echo "<tr>
-                                <th>EOInumber</th>
-                                <th>Job Reference</th>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>DoB</th>
-                                <th>National ID</th>
-                                <th>Gender</th>
-                                <th>Phone Number</th>
-                                <th>Email</th>
-                                <th>Status</th>
-                            </tr>";
-                        while($row = mysqli_fetch_assoc($result)) {
-                            echo "<tr>";
-                            echo "<td>".$row['EOInumber']."</td>";
-                            echo "<td>".$row['JobReferenceNumber']."</td>";
-                            echo "<td>".$row['FirstName']."</td>";
-                            echo "<td>".$row['LastName']."</td>";
-                            echo "<td>".$row['DoB']."</td>";
-                            echo "<td>".$row['NID']."</td>";
-                            echo "<td>".$row['Gender']."</td>";
-                            echo "<td>".$row['PhoneNumber']."</td>";
-                            echo "<td>".$row['Email']."</td>";
-                            echo "<td>".$row['AppStatus']."</td>";
-                            echo "</tr>";
-                        }
-                        echo "</table>";
-                    } else {
-                        echo "No EOIs found.";
-                    }                    
+                // Execute the query
+                $result = mysqli_query($conn, $sql);
+                if ($result == false) {
+                    echo "Error: " . mysqli_error($conn);
+                } else {
+                    // if (is_bool($result)) {
+                    //     echo "Query executed successfully, but no result set returned.";
+                    // }
+                    if (!is_bool($result)) {
+                        if (mysqli_num_rows($result) > 0) {
+                            echo "<h2>EOIs</h2>";
+                            echo "<table border='1' style='margin-bottom: 10vh'>";
+                            echo "<tr>
+                                    <th>EOInumber</th>
+                                    <th>Job Reference</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>DoB</th>
+                                    <th>National ID</th>
+                                    <th>Gender</th>
+                                    <th>Phone Number</th>
+                                    <th>Email</th>
+                                    <th>Status</th>
+                                </tr>";
+                            while($row = mysqli_fetch_assoc($result)) {
+                                echo "<tr>";
+                                echo "<td>".$row['EOInumber']."</td>";
+                                echo "<td>".$row['JobReferenceNumber']."</td>";
+                                echo "<td>".$row['FirstName']."</td>";
+                                echo "<td>".$row['LastName']."</td>";
+                                echo "<td>".$row['DoB']."</td>";
+                                echo "<td>".$row['NID']."</td>";
+                                echo "<td>".$row['Gender']."</td>";
+                                echo "<td>".$row['PhoneNumber']."</td>";
+                                echo "<td>".$row['Email']."</td>";
+                                echo "<td>".$row['AppStatus']."</td>";
+                                echo "</tr>";
+                            }
+                            echo "</table>";
+                        } else {
+                            echo "No EOIs found.";
+                        }                    
+                    }
                 }
             }
-        }    
+        }
         else {
             header("Location: index.php");
         }  
