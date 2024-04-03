@@ -1,3 +1,59 @@
+<?php 
+    include_once("settings.php");
+    session_start();
+
+
+    function sanitizeInput($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+    
+    $conn = @mysqli_connect($host, $user, $password, $database);
+    
+    if (!$conn) {
+        die("Connection failed". mysqli_connect_error());
+    }
+    else {
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            // Sanitize user input
+            $email = ($_POST['LoginEmail']);
+            $password = ($_POST['LoginPassword']);
+        
+            // Retrieve user data from database
+            $query = "SELECT * FROM users WHERE email = '$email';";
+            $result = mysqli_query($conn, $query);
+        
+            if (mysqli_num_rows($result) == 1) {
+                // User found, verify password
+                $user = mysqli_fetch_assoc($result);
+                if ($password === $user['password']) {
+                    // Password is correct, set session variables
+                    $_SESSION['email'] = $user['email'];
+                    $_SESSION['position'] = $user['position'];
+                    // $err_message = "Login successfully.";
+                    
+                    // Redirect to manage page based on user's position
+                    if ($user['position'] == 1) {
+                        header("Location: manage.php");
+                        exit();
+                    } else {
+                        header("Location: index.php");
+                        exit();
+                    }
+                } else {
+                    // Incorrect password
+                    $err_message = "Incorrect email or password. Please check the fields again.";
+                }
+            } else {
+                // User not found
+                $err_message = "User not found.";
+            }
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +62,7 @@
     <title>NOCXI</title>
 
     <!-- <link rel="stylesheet" href="./styles/index.css" class="css"> -->
-    <link rel="stylesheet" href="./styles/login.css" class="css">
+    <link rel="stylesheet" href="styles/login.css" class="css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,25 +79,32 @@
             <div class="logo">
                 <img src="./images/logo.png" alt=""> 
             </div>
-            <form method="" id="form">
+            <form method="post" action="login.php" id="form">
                 <div class="sign-in-box">
                     <div class="text-box">
-                        <input type="text" name="email" required id="email">
+                        <input type="text" name="LoginEmail" required id="email">
                         <span></span>
-                        <label for="email">Email</label>
+                        <label>Email</label>
                     </div>
                     <div class="text-box">
-                        <input type="password" name="password"required id="password">
+                        <input type="password" name="LoginPassword" required id="password">
                         <span></span>
-                        <label for="password">Password</label>
+                        <label>Password</label>
                     </div>
                     <p class="pass">Forgot Password?</p>
                 </div>
                 <div class="button-row">
-                    <button class="login" type="button" id="login">Sign in</button>
-                    <a href="./sign-up.html">Signup here</a>
+                    <!-- <button class="login" type="button" id="login">Sign in</button> -->
+                    <input type="submit" name="login" id="login" value="Sign in">
+                    <p class="member">Not a member? <a href="./sign-up.html">Signup here</a></p>
                 </div>
+                <?php 
+                    if (isset($err_message)) {
+                        echo "<p class='alert'>$err_message</p>";
+                    }
+                ?>
             </form>
+
         </div> 
     </div>
 
@@ -51,73 +114,3 @@
  
 </body>
 </html>
-
-<!-- <?php 
-    require_once("settings.php");
-
-    function sanitizeInput($data) {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }
-    
-    $conn = @mysqli_connect($host, $user, $password, $database);
-    
-    if (!$conn) {
-        die("Connection failed". mysqli_connect_error());
-    }
-    else {
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $email = sanitise_input($_POST['Email']);
-            $password = sanitise_input($_POST['Password']);
-            $retypepassword = sanitise_input($_POST['RetypePassword']);
-        }
-
-        if (empty($email) || empty($password) || empty($retypepassword)) {
-            die('Please fill in the information to register.');
-        }
-        else {
-            if ($retypepassword != $password) {
-                die("Error: Retype password must match password.");
-            }
-            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                die("Error: Email address is required and must be in a valid format.");
-            }
-            else {
-                $registerQuery = "SHOW TABLES LIKE 'users'";
-                $registerResult = mysqli_query($conn, $registerQuery);
-                if (mysqli_num_rows($registerResult) == 0) {
-                    $createTableQuery = "CREATE TABLE users (
-                        id INT AUTO_INCREMENT PRIMARY KEY,
-                        email VARCHAR(255) UNIQUE NOT NULL,
-                        pass VARCHAR(255) NOT NULL,
-                        -- position VARCHAR(50) NOT NULL
-                    );";
-
-                    if (mysqli_query($conn, $createTableQuery)) {
-                        $insertQuery = "INSERT INTO users (email, pass) VALUES ('$email', '$password');";
-                        $result = mysqli_query($conn, $insertQuery);
-                        if ($result) {
-                            echo '<span>Go to <a href="index.php">Login</a> page</span>';
-                        } else {
-                            echo "Error: " . $insertQuery . "<br>" . mysqli_error($conn);
-                        }
-                    } 
-                    else {
-                        echo "Error creating table: " . mysqli_error($conn);
-                    }
-                } 
-                else {
-                    $insertQuery = "INSERT INTO users (email, pass) VALUES ('$email', '$password');";
-                    $result = mysqli_query($conn, $insertQuery);
-                    if ($result) {
-                        echo '<span>Go to <a href="index.php">Login</a> page</span>';
-                    } else {
-                        echo "Error: " . $insertQuery . "<br>" . mysqli_error($conn);
-                    }
-                }
-            }
-        }
-    }
-?> -->
