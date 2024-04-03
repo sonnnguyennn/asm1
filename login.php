@@ -76,24 +76,25 @@
     <!-- create login page for NOCXI -->
     <div class="container">
         <div class="sign-in">
-            <h2>Sign In</h2> 
-            <form method="post" action="login.php" id="form">
+            <div class="logo">
+                <img src="./images/logo.png" alt=""> 
+            </div>
+            <form method="" id="form">
                 <div class="sign-in-box">
                     <div class="text-box">
                         <input type="text" name="LoginEmail" required id="email">
                         <span></span>
-                        <label>Email</label>
+                        <label for="email">Email</label>
                     </div>
                     <div class="text-box">
                         <input type="password" name="LoginPassword" required id="password">
                         <span></span>
-                        <label>Password</label>
+                        <label for="password">Password</label>
                     </div>
                     <p class="pass">Forgot Password?</p>
                 </div>
                 <div class="button-row">
-                    <!-- <button class="login" type="button" id="login">Sign in</button> -->
-                    <input type="submit" name="login" id="login" value="Sign in">
+                    <button class="login" type="button" id="login">Sign in</button>
                     <p class="member">Not a member? <a href="./sign-up.html">Signup here</a></p>
                 </div>
                 <?php 
