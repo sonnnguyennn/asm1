@@ -16,20 +16,20 @@
 </head>
 <body>
     <?php 
-        include_once("header.inc");
+        include("header.inc");
     ?>
     <main>
         <section class="hero-content">
             <div class="hero-items">
                 <ul class="hero-navi">
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="index.php">Home</a>
                     </li>
                     <li>
                         /
                     </li>
                     <li>
-                        <a href="apply.html">Apply</a>
+                        <a href="apply.php">Apply</a>
                     </li>
                 </ul>
                 <h2>Application Form</h2>

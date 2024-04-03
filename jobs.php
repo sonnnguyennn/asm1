@@ -23,7 +23,7 @@
         <div class="hero-items">
             <h1>Your new journey start now!</h1>
             <p>Embark on your career journey with us and discover a world of opportunities tailored just for you.</p>
-            <a href="./apply.html" class="hero-button">
+            <a href="apply.php" class="hero-button">
                 <p>Register now</p>
             </a>
         </div>

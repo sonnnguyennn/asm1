@@ -30,14 +30,6 @@ a {
     color: inherit;
     text-decoration: none;
 }
-.alert {
-    background-color: #f2dede;
-    color: #a94442;
-    padding: 10px;
-    border: 1px solid #ebccd1;
-    border-radius: 4px;
-    margin-bottom: 15px;
-}
 
 
 /* HEADER */
@@ -185,12 +177,13 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 36%;
-    height: 35%;
+    /* width: 36%;
+    height: 35%; */
     border-radius: 8px;
     border: 1px solid #002C57;
     cursor: pointer;
-    transition: 0.3s ease-in-out;
+    /* transition: 0.3s ease-in-out; */
+    padding: 0 50px;
 }
 .log-in span{
     color: #002C57;
