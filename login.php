@@ -79,22 +79,23 @@
             <div class="logo">
                 <img src="./images/logo.png" alt=""> 
             </div>
-            <form method="" id="form">
+            <form method="post" action="login.php" id="form">
                 <div class="sign-in-box">
                     <div class="text-box">
                         <input type="text" name="LoginEmail" required id="email">
                         <span></span>
-                        <label for="email">Email</label>
+                        <label>Email</label>
                     </div>
                     <div class="text-box">
                         <input type="password" name="LoginPassword" required id="password">
                         <span></span>
-                        <label for="password">Password</label>
+                        <label>Password</label>
                     </div>
                     <p class="pass">Forgot Password?</p>
                 </div>
                 <div class="button-row">
-                    <button class="login" type="button" id="login">Sign in</button>
+                    <!-- <button class="login" type="button" id="login">Sign in</button> -->
+                    <input type="submit" name="login" id="login" value="Sign in">
                     <p class="member">Not a member? <a href="./sign-up.html">Signup here</a></p>
                 </div>
                 <?php 
@@ -103,6 +104,7 @@
                     }
                 ?>
             </form>
+
         </div> 
     </div>
 
