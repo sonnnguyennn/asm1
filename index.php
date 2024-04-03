@@ -28,7 +28,7 @@
                     <button class="discover-1">
                         <span>Discover more</span>
                     </button>
-                    <a class="video-btn" href="https://www.youtube.com/watch?v=jDw8s0O-YEw" target="_blank">
+                    <a class="video-btn" href="login.php" target="_blank">
                         <div class="video">
                             <span class="fa-solid fa-play"></span>
                             <span>Play</span>
