@@ -20,24 +20,26 @@
     <!-- create login page for NOCXI -->
     <div class="container">
         <div class="sign-in">
-            <h2>Sign In</h2> 
+            <div class="logo">
+                <img src="./images/logo.png" alt=""> 
+            </div>
             <form method="" id="form">
                 <div class="sign-in-box">
                     <div class="text-box">
                         <input type="text" name="email" required id="email">
                         <span></span>
-                        <label>Email</label>
+                        <label for="email">Email</label>
                     </div>
                     <div class="text-box">
                         <input type="password" name="password"required id="password">
                         <span></span>
-                        <label>Password</label>
+                        <label for="password">Password</label>
                     </div>
                     <p class="pass">Forgot Password?</p>
                 </div>
                 <div class="button-row">
                     <button class="login" type="button" id="login">Sign in</button>
-                    <p class="member">Not a member? <a href="./sign-up.html">Signup here</a></p>
+                    <a href="./sign-up.html">Signup here</a>
                 </div>
             </form>
         </div> 
