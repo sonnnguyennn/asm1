@@ -73,104 +73,45 @@ body {
     width:47%;
     object-fit: cover;
 }
-.container form {
-    flex: 1;
-    padding: 0 40px;
-    box-sizing: border-box;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-form .text-box{
-    width: 100%;
-    /* background-color: lightblue; */
-    margin: 10% 0;
-    border-bottom: 2px solid silver;
-    position: relative;
-}
-.text-box input{
-    width: 100%;
-    padding: 0 5px;
-    font-size: 16px;
-    height: 40px;
-    border: none;
-    outline: none;
-    background: none;
-}
-.text-box label {
-    font-size: 16px;
-    color: grey;
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    width: 100%;
-    pointer-events: none;
-    transition: 0.5s;
-}
-.text-box span::before {
-    content: "";
-    position: absolute;
-    top:40px;
-    left: 0px;
-    width: 0;
-    background-color:#46B1C9;
-    height: 2px;
-    transition: 0.5s;
-}
-.text-box input:focus ~ label, 
-.text-box input:valid ~ label{
-    top: -5px;
-    color:#46B1C9;
-}
-.text-box input:focus ~ span::before, 
-.text-box input:valid ~ span::before{
-    width: 100%;
-    color: #46B1C9;
-}
-.pass {
-    color: #46B1C9;
-    margin: 0 0 30px 5px;
-    cursor: pointer;
-    font-size: 14px;
-}
-#login {
-    width: 100%;
-    height: 50px;
-    background-color: #46B1C9;
-    border-radius: 20px;
-    outline: none;
-    border: none;
-    font-size: 16px;
-    font-weight: 600;
-    color:white;      
-    cursor: pointer;
-}
-.button-row a {
-    color: #46B1C9;
-    text-decoration: none;
-    display: block;
-    margin: 15px 0;
-}
-.button-row {
-    /* position: absolute; */
-    /* background-color: lightblue; */
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-}
 .sign-in p {
-    width: 80%;
-    display: grid;
+    width: 100%;
+    line-height: 3em;
+    text-align: center;
     place-items: center;
-    background-color: blue;
+    font-size: 1.5em;
+    margin: 5% 0;
+    /* background-color: lightblue; */
+}
+.log-out{
+    display: flex;
+    height: 70%;
+    /* background-color: lightpink; */
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
 }
 .links {
     width: 100%;
     text-align: center;
     display: flex;
-    align-self: flex-end;
-    justify-content: space-evenly;
-    background-color: red;
+    justify-content: center;
+    /* background-color: red; */
+}
+.home, 
+.login{
+    width: 40%;
+    /* background-color: lightblue; */
+    height: 50px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid lightgrey;
+    margin: 0 2%;
+    transition: 0.3s ease;
+}
+.home:hover, 
+.login:hover{
+    background-color: #46B1C9;
+    color: white;
 }

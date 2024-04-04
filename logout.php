@@ -23,11 +23,13 @@
             <div class="logo">
                 <img src="./images/logo.png" alt=""> 
             </div>
-            <p>You have been logged out.</p>
-            <div class="links">
-                <a href="index.php">Go back to Home</a>
-                <a href="login.php">Login</a>
-            </div>            
+            <div class="log-out">
+                <p>You have been logged out.</p>
+                <div class="links">
+                    <a class="home" href="index.php">Go back to Home</a>
+                    <a class="login" href="login.php">Login</a>
+                </div> 
+            </div>           
         </div>
     </div>
 </body>

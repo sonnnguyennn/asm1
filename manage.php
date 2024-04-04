@@ -51,6 +51,7 @@
                 <div class="form-col">
                     <label for="firstName">Applicant's First Name:</label>
                     <input type="text" id="firstName" name="FirstName">
+                    <input type="submit" name="list_by_applicant_name" value="Search">
                 </div>
                 <div class="form-col">
                     <label for="lastName">Applicant's Last Name:</label>
