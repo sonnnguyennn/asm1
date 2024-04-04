@@ -23,7 +23,7 @@
         <li class="drop"><a href="about.php">About us</a></li>
         <li class="drop"><a href="enhancements.php">Enhancements</a></li>
         <?php 
-            if ($_SESSION["position"] == 1) {   
+            if ((isset($_SESSION["position"])) && ($_SESSION['position'] == 1)) {   
                 echo "<li class='drop'><a href='manage.php'>Manage</a></li>";     
             }
         ?>

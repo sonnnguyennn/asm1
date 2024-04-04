@@ -91,7 +91,7 @@
             if (!$conn) {
                 die("Connection failed: " . mysqli_connect_error());
             } else {
-                if ($_SESSION['position'] == 1) {
+                if (isset($_SESSION['position']) === 1) {
                     if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         if (isset($_POST["list_all_EOI"])) {
                             // List all EOIs
@@ -162,7 +162,7 @@
                         }
                     }
                 }
-                else {
+                else if (isset($_SESSION['position']) === 0) {
                     header("Location: index.php");
                 }  
                 mysqli_close($conn);
