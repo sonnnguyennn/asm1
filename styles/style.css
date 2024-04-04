@@ -172,31 +172,36 @@ a {
     justify-content: space-around;
     align-items: center;
     margin-right: 2%;
+    /* background-color:lightblue; */
 }
 .log-in{
-    display: flex;
+    display:flex;
     justify-content: center;
     align-items: center;
-    /* width: 36%;
-    height: 35%; */
     border-radius: 8px;
-    border: 1px solid #002C57;
+    border: 1px solid hsl(210, 100%, 17%);
     cursor: pointer;
+    padding:20px;
+    align-content: center;
     /* transition: 0.3s ease-in-out; */
-    padding: 0 50px;
+    /* background-color: red; */
+    text-align: center;
+    /* width: 100%; */
 }
 .log-in span{
     color: #002C57;
     font-size: 14px;
     transition: 0.3s ease-in-out;
+    /* margin: 0 10px; */
 }
 .log-in p{
     color: #002C57;
     font-size: 14px;
     transition: 0.3s ease-in-out;
-}
-.log-in span{
-    margin: 0 10px 0 0;
+    /* background-color: red; */
+    /* width: 100px; */
+    /* line-height: 28px; */
+
 }
 .start{
     width: 40%;
