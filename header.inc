@@ -6,13 +6,6 @@
     </div>
     <ul class="main-menu">
         <li class="drop"><a href="index.php">Home</a></li>
-        <li class="drop"><a href="#">Pages</a>
-            <ul class="pages-drop">
-                <li><a href="#">Our Team</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">FAQs</a></li>
-            </ul>
-        </li>
         <li class="drop"><a href="jobs.php">Jobs</a>
             <ul class="services-drop">
                 <li><a href="#">Server Administrator</a></li>
@@ -37,14 +30,14 @@
             echo 
                 "<a class='log-in' href='login.php'>
                     <span class='fa-solid fa-lock'></span>
-                    <p>Log in</p>
+                    <span>Log in</span>
                 </a>";
         }
         else {
             echo 
                 "<a class='log-in' href='logout.php'>
                     <span class='fa-solid fa-lock'></span>
-                    <p>Log out</p>
+                    <span>Log out</span>
                 </a>";
         }
         ?>

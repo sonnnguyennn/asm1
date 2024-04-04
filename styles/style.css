@@ -56,7 +56,7 @@ a {
     object-fit: cover;
 }
 .main-menu{
-    width: 47%;
+    /* width: 47%; */
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -64,12 +64,17 @@ a {
     font-size: 16px;
     font-weight: 400;
     line-height: 32px;
+    /* background-color: lightblue; */
 }
 .drop{
     position: relative;
     transition: 0.3s ease;
     color: #002c57;
     opacity: 0.5;
+    margin: 0 2vw;
+}
+.drop a{
+    font-size: 1.04vw;
 }
 .drop::after {
     content: "";
@@ -87,10 +92,10 @@ a {
 .drop:hover{
     opacity: 1;
 }
-.pages-drop, .services-drop{
+.services-drop{
     position: absolute;
     top: 50px;
-    width: 12vw;
+    width: 13vw;
     font-size: 15px;
     background-color: white;
     display: none;
@@ -101,31 +106,19 @@ a {
     opacity: 0;
     line-height: 8vh;
 }
-.pages-drop li:hover{
-    background-color: #46B1C9;
-    color: white;
-}
 .services-drop li:hover{
     background-color: #46B1C9;
     color: white;
 }
-.pages-drop li, .services-drop li{
+.services-drop li{
     transition: 0.2s linear;
-    padding-left: 10px;
+    padding: 0 10px;
 }
-.pages-drop li:nth-child(3), .services-drop li:nth-child(4){
+.services-drop li:nth-child(3){
     border-radius: 0 0 5px 5px;
 }
-.pages-drop li:nth-child(1), .services-drop li:nth-child(1){
+.services-drop li:nth-child(1){
     border-radius: 5px 5px 0 0;
-}
-.pages-drop::after{
-    content: "";
-    position: absolute;
-    width: 30%;
-    height: 20px;
-    top: -20px;
-    left: 0;
 }
 .services-drop::after{
     content: "";
@@ -135,18 +128,15 @@ a {
     top: -20px;
     left: 0;
 }
-.drop:nth-child(2):hover .pages-drop {
-    opacity: 1;
-    display: flex;
-}
-.drop:nth-child(3):hover .services-drop {
+.drop:nth-child(2):hover .services-drop {
     opacity: 1;
     display: flex;
 }
 .hiring{
-    font-size: 20px;
+    font-size: 1.24vw;
     position: relative;
     color: #002c57;
+    margin: 0 2vw;
 }
 .hiring::after{
     content: "";
@@ -181,40 +171,25 @@ a {
     border-radius: 8px;
     border: 1px solid hsl(210, 100%, 17%);
     cursor: pointer;
-    padding:20px;
-    align-content: center;
-    /* transition: 0.3s ease-in-out; */
-    /* background-color: red; */
-    text-align: center;
-    /* width: 100%; */
+    padding: 1.3vw 3vw;
 }
 .log-in span{
     color: #002C57;
-    font-size: 14px;
-    transition: 0.3s ease-in-out;
-    /* margin: 0 10px; */
-}
-.log-in p{
-    color: #002C57;
-    font-size: 14px;
-    transition: 0.3s ease-in-out;
-    /* background-color: red; */
-    /* width: 100px; */
-    /* line-height: 28px; */
-
+    font-size: 0.95vw;
+    margin: 0 5px;
+    display: block;
+    white-space: nowrap;
 }
 .start{
-    width: 40%;
-    height: 35%;
     background-color: #002C57;
     outline: none;
     border: none;
     border-radius: 8px;
     color: white;
-    font-size: 14px;
+    font-size:0.95vw;
     transition: 0.3s ease-in-out;
     cursor: pointer;
-    margin: 0 10px;
+    padding: 11px;
     font-weight:400 ;
 }
 .start:hover{
