@@ -23,7 +23,7 @@
         <li class="drop"><a href="about.php">About us</a></li>
         <li class="drop"><a href="enhancements.php">Enhancements</a></li>
         <?php 
-            if ($_SESSION["position"] == 1) {   
+            if (isset($_SESSION["position"]) && $_SESSION["position"] == 1) {   
                 echo "<li class='drop'><a href='manage.php'>Manage</a></li>";     
             }
         ?>
@@ -33,20 +33,20 @@
     </ul>
     <div class="icon-control">
         <?php 
-        if (!isset($_SESSION["position"])) {
-            echo 
-                "<a class='log-in' href='login.php'>
-                    <span class='fa-solid fa-lock'></span>
-                    <p>Log in</p>
-                </a>";
-        }
-        else {
-            echo 
-                "<a class='log-in' href='logout.php'>
-                    <span class='fa-solid fa-lock'></span>
-                    <p>Log out</p>
-                </a>";
-        }
+            if (!isset($_SESSION["position"])) {
+                echo 
+                    "<a class='log-in' href='login.php'>
+                        <span class='fa-solid fa-lock'></span>
+                        <p>Log in</p>
+                    </a>";
+            }
+            else {
+                echo 
+                    "<a class='log-in' href='logout.php'>
+                        <span class='fa-solid fa-lock'></span>
+                        <p>Log out</p>
+                    </a>";
+            }
         ?>
         <button class="start">Get started</button>
         <div class="iconsearch-ctr">
