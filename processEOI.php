@@ -27,30 +27,6 @@ function calculateAge($dob) {
     $ageInYears = floor($ageInSeconds / (60 * 60 * 24 * 365));
     return $ageInYears;
 }
-// Function to add an EOI record to the table
-function addEOIRecord($conn, $jobRefNumber, $firstName, $lastName, $dob, $gender, $streetAddress, $suburbTown, $state, $postcode, $email, $phone, $otherSkills) {
-    // Implement database insertion logic here
-    // Example:
-    $query = "INSERT INTO eoi (JobReferenceNumber, FirstName, LastName, DoB, Gender, StreetAddress, SuburbTown, StateOfAus, Postcode, Email,PhoneNumber, SkillQuestion) VALUES ('$jobRefNumber', '$firstName', '$lastName', '$dob', '$gender', '$streetAddress', '$suburbTown', '$state', '$postcode', '$email', $phone, '$otherSkills')";
-    // Execute the query and handle errors accordingly
-    // $eoiquery = "SELECT EOInumber FROM eoi WHERE FirstName = '$firstName' AND LastName = '$lastName';";
-    $result = mysqli_query($conn, $query);
-    // $eoiresult = mysqli_query($conn, $eoiquery);
-    $eoiresult = mysqli_fetch_array($result);
-    if ($result) {
-        if ($eoiresult) {
-            echo '<div class="alert"> Expression of Interest submitted successfully. Your EOInumber is: '. $eoiresult['EOInumber'] .'</div><br>';
-            echo '<a href="index.php">Go back to Homepage</a>';
-        }
-        else {
-            echo 'Error: Failed to load your EOI number.';
-        }
-    } else {
-        echo ' Error: Failed to add EOI record. ';
-    }
-    // Return true if insertion is successful, false otherwise
-    return true; // Placeholder return value
-}
 
 
 $conn = @mysqli_connect($host, $user, $password, $database);
@@ -201,7 +177,7 @@ else {
                             echo '<a href="index.php">Go back to Homepage</a>';
                             $formComplete = true;
                         } else {
-                            echo "Error: " . $insertQuery . "<br>" . mysqli_error($conn);
+                            echo "Error: Expression of Interest failed to submit. Please check your information again. <br>" . mysqli_error($conn);
                         }
                     } 
                     else {
@@ -219,7 +195,7 @@ else {
                         echo '<a href="index.php">Go back to Homepage</a>';
                         $formComplete = true;
                     } else {
-                        echo "Error: " . $insertQuery . "<br>" . mysqli_error($conn);
+                        echo "Error: Expression of Interest failed to submit. Please check your information again. <br>" . mysqli_error($conn);
                     }
                 }
             }

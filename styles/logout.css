@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+ul li{
+    list-style: none;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.alert {
+    background-color: #f2dede;
+    color: #a94442;
+    padding: 10px;
+    border: 1px solid #ebccd1;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+
+
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    /* background:linear-gradient(50deg, rgba(255, 194, 0, 1) 0%, rgba(255, 98, 173, 1) 49%, rgba(238, 182, 130, 1) 100%); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.container{
+    width: 30vw;
+    height:70vh;
+    background-color: white;
+    border-radius: 15px;
+}
+.sign-in{
+    width: 100%;
+    height: 100%;
+    /* text-align: center; */
+    /* background-color: lightgrey; */
+    box-shadow: 0 0 10px 5px lightgrey;
+    border-radius: 15px;
+    place-items: center;
+}  
+/* .container h2 {
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid grey;
+} */
+.logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 0;
+    /* background-color: lightpink; */
+    border-width: 0 0 1px 0;
+    border-color: lightgrey;
+    border-style: solid;
+}
+.sign-in img{
+    width:47%;
+    object-fit: cover;
+}
+.container form {
+    flex: 1;
+    padding: 0 40px;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+form .text-box{
+    width: 100%;
+    /* background-color: lightblue; */
+    margin: 10% 0;
+    border-bottom: 2px solid silver;
+    position: relative;
+}
+.text-box input{
+    width: 100%;
+    padding: 0 5px;
+    font-size: 16px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: none;
+}
+.text-box label {
+    font-size: 16px;
+    color: grey;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    width: 100%;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.text-box span::before {
+    content: "";
+    position: absolute;
+    top:40px;
+    left: 0px;
+    width: 0;
+    background-color:#46B1C9;
+    height: 2px;
+    transition: 0.5s;
+}
+.text-box input:focus ~ label, 
+.text-box input:valid ~ label{
+    top: -5px;
+    color:#46B1C9;
+}
+.text-box input:focus ~ span::before, 
+.text-box input:valid ~ span::before{
+    width: 100%;
+    color: #46B1C9;
+}
+.pass {
+    color: #46B1C9;
+    margin: 0 0 30px 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+#login {
+    width: 100%;
+    height: 50px;
+    background-color: #46B1C9;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    color:white;      
+    cursor: pointer;
+}
+.button-row a {
+    color: #46B1C9;
+    text-decoration: none;
+    display: block;
+    margin: 15px 0;
+}
+.button-row {
+    /* position: absolute; */
+    /* background-color: lightblue; */
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+.sign-in p {
+    width: 80%;
+    display: grid;
+    place-items: center;
+    background-color: blue;
+}
+.links {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-self: flex-end;
+    justify-content: space-evenly;
+    background-color: red;
+}

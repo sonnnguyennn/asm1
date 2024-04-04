@@ -22,8 +22,10 @@
             $password = ($_POST['LoginPassword']);
         
             // Retrieve user data from database
-            $query = "SELECT * FROM users WHERE email = '$email';";
-            $result = mysqli_query($conn, $query);
+            $stmt = mysqli_prepare($conn, "SELECT email, password, position FROM users WHERE email = ?");
+            mysqli_stmt_bind_param($stmt, "s", $email);
+            mysqli_stmt_execute($stmt);
+            $result = mysqli_stmt_get_result($stmt);
         
             if (mysqli_num_rows($result) == 1) {
                 // User found, verify password
@@ -32,7 +34,6 @@
                     // Password is correct, set session variables
                     $_SESSION['email'] = $user['email'];
                     $_SESSION['position'] = $user['position'];
-                    // $err_message = "Login successfully.";
                     
                     // Redirect to manage page based on user's position
                     if ($user['position'] == 1) {
