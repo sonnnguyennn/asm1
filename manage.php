@@ -126,10 +126,10 @@
                         } else {
                             if (!is_bool($result)) {
                                 if (mysqli_num_rows($result) > 0) {
-                                    echo "<h2>EOIs</h2>";
                                     echo "<table>";
+                                    echo "<caption>EOIs</caption>";
                                     echo "<tr>
-                                            <th>EOInumber</th>
+                                            <th>EOI ID</th>
                                             <th>Job Reference</th>
                                             <th>First Name</th>
                                             <th>Last Name</th>
