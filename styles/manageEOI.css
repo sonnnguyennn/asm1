@@ -26,6 +26,7 @@ description: [manage.php]
 /* MAIN */
 main {
     margin-bottom: 10vh;
+    width: 100%;
 }
 .hero-content {
     width: 100vw;
@@ -72,15 +73,50 @@ h1 {
     margin-top: 30vh;
 }
 form {
-    height: 100px;
-    margin-bottom: 5vh;
+    width: 60%;
+    height: fit-content;
+    margin: 5vh auto;
+    /* margin-bottom: 5vh; */
+    /* align-self: center; */
+    line-height: 2.2em;
+    display: block;
+    /* background-color: red; */
+    letter-spacing: 0.5px;
+}
+form input[type='submit'] {
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 5px;
+    color: white;
+    background-color: #002C57;
+}
+form input[type='text'], form select {
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 5px;
+}
+form input[type='text']:focus {
+    border: 2px solid #002C57;
 }
 table {
+    width: 80%;
     margin-top: 10vh;
+    margin: 10vh auto;
+}
+table caption {
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 2vh;
 }
 table, th, td {
-    border: 3px solid #002C57;
+    border: 3px solid #1B1525;
     border-collapse: collapse;
+}
+th {
+    font-weight: 800;
+    color: white;
+    background-color: #002C57;
 }
 th, td {
     padding: 10px;
