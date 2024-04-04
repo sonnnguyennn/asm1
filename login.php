@@ -22,8 +22,8 @@
             $password = ($_POST['LoginPassword']);
         
             // Retrieve user data from database
-            $stmt = mysqli_prepare($conn, "SELECT email, password, position FROM users WHERE email = ?");
-            mysqli_stmt_bind_param($stmt, "s", $email);
+            $stmt = mysqli_prepare($conn, "SELECT * FROM users WHERE email = ? AND password = ?");
+            mysqli_stmt_bind_param($stmt, "ss", $email, $password);
             mysqli_stmt_execute($stmt);
             $result = mysqli_stmt_get_result($stmt);
         
