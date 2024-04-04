@@ -97,7 +97,9 @@
                 <div class="button-row">
                     <!-- <button class="login" type="button" id="login">Sign in</button> -->
                     <input type="submit" name="login" id="login" value="Sign in">
-                    <p class="member">Not a member?<a href="./sign-up.html">Signup here</a></p>
+                    <p class="member">Not a member?
+                        <a href="./sign-up.html">Signup here</a>
+                    </p>
                 </div>
                 <?php 
                     if (isset($err_message)) {
