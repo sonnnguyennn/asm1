@@ -1,14 +1,7 @@
-<!-- 
-    Create a web page manage.php that allows a manager to make the following queries of 
-    the eoi table and returns a web page with the appropriate results. 
-    • List all EOIs. 
-    • List all EOIs for a particular position (given a job reference number). 
-    • List all EOIs for a particular applicant given their first name, last name or both. 
-    • Delete all EOIs with a specified job reference number 
-    • Change the Status of an EOI. 
--->
 <?php 
     require("settings.php");
+    include("header.inc");
+    if ((isset($_SESSION['position'])) && ($_SESSION['position'] == 1)) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,9 +19,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <?php 
-        include("header.inc");
-    ?>
     <main>
         <section class="hero-content">
             <div class="hero-items">
@@ -48,7 +38,7 @@
         </section>
         <form action="manage.php" method="post">
             <h1>Manage EOIs</h1>
-            <label for="list_all">List all the EOIs</label>
+            <span>List all the EOIs</span>
             <input type="submit" name="list_all_EOI" value="Search">
             <br>
             <label for="job_reference">Job Reference Number:</label>
@@ -91,7 +81,7 @@
             if (!$conn) {
                 die("Connection failed: " . mysqli_connect_error());
             } else {
-                if (isset($_SESSION['position']) == 1) {
+                if ((isset($_SESSION['position'])) && $_SESSION['position'] == 1) {
                     if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         if (isset($_POST["list_all_EOI"])) {
                             // List all EOIs
@@ -162,9 +152,9 @@
                         }
                     }
                 }
-                else if (isset($_SESSION['position']) === 0) {
-                    header("Location: index.php");
-                }  
+                // else if (isset($_SESSION['position']) === 0) {
+                //     header("Location: index.php");
+                // }  
                 mysqli_close($conn);
             }
         ?>
@@ -176,3 +166,11 @@
     ?>
 </body>
 </html>
+
+<?php
+} 
+else {
+    header("Location: index.php");
+    exit();
+}
+?>
