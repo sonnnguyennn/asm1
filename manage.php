@@ -48,34 +48,45 @@
         </section>
         <form action="manage.php" method="post">
             <h1>Manage EOIs</h1>
-            <label for="list_all">List all the EOIs</label>
-            <input type="submit" name="list_all_EOI" value="Search">
-            <br>
-            <label for="job_reference">Job Reference Number:</label>
-            <input type="text" name="job_reference" id="job_reference">
-            <input type="submit" name="list_by_job_reference" value="Search">
-            <br>
-            <label for="firstName">Applicant's First Name:</label>
-            <input type="text" id="firstName" name="FirstName">
-            <label for="lastName">Applicant's Last Name:</label>
-            <input type="text" id="lastName" name="LastName">
-            <input type="submit" name="list_by_applicant_name" value="Search">
-            <br>
-            <label for="delete_job_ref">Delete Job:</label>
-            <input type="text" name="DeleteJobRef" id="delete_job_ref" placeholder="Job Reference Number">
-            <input type="submit" name="delete_job_ref" value="Delete">
-            <br>
-            <label for="select_an_EOI">Select an EOI to change status</label>
-            <input type="text" name="selectEOI" id="select_an_EOI">
-            <br>
-            <label for="new_status_EOI">Change an EOI's status</label>
-            <select id="new_status_EOI" name="newStatusEOI">
-                <option value="">Please select</option>
-                <option value="New">New</option>
-                <option value="Current">Current</option>
-                <option value="Final">Final</option>
-            </select>
-            <input type="submit" name="change_EOI_status" value="Change EOI Status">
+            <ul class="form-container">
+                <div class="form-col">
+                    <label for="list_all">List all the EOIs</label>
+                    <input type="submit" name="list_all_EOI" value="Search">
+                </div>
+                <div class="form-col">
+                    <label for="job_reference">Job Reference Number:</label>
+                    <input type="text" name="job_reference" id="job_reference">
+                    <input type="submit" name="list_by_job_reference" value="Search">
+                </div>
+                <div class="form-col">
+                    <label for="firstName">Applicant's First Name:</label>
+                    <input type="text" id="firstName" name="FirstName">
+                </div>
+                <div class="form-col">
+                    <label for="lastName">Applicant's Last Name:</label>
+                    <input type="text" id="lastName" name="LastName">
+                    <input type="submit" name="list_by_applicant_name" value="Search">
+                </div>
+                <div class="form-col">
+                    <label for="delete_job_ref">Delete Job: <br><br> </label>
+                    <input type="text" name="DeleteJobRef" id="delete_job_ref" placeholder="Job Reference Number">
+                    <input type="submit" name="delete_job_ref" value="Delete">
+                </div>
+                <div class="form-col">
+                    <label for="select_an_EOI">Select an EOI to change status</label>
+                    <input type="text" name="selectEOI" id="select_an_EOI">
+                </div>
+                <div class="form-col">
+                    <label for="new_status_EOI">Change an EOI's status</label>
+                    <select id="new_status_EOI" name="newStatusEOI">
+                        <option value="">Please select</option>
+                        <option value="New">New</option>
+                        <option value="Current">Current</option>
+                        <option value="Final">Final</option>
+                    </select>
+                    <input type="submit" name="change_EOI_status" value="Change EOI Status">
+                </div>
+            </div>
         </form>        
 
         <?php
