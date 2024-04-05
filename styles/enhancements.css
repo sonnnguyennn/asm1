@@ -9,11 +9,11 @@ description: [enhancements.php]
 
 
 /* HEADER */
-.drop:nth-child(4){
+.drop:nth-child(5){
     opacity: 1;
     position: relative;
 }
-.drop:nth-child(4)::after{
+.drop:nth-child(5)::after{
     content: "";
     position: absolute;
     bottom: 0;
@@ -75,8 +75,8 @@ description: [enhancements.php]
 /* CONTENT */
 .enhancements {
     width: 100%;
-    height: 180vh;
     margin: 50px 0;
+    /* background-color: red; */
 }
 .enhance-title {
     width: 100%;
@@ -97,7 +97,8 @@ description: [enhancements.php]
 }
 .enhance-content {
     width: 90%;
-    height: 150vh;
+    /* height: 145vh; */
+    padding-bottom: 10vh;
     display: flex;
     justify-content: space-around;
     margin: 2em auto;
@@ -111,7 +112,7 @@ description: [enhancements.php]
     list-style-type: disc;
 }
 .enhancement-1,.enhancement-2 {
-    width: 45%;
+    width: 48%;
     height: 100%;
     border: 4px solid #001020;
     border-radius: 50px;
