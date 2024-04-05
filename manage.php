@@ -120,61 +120,64 @@
                                 // Delete EOIs for a particular job reference number
                                 $job_reference = sanitize_input($_POST["DeleteJobRef"]);
                                 $sql = "DELETE FROM eoi WHERE JobReferenceNumber = '$job_reference';";
+                                if ($result = mysqli_query($conn, $sql)) {
+                                    echo "<p class='notify'>Successfully delete job reference: $job_reference</p>";
+                                }
                             } elseif(isset($_POST["change_EOI_status"])) {
                                 // Change the status of an EOI
                                 $newStatusEOI = ($_POST['newStatusEOI']);
                                 $selectedEOI = ($_POST['selectEOI']);
                                 $sql = "UPDATE eoi SET AppStatus = '$newStatusEOI' WHERE EOInumber = '$selectedEOI'";
                                 if ($result = mysqli_query($conn, $sql)) {
-                                    echo "Successfully change status of EOI ID:$selectedEOI to $newStatusEOI";
+                                    echo "<p class='notify'>Successfully change status of EOI ID:$selectedEOI to $newStatusEOI</p>";
                                 }
                             }
 
-                        // Execute the query
-                        $result = mysqli_query($conn, $sql);
-                        if ($result == false) {
-                            echo "Error: " . mysqli_error($conn);
-                        } else {
-                            if (!is_bool($result)) {
-                                if (mysqli_num_rows($result) > 0) {
-                                    echo "<table>";
-                                    echo "<caption>EOIs</caption>";
-                                    echo "<tr>
-                                            <th>EOI ID</th>
-                                            <th>Job Reference</th>
-                                            <th>First Name</th>
-                                            <th>Last Name</th>
-                                            <th>DoB</th>
-                                            <th>National ID</th>
-                                            <th>Gender</th>
-                                            <th>Phone Number</th>
-                                            <th>Email</th>
-                                            <th>Status</th>
-                                        </tr>";
-                                    while($row = mysqli_fetch_assoc($result)) {
-                                        echo "<tr>";
-                                        echo "<td>".$row['EOInumber']."</td>";
-                                        echo "<td>".$row['JobReferenceNumber']."</td>";
-                                        echo "<td>".$row['FirstName']."</td>";
-                                        echo "<td>".$row['LastName']."</td>";
-                                        echo "<td>".$row['DoB']."</td>";
-                                        echo "<td>".$row['NID']."</td>";
-                                        echo "<td>".$row['Gender']."</td>";
-                                        echo "<td>".$row['PhoneNumber']."</td>";
-                                        echo "<td>".$row['Email']."</td>";
-                                        echo "<td>".$row['AppStatus']."</td>";
-                                        echo "</tr>";
-                                    }
-                                    echo "</table>";
-                                } else {
-                                    echo "<p class='alert'>No EOIs found.</p>";
-                                }                    
+                            // Execute the query
+                            $result = mysqli_query($conn, $sql);
+                            if ($result == false) {
+                                echo "Error: " . mysqli_error($conn);
+                            } else {
+                                if (!is_bool($result)) {
+                                    if (mysqli_num_rows($result) > 0) {
+                                        echo "<table>";
+                                        echo "<caption>EOIs</caption>";
+                                        echo "<tr>
+                                                <th>EOI ID</th>
+                                                <th>Job Reference</th>
+                                                <th>First Name</th>
+                                                <th>Last Name</th>
+                                                <th>DoB</th>
+                                                <th>National ID</th>
+                                                <th>Gender</th>
+                                                <th>Phone Number</th>
+                                                <th>Email</th>
+                                                <th>Status</th>
+                                            </tr>";
+                                        while($row = mysqli_fetch_assoc($result)) {
+                                            echo "<tr>";
+                                            echo "<td>".$row['EOInumber']."</td>";
+                                            echo "<td>".$row['JobReferenceNumber']."</td>";
+                                            echo "<td>".$row['FirstName']."</td>";
+                                            echo "<td>".$row['LastName']."</td>";
+                                            echo "<td>".$row['DoB']."</td>";
+                                            echo "<td>".$row['NID']."</td>";
+                                            echo "<td>".$row['Gender']."</td>";
+                                            echo "<td>".$row['PhoneNumber']."</td>";
+                                            echo "<td>".$row['Email']."</td>";
+                                            echo "<td>".$row['AppStatus']."</td>";
+                                            echo "</tr>";
+                                        }
+                                        echo "</table>";
+                                    } else {
+                                        echo "<p class='alert'>No EOIs found.</p>";
+                                    }                    
+                                }
                             }
                         }
-                    }
-                } 
-                mysqli_close($conn);
-            }
+                    } 
+                    mysqli_close($conn);
+                }
         ?>
 
         </main>

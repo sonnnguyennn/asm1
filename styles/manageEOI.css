@@ -141,3 +141,13 @@ th, td {
     margin-bottom: 15px;
     margin: 0 auto;
 }
+.notify {
+    width: fit-content;
+    background-color: #b5dcb5;
+    color: #354935;
+    padding: 10px;
+    border: 1px solid #82EE82;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    margin: 0 auto;
+}
