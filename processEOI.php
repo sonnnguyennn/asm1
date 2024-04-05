@@ -110,7 +110,7 @@ else {
                 $errMsg .= "Error: Phone number must be 8 to 12 digits or spaces.<br>";
             }
             if ($education == "") {
-                $errMsg .= "Error: Education level is required.";
+                $errMsg .= "Error: Education level is required.<br>";
             }
             if (isset($_POST["Experience"])) {
                 $experience = sanitizeInput($_POST["Experience"]);

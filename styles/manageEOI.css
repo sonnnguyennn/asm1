@@ -94,7 +94,7 @@ form {
     position: relative;
     border: 1px solid lightgrey;
 }
-form label {
+form label, form span {
     font-size: 0.95em;
 }
 form input[type='submit'] {
