@@ -8,11 +8,11 @@ description: [about.php]
 
 
 /* HEADER */
-.drop:nth-child(4){
+.drop:nth-child(3){
     opacity: 1;
     position: relative;
 }
-.drop:nth-child(4)::after{
+.drop:nth-child(3)::after{
     content: "";
     position: absolute;
     bottom: 0;
