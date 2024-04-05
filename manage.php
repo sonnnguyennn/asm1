@@ -128,8 +128,16 @@
                                 $newStatusEOI = ($_POST['newStatusEOI']);
                                 $selectedEOI = ($_POST['selectEOI']);
                                 $sql = "UPDATE eoi SET AppStatus = '$newStatusEOI' WHERE EOInumber = '$selectedEOI'";
-                                if ($result = mysqli_query($conn, $sql)) {
-                                    echo "<p class='notify'>Successfully change status of EOI ID:$selectedEOI to $newStatusEOI</p>";
+                                if (!empty($selectedEOI) && !empty($newStatusEOI)) {
+                                    if ($result = mysqli_query($conn, $sql)) {
+                                        echo "<p class='notify'>Successfully change status of EOI ID:$selectedEOI to $newStatusEOI</p>";
+                                    }
+                                    else {
+                                        echo "<p class='alert'>Error updating status</p>";
+                                    }
+                                } 
+                                else {
+                                    echo "<p class='alert'>Please check if an EOI and a status are both selected</p>";
                                 }
                             }
 
