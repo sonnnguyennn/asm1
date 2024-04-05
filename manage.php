@@ -44,22 +44,22 @@
                         <input type="submit" name="list_all_EOI" value="Search">
                     </li>
                     <li class="form-col">
-                        <label for="job_reference">Job Reference Number:</label>
+                        <label for="job_reference">Job Reference Number: </label>
                         <input type="text" name="job_reference" id="job_reference">
                         <input type="submit" name="list_by_job_reference" value="Search">
                     </li>
                     <li class="form-col">
-                        <label for="firstName">Applicant's First Name:</label>
+                        <label for="firstName">Applicant's First Name: </label>
                         <input type="text" id="firstName" name="FirstName">
                         <input type="submit" name="list_by_applicant_name" value="Search">
                     </li>
                     <li class="form-col">
-                        <label for="lastName">Applicant's Last Name:</label>
+                        <label for="lastName">Applicant's Last Name: </label>
                         <input type="text" id="lastName" name="LastName">
                         <input type="submit" name="list_by_applicant_name" value="Search">
                     </li>
                     <li class="form-col">
-                        <label for="delete_job_ref">Delete Job: <br><br> </label>
+                        <label for="delete_job_ref">Delete Job's Application:</label>
                         <input type="text" name="DeleteJobRef" id="delete_job_ref" placeholder="Job Reference Number">
                         <input type="submit" name="delete_job_ref" value="Delete">
                     </li>
