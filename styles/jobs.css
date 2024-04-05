@@ -14,11 +14,11 @@ description: [jobs.php]
 
 
 /* HEADER */
-.drop:nth-child(3){
+.drop:nth-child(2){
     opacity: 1;
     position: relative;
 }
-.drop:nth-child(3)::after{
+.drop:nth-child(2)::after{
     content: "";
     position: absolute;
     bottom: 0;
