@@ -12,7 +12,7 @@ description: [about.php]
     opacity: 1;
     position: relative;
 }
-.drop:nth-child(4)::after{
+.drop:nth-child(1)::after{
     content: "";
     position: absolute;
     bottom: 0;

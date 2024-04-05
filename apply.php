@@ -87,7 +87,7 @@
                             </div>
                             <div id="bday">
                                 <label for="form-general-bday">DoB<em>(*)</em></label>&nbsp;
-                                <input type="date" name="DoB" id="form-general-bday"  title="Please enter the date according to the placeholder" placeholder="dd/mm/yyyy" >
+                                <input type="date" name="DoB" id="form-general-bday">
                             </div>
                             <div id="id">
                                 <label for="form-general-ID">National identification number<em>(*)</em></label>&nbsp;

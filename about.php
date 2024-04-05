@@ -22,13 +22,13 @@
         <div class="hero-items">
             <ul class="hero-navi">
                 <li>
-                    <a href="/index.php">Home</a>
+                    <a href="index.php">Home</a>
                 </li>
                 <li>
                     /
                 </li>
                 <li>
-                    <a href="/about.php">About us</a>
+                    <a href="about.php">About us</a>
                 </li>
             </ul>
             <h2>About us</h2>
