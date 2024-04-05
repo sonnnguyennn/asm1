@@ -41,149 +41,101 @@
         </div>
         <div class="enhance-content">
             <div class="enhancement-1">
-                <h1>@keyframes</h1>
+                <h1>@login</h1>
                 <h2>Description</h2>
                 <p>
-                    @keyframes in CSS is a rule that allows you to create 
-                    animations by gradually changing from one set of CSS styles to another. 
-                    It specifies the intermediate steps in the animation sequence through a series of percentages. 
-                    The animation is defined by using the @keyframes keyword 
-                    followed by a unique name for the animation sequence.
+                A "login" on a website is the process through which a user gains access to their personalized account or 
+                profile on that site. It's a fundamental part of the user experience for any website that requires users
+                to have individual accounts, such as social media platforms, online stores, email services, banking websites.
                 </p>
                 <h2>Explanation</h2>
                 <ol>
                     <li>
-                        <strong>Declaration:</strong> Begin by declaring the @keyframes 
-                        rule with a name that identifies the animation sequence. <br>
+                        <strong>Purpose:</strong> Use for the user&admin to manage and control the applicants input.
+                         In other words, this function to authenticate the privilege for the user and admin(manager)
+                         .It only gain access to 'Manage' if the right admin account login.  <br>
                         <br>
-                        For example: <br>
-                        @keyframes slideRight{<br>
-                        }
+                        
                     </li>
                     <li>
-                        <strong>Define Animation Steps:</strong> Inside the @keyframes rule, 
-                        define the animation steps using percentages (0% to 100% or from/to). 
-                        Each percentage represents a point in time during the animation.
-                        Specify the CSS styles at each step, indicating how the element 
-                        should look at that particular point in the animation. <br>
+                        <strong>Steps:</strong> <br>
+                        <strong>- Accessing the Admin Login Page:</strong> 
+                        <br> We have 2 section for account and password here then user have to fill in all of this
+                        <br>
                         <br>
                         For example: <br>
-                        @keyframes slideRight{<br>
-                            0% {
-                                transform: translateX(0);
-                            }
-                            <br>
-                            100% {
-                                transform: translateX(100px);
-                            }
-                            <br>
-                        }
+                        input type="password" name="LoginPassword" required id="password"><br>
+                        input type="text" name="LoginEmail" required id="email"><br>
+
+
+                        <strong>- Checking data:</strong><br>
+                        PHP system will check the data of table if it match the input from user so it will authenticate
+                        for the admin to login. <br>
+                        
+
                     </li>
                     <li>
-                        <strong>Implement the Animation:</strong> After creating your custom
-                        animation using @keyframes, apply the animation by using the 'animation' 
-                        property. Specify the name of the animation, 
-                        duration, and any other desired properties. <br>
-                        <br>
-                        For example: <br>
-                        img{ animation: slideRight 1s ease;  }
+                        <strong>- Privilege:</strong> <br>
+                        The user will be able to access new section in Navbar which called "Manange" . In this section, 
+                        user can access and see the applied form , edit , add , delete , search for form.
+
                     </li>
                 </ol>
-                <h2>Reference(s)</h2>
-                <ul>
-                    <li>
-                        <a href="https://youtu.be/PjR97QzOrJM?si=NrNl7PlS-SvWGUIz" target="_blank">CSS Animation Tutorial #4 - Keyframes</a>
-                    </li>
-                    <li>
-                        <a href="https://www.w3schools.com/css/css3_animations.asp" target="_blank">CSS Animations by W3Schools</a>                        
-                    </li>
-                </ul>
+               
                 <h2>Implementation</h2>
                 <ul>
                     <li>
-                        <a href="./index.html" target="_blank">Home's header & hiring</a>
+                        <a href="./login.php" target="_blank">Login page</a>
                     </li>
-                    <li>
-                        <a href="./about.html#more-img" target="_blank">About us's more-img class (load-in)</a>
-                    </li>
+                   
                 </ul>
             </div>
             <div class="enhancement-2">
-                <h1>@media</h1>
+                <h1>@login</h1>
                 <h2>Description</h2>
                 <p>
-                    @media in CSS is used for creating responsive designs by 
-                    applying styles based on specific conditions like screen width 
-                    or device type. It enables adapting website layouts for different 
-                    devices or screen sizes by defining CSS rules that activate only 
-                    when certain conditions are met.
+                A "logout" on a website is the process through which a user erase all access to their personalized account or 
+                profile on that site. It's a fundamental part of the login, for the flexibility and the the convienient of user
                 </p>
                 <h2>Explanation</h2>
                 <ol>
                     <li>
-                        <strong>Add @media Rule:</strong> Insert @media rules in your CSS file, followed by the specific condition. <br>
+                        <strong>Purpose:</strong> Use for the user&admin to shutdown there privilege and out of the form,
+                        for safety reason.  <br>
                         <br>
-                        For example: <br>
-                        To style for screen with width smaller than 900px <br>
-                        @media screen and (max-width: 900px) {<br>
-                        }
+                        
                     </li>
                     <li>
-                        <strong>Define Styles:</strong> Within the curly braces, 
-                        specify the CSS styles that should apply when the condition is met. <br>
-                        <br>
-                        For instance: <br>
-                        @media screen and (max-width: 900px) {<br>
-                            body {
-                                font-size: 15px;
-                            }
-                            <br>
-                            nav li {
-                                width: 50%;
-                            }
-                            <br>
-                        }
+                        <strong>Steps:</strong> <br>
+                        <strong>- Accessing the Admin Logout:</strong> 
+                        <br> We have 2 section for logout are login back or back to web page, as soon as the user see this page so 
+                        they already logged out. <br>
+                        p>You have been logged out./p <br>
+                        class="home" href="index.php">Go back to Home <br>
+                        class="login" href="login.php">Login <br>
+                        section.destroy() <br>
+
+
+
+                        
+                      
+                        
+
                     </li>
                     <li>
-                        <strong>Apply to HTML:</strong> Ensure that your HTML 
-                        file includes the responsive CSS file, and the media queries 
-                        will automatically adjust styles based on the specified conditions.
-                    </li>
-                    <li>
-                        <strong>Consider Multiple Breakpoints (Optional):</strong> 
-                        For a more comprehensive responsive design, adding multiple 
-                        @media queries for different breakpoints allows you to customize 
-                        styles for various screen sizes. <br>
-                        <br>
-                        For example: <br>
-                        @media screen and (max-width: 900px) {<br>
-                            nav li {
-                                width: 50%;
-                            }
-                            <br>
-                        } <br>
-                        @media screen and (max-width: 500px) {<br>
-                            nav li {
-                                width: 100%;
-                            }
-                            <br>
-                        }
+                        <strong>- Privilege:</strong> <br>
+                        The user will no longer be able to access section in  "Manange" . And 
+                        user cannot access it anymore.
+
                     </li>
                 </ol>
-                <h2>Reference(s)</h2>
-                <ul>
-                    <li>
-                        <a href="https://www.w3schools.com/css/css_rwd_images.asp" target="_blank">Responsive Web Design - Images by W3Schools</a>
-                    </li>
-                    <li>
-                        <a href="https://www.w3schools.com/cssref/css3_pr_mediaquery.php" target="_blank">CSS @media Rule by W3Schools</a>
-                    </li>
-                </ul>
+              
                 <h2>Implementation</h2>
                 <ul>
                     <li>
-                        <a href="./apply.html" target="_blank">Apply page</a>
+                        <a href="./logout.php" target="_blank">Logout page</a>
                     </li>
+                   
                 </ul>
             </div>
         </div>
