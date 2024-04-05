@@ -91,7 +91,7 @@
                 </ul>
             </div>
             <div class="enhancement-2">
-                <h1>@login</h1>
+                <h1>@logout</h1>
                 <h2>Description</h2>
                 <p>
                 A "logout" on a website is the process through which a user erase all access to their personalized account or 
