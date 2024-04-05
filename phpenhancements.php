@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NOCXI</title>
 
-    <link rel="stylesheet" href="./styles/enhancements.css" class="css">
+    <link rel="stylesheet" href="./styles/phpenhancements.css" class="css">
     <link rel="stylesheet" href="./styles/style.css" class="css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -114,12 +114,6 @@
                         class="home" href="index.php">Go back to Home <br>
                         class="login" href="login.php">Login <br>
                         section.destroy() <br>
-
-
-
-                        
-                      
-                        
 
                     </li>
                     <li>
