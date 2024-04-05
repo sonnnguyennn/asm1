@@ -73,22 +73,19 @@ h1 {
     line-height: 2.5em;
 }
 form {
-    width: 85%;
+    width: 82%;
     /* height: fit-content; */
     margin: 5vh auto;
     text-align: center;
     line-height: 2em;
-    /* background-color: lightblue; */
     letter-spacing: 0.5px;
-    border: 1px solid lightgrey;
+    /* border: 1px solid lightgrey; */
 }
 .form-container{
     width: 100%;
     border: 1px solid lightgrey;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    /* gap: 0 2%; */
-    /* padding: 20px; */
 }
 .form-col{
     /* background-color: lightcoral; */
@@ -96,7 +93,7 @@ form {
     flex-direction: column;
     justify-content: space-between;
     padding: 10px 10px;
-
+    position: relative;
     border: 1px solid lightgrey;
 }
 form label {
@@ -118,16 +115,19 @@ form input[type='text']:focus {
     border: 2px solid #002C57;
 }
 table {
-    width: 1vw;
-    margin-top: 10vh;
+    
+    /* position: absolute; */
+    /* margin: 0 2vw; */
+    width: 82vw;
     margin: 10vh auto;
-    background-color: red;
+    /* background-color: red; */
 }
 table caption {
-    font-size: 2em;
+    /* font-size: 2em;
     font-weight: 700;
     letter-spacing: 2px;
-    margin-bottom: 2vh;
+    margin-bottom: 2vh; */
+    visibility: hidden;
 }
 table, th, td {
     border: 3px solid #1B1525;
@@ -139,5 +139,5 @@ th {
     background-color: #002C57;
 }
 th, td {
-    padding: 10px;
+    padding: 15px;
 }
