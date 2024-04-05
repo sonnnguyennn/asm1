@@ -163,10 +163,7 @@
                             }
                         }
                     }
-                }
-                // else if (isset($_SESSION['position']) === 0) {
-                //     header("Location: index.php");
-                // }  
+                } 
                 mysqli_close($conn);
             }
         ?>
