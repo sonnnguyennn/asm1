@@ -106,7 +106,16 @@
                                 // List all EOIs for a particular applicant given their first name, last name, or both
                                 $firstname = sanitize_input($_POST['FirstName']);
                                 $lastname = sanitize_input($_POST['LastName']);
-                                $sql = "SELECT * FROM eoi WHERE FirstName LIKE '%$firstname%' OR LastName LIKE '%$lastname%';";
+                                if (!empty($firstname) && !empty($lastname)) {
+                                    $sql = "SELECT * FROM eoi WHERE FirstName LIKE '%$firstname%' AND LastName LIKE '%$lastname%'";
+                                } elseif (!empty($firstname)) {
+                                    $sql = "SELECT * FROM eoi WHERE FirstName LIKE '%$firstname%'";
+                                } elseif (!empty($lastname)) {
+                                    $sql = "SELECT * FROM eoi WHERE LastName LIKE '%$lastname%'";
+                                } else {
+                                    echo "<p class='alert'>Please provide at least one of the following: First Name, Last Name</p>";
+                                    exit();
+                                }
                             } elseif(isset($_POST["delete_job_ref"])) {
                                 // Delete EOIs for a particular job reference number
                                 $job_reference = sanitize_input($_POST["DeleteJobRef"]);
@@ -158,7 +167,7 @@
                                     }
                                     echo "</table>";
                                 } else {
-                                    echo "No EOIs found.";
+                                    echo "<p class='alert'>No EOIs found.</p>";
                                 }                    
                             }
                         }
